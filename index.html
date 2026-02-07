@@ -8,71 +8,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap');
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background: radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.3) 0, transparent 50%), 
                         radial-gradient(at 100% 100%, rgba(241, 245, 249, 1) 0, transparent 50%),
                         #FFFFFF;
-            color: #1E293B;
-            scroll-behavior: smooth;
+            color: #1E293B; scroll-behavior: smooth;
         }
-
         .premium-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;
         }
+        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.15); border-color: #3b82f6; background: white; }
+        
+        /* Sponsor Şeridi Animasyonu */
+        .sponsor-track { display: flex; gap: 40px; width: calc(250px * 10); animation: scroll 20s linear infinite; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-250px * 5)); } }
+        
+        .ref-img { width: 100%; height: 220px; object-fit: cover; border-radius: 24px; transition: 0.4s; border: 1px solid rgba(0,0,0,0.05); }
+        .ref-img:hover { transform: scale(1.03); }
 
-        .premium-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.15);
-            border-color: #3b82f6;
-            background: white;
-        }
-
-        .ref-img {
-            width: 100%; height: 220px; object-fit: cover;
-            border-radius: 24px; transition: 0.4s;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .ref-img:hover { transform: scale(1.03); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-        #sidePanel {
-            position: fixed; top: 0; right: -100%; width: 100%; max-width: 450px;
-            height: 100%; background: white; z-index: 1000;
-            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            box-shadow: -20px 0 50px rgba(0,0,0,0.1);
-            padding: 40px; display: flex; flex-direction: column;
-        }
+        #sidePanel { position: fixed; top: 0; right: -100%; width: 100%; max-width: 450px; height: 100%; background: white; z-index: 1000; transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); box-shadow: -20px 0 50px rgba(0,0,0,0.1); padding: 40px; display: flex; flex-direction: column; }
         #sidePanel.open { right: 0; }
         .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); display: none; z-index: 999; }
         
-        /* Özelleştirilmiş Inputlar */
         .input-box { position: relative; margin-bottom: 15px; }
         .input-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #3b82f6; }
         .custom-input { width: 100%; background: #F8FAFC; border: 2px solid #F1F5F9; padding: 16px 16px 16px 48px; border-radius: 16px; outline: none; transition: 0.3s; font-weight: 600; }
-        .custom-input:focus { border-color: #3b82f6; background: white; }
     </style>
 </head>
 <body>
-
     <div id="overlay" class="overlay" onclick="closePanel()"></div>
 
     <nav class="flex justify-between items-center px-8 py-5 sticky top-0 bg-white/70 backdrop-blur-md z-50 border-b border-slate-100">
         <div onclick="location.reload()" class="cursor-pointer text-3xl font-black tracking-tighter text-blue-600">ESEN TECH</div>
-        
         <div class="flex items-center gap-6">
             <div class="hidden md:flex items-center gap-4 text-[11px] font-extrabold uppercase tracking-widest text-slate-400">
-                <a href="#" onclick="location.reload()" class="hover:text-blue-600 transition">Ana Menü</a>
-                <span class="text-slate-200">|</span>
-                <a href="#hizmetler" class="hover:text-blue-600 transition">Hizmetler</a>
-                <span class="text-slate-200">|</span>
-                <a href="#about" class="hover:text-blue-600 transition">Hakkımızda</a>
+                <a href="#hizmetler">Hizmetler</a> | <a href="#about">Hakkımızda</a>
             </div>
-            <div class="h-8 w-[1px] bg-slate-100 hidden md:block"></div>
             <div class="text-center">
                 <a href="https://wa.me/905346625972" class="bg-blue-600 text-white px-7 py-2 rounded-full font-bold text-sm block shadow-lg shadow-blue-100">WhatsApp</a>
                 <span class="text-[9px] font-bold text-blue-500 uppercase tracking-tighter block mt-1">7/24 Teknik Destek</span>
@@ -80,39 +54,40 @@
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center">
+    <div class="bg-white border-b border-slate-100 overflow-hidden py-4">
+        <div class="sponsor-track">
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-solid fa-microchip text-xl"></i> <span class="font-bold">INTEL PARTNER</span></div>
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-nvidia text-xl"></i> <span class="font-bold">NVIDIA CORP</span></div>
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-microsoft text-xl"></i> <span class="font-bold">MICROSOFT</span></div>
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-apple text-xl"></i> <span class="font-bold">APPLE SERVİS</span></div>
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-solid fa-shield-halved text-xl"></i> <span class="font-bold">ESET SECURITY</span></div>
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-solid fa-microchip text-xl"></i> <span class="font-bold">INTEL PARTNER</span></div>
+            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-nvidia text-xl"></i> <span class="font-bold">NVIDIA CORP</span></div>
+        </div>
+    </div>
+
+    <header class="py-20 text-center px-6">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-tight">Teknolojide <span class="text-blue-600">Esen</span> Kalite.</h1>
-        <p class="text-slate-500 max-w-2xl mx-auto text-lg font-medium italic">"Türkiye genelinde kurumsal ve bireysel teknoloji çözümleri."</p>
+        <p class="text-slate-500 max-w-2xl mx-auto text-lg font-medium italic">"Türkiye genelinde profesyonel teknoloji çözümleri."</p>
     </header>
 
     <section id="hizmetler" class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('PC Tamiri', 'Profesyonel onarım.')"><i class="fa-solid fa-screwdriver-wrench text-2xl text-blue-600 mb-4 block"></i><h3 class="font-bold">PC Tamiri</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Sistem Toplama', 'Canavar sistemler.')"><i class="fa-solid fa-desktop text-2xl text-emerald-600 mb-4 block"></i><h3 class="font-bold">Sistem Toplama</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Logo Tasarım', 'Kurumsal kimlik.')"><i class="fa-solid fa-pen-nib text-2xl text-purple-600 mb-4 block"></i><h3 class="font-bold">Logo Tasarımı</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Web Yazılım', 'Hızlı çözümler.')"><i class="fa-solid fa-code text-2xl text-indigo-600 mb-4 block"></i><h3 class="font-bold">Web Yazılım</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Anakart Onarımı', 'Mikroskop tamir.')"><i class="fa-solid fa-microchip text-2xl text-red-600 mb-4 block"></i><h3 class="font-bold">Anakart Onarımı</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Veri Kurtarma', 'Profesyonel recovery.')"><i class="fa-solid fa-database text-2xl text-slate-900 mb-4 block"></i><h3 class="font-bold">Veri Kurtarma</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Mining Servisi', 'GPU Optimizasyon.')"><i class="fa-solid fa-coins text-2xl text-orange-600 mb-4 block"></i><h3 class="font-bold">Mining Servisi</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Kafe Çözümleri', 'Diskless yönetim.')"><i class="fa-solid fa-network-wired text-2xl text-cyan-600 mb-4 block"></i><h3 class="font-bold">Kafe Çözümleri</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Siber Güvenlik', 'Ağ koruması.')"><i class="fa-solid fa-shield-virus text-2xl text-green-600 mb-4 block"></i><h3 class="font-bold">Siber Güvenlik</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Bakım Anlaşması', 'Yıllık destek.')"><i class="fa-solid fa-file-contract text-2xl text-yellow-600 mb-4 block"></i><h3 class="font-bold">Bakım Anlaşması</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Yazıcı Tamiri', 'Hızlı servis.')"><i class="fa-solid fa-print text-2xl text-pink-600 mb-4 block"></i><h3 class="font-bold">Yazıcı Tamiri</h3></div>
-        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('IT Danışmanlık', 'Stratejik akıl.')"><i class="fa-solid fa-lightbulb text-2xl text-teal-600 mb-4 block"></i><h3 class="font-bold">IT Danışmanlık</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('PC Tamiri')"><i class="fa-solid fa-screwdriver-wrench text-2xl text-blue-600 mb-4 block"></i><h3 class="font-bold">PC Tamiri</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Sistem Toplama')"><i class="fa-solid fa-desktop text-2xl text-emerald-600 mb-4 block"></i><h3 class="font-bold">Sistem Toplama</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Logo Tasarım')"><i class="fa-solid fa-pen-nib text-2xl text-purple-600 mb-4 block"></i><h3 class="font-bold">Logo Tasarımı</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Web Yazılım')"><i class="fa-solid fa-code text-2xl text-indigo-600 mb-4 block"></i><h3 class="font-bold">Web Yazılım</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Anakart Onarımı')"><i class="fa-solid fa-microchip text-2xl text-red-600 mb-4 block"></i><h3 class="font-bold">Anakart Onarımı</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Veri Kurtarma')"><i class="fa-solid fa-database text-2xl text-slate-900 mb-4 block"></i><h3 class="font-bold">Veri Kurtarma</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Mining Servisi')"><i class="fa-solid fa-coins text-2xl text-orange-600 mb-4 block"></i><h3 class="font-bold">Mining Servisi</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Kafe Çözümleri')"><i class="fa-solid fa-network-wired text-2xl text-cyan-600 mb-4 block"></i><h3 class="font-bold">Kafe Çözümleri</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Siber Güvenlik')"><i class="fa-solid fa-shield-virus text-2xl text-green-600 mb-4 block"></i><h3 class="font-bold">Siber Güvenlik</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Bakım Anlaşması')"><i class="fa-solid fa-file-contract text-2xl text-yellow-600 mb-4 block"></i><h3 class="font-bold">Bakım Anlaşması</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Yazıcı Tamiri')"><i class="fa-solid fa-print text-2xl text-pink-600 mb-4 block"></i><h3 class="font-bold">Yazıcı Tamiri</h3></div>
+        <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('IT Danışmanlık')"><i class="fa-solid fa-lightbulb text-2xl text-teal-600 mb-4 block"></i><h3 class="font-bold">IT Danışmanlık</h3></div>
     </section>
 
     <section id="about" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-100">
-        <div class="flex flex-col md:flex-row gap-12 items-center mb-20">
-            <div class="flex-1">
-                <h2 class="text-4xl font-black text-slate-900 mb-6 uppercase tracking-tighter italic">Hakkımızda</h2>
-                <p class="text-slate-500 text-lg leading-relaxed mb-6 font-medium">ESEN TECH olarak, Türkiye genelinde 10 yılı aşkın süredir teknoloji partnerliği yapıyoruz. Mikroskobik anakart onarımlarından siber güvenliğe kadar her alanda profesyonel destek sağlıyoruz.</p>
-                <div class="bg-blue-600 text-white p-8 rounded-[32px] shadow-xl shadow-blue-100 inline-block">
-                    <div class="text-4xl font-black">10.000+</div>
-                    <p class="text-xs font-bold uppercase tracking-widest opacity-80">Başarılı Teslimat</p>
-                </div>
-            </div>
-        </div>
-
-        <h3 class="text-2xl font-black mb-10 text-slate-900 uppercase italic">Referans Çalışmalarımız</h3>
+        <h2 class="text-4xl font-black text-slate-900 mb-10 uppercase tracking-tighter italic text-center">Referanslarımız</h2>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
             <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=300" class="ref-img">
             <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?w=300" class="ref-img">
@@ -130,46 +105,21 @@
     <div id="sidePanel">
         <button onclick="closePanel()" class="text-2xl mb-8 self-start">✕</button>
         <h2 id="pTitle" class="text-3xl font-black text-blue-600 mb-6 uppercase tracking-tighter"></h2>
-        
-        <div class="input-box">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" id="name" class="custom-input" placeholder="Ad Soyad">
-        </div>
-        <div class="input-box">
-            <i class="fa-solid fa-map-location-dot"></i>
-            <input type="text" id="city" class="custom-input" placeholder="Şehir">
-        </div>
-        <div class="input-box">
-            <i class="fa-solid fa-phone-volume"></i>
-            <input type="tel" id="tel" class="custom-input" placeholder="Telefon">
-        </div>
-        
-        <button onclick="sendToWhatsApp()" class="w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-blue-100 mt-4 hover:bg-blue-700 transition flex items-center justify-center gap-3">
+        <div class="input-box"><i class="fa-solid fa-user"></i><input type="text" id="name" class="custom-input" placeholder="Ad Soyad"></div>
+        <div class="input-box"><i class="fa-solid fa-map-pin"></i><input type="text" id="city" class="custom-input" placeholder="Şehir"></div>
+        <div class="input-box"><i class="fa-solid fa-phone"></i><input type="tel" id="tel" class="custom-input" placeholder="Telefon"></div>
+        <button onclick="sendToWhatsApp()" class="w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-lg mt-4 shadow-xl shadow-blue-100 flex items-center justify-center gap-3">
             <i class="fa-brands fa-whatsapp text-2xl"></i> TALEBİ ONAYLA
         </button>
     </div>
 
-    <footer class="py-12 border-t border-slate-100 text-center text-slate-400 text-[10px] font-bold tracking-[5px] uppercase">
-        © 2026 ESEN TECH | TÜRKİYE
-    </footer>
-
     <script>
         let currentSvc = "";
-        function openPanel(title, desc) { 
-            currentSvc = title; 
-            document.getElementById('pTitle').innerText = title; 
-            document.getElementById('sidePanel').classList.add('open'); 
-            document.getElementById('overlay').style.display = 'block'; 
-        }
-        function closePanel() { 
-            document.getElementById('sidePanel').classList.remove('open'); 
-            document.getElementById('overlay').style.display = 'none'; 
-        }
+        function openPanel(title) { currentSvc = title; document.getElementById('pTitle').innerText = title; document.getElementById('sidePanel').classList.add('open'); document.getElementById('overlay').style.display = 'block'; }
+        function closePanel() { document.getElementById('sidePanel').classList.remove('open'); document.getElementById('overlay').style.display = 'none'; }
         function sendToWhatsApp() {
-            const n = document.getElementById('name').value;
-            const c = document.getElementById('city').value;
-            const t = document.getElementById('tel').value;
-            if(!n || !c || !t) { alert("Lütfen alanları doldur kanka."); return; }
+            const n = document.getElementById('name').value; const c = document.getElementById('city').value; const t = document.getElementById('tel').value;
+            if(!n || !c || !t) { alert("Doldur kanka!"); return; }
             window.location.href = `https://wa.me/905346625972?text=*YENİ TALEP*%0A%0A*Hizmet:* ${currentSvc}%0A*İsim:* ${n}%0A*Şehir:* ${c}%0A*Tel:* ${t}`;
         }
     </script>
