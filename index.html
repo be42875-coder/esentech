@@ -389,9 +389,9 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
 </div></div>
 
 <header class="nav" id="nav"><div class="wrap nav-in">
- <a href="#top" class="logo" aria-label="ESENTECH Technology ana sayfa"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a>
+ <a href="/anasayfa" class="logo" aria-label="ESENTECH Technology ana sayfa"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a>
  <nav class="menu" id="menu" aria-label="Ana menü">
-  <a href="#yaklasim">Yaklaşım</a><a href="#hizmetler">Hizmetler</a><a href="#projeler">Konseptler</a><a href="#surec">Süreç</a><a href="#fiyatlar">Fiyatlar</a><a href="#yorumlar">Yorumlar</a><a href="#sss">SSS</a>
+  <a href="/yaklasim">Yaklaşım</a><a href="/hizmetler">Hizmetler</a><a href="/konseptler">Konseptler</a><a href="/surec">Süreç</a><a href="/fiyatlar">Fiyatlar</a><a href="/yorumlar">Yorumlar</a><a href="/sss">SSS</a>
  </nav>
  <div class="nav-r">
   <a id="navWa" class="btn btn-p btn-s" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-wa"/></svg> Teklif Al</a>
@@ -425,8 +425,8 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
    </h1>
    <p class="sub rv-up" style="--d:420">Web tasarım. E-ticaret. Video. Kreatif tasarım.</p>
    <div class="cta rv-up" style="--d:540">
-    <a class="btn btn-p" href="#iletisim">Projeni Başlat <svg class="i"><use href="#i-arrow"/></svg></a>
-    <a class="btn btn-g" href="#hizmetler">Hizmetleri Keşfet</a>
+    <a class="btn btn-p" href="/iletisim">Projeni Başlat <svg class="i"><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-g" href="/hizmetler">Hizmetleri Keşfet</a>
    </div>
   </div>
  </div>
@@ -525,8 +525,8 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
 
 <footer><div class="wrap">
  <div class="fgrid">
-  <div><a href="#top" class="logo" aria-label="Başa dön"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a><p style="margin-top:16px;max-width:36ch">Web. E-ticaret. Video. Kreatif tasarım.</p></div>
-  <div><h4>Sayfalar</h4><ul><li><a href="#hizmetler">Hizmetler</a></li><li><a href="#projeler">Konseptler</a></li><li><a href="#surec">Süreç</a></li><li><a href="#fiyatlar">Fiyatlar</a></li><li><a href="#sss">SSS</a></li></ul></div>
+  <div><a href="/anasayfa" class="logo" aria-label="Başa dön"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a><p style="margin-top:16px;max-width:36ch">Web. E-ticaret. Video. Kreatif tasarım.</p></div>
+  <div><h4>Sayfalar</h4><ul><li><a href="/hizmetler">Hizmetler</a></li><li><a href="/konseptler">Konseptler</a></li><li><a href="/surec">Süreç</a></li><li><a href="/fiyatlar">Fiyatlar</a></li><li><a href="/sss">SSS</a></li></ul></div>
   <div><h4>Yasal</h4><ul><li><button data-legal="kvkk">KVKK Aydınlatma Metni</button></li><li><button data-legal="gizlilik">Gizlilik Politikası</button></li><li><button data-legal="cerez">Çerez Politikası</button></li><li><button onclick="openCookiePrefs()">Çerez Tercihleri</button></li></ul></div>
  </div>
  <div class="fbot"><span>© <span id="yr"></span> ESENTECH Technology. Tüm hakları saklıdır.</span><div><a href="tel:+905349644975">+90 534 964 4975</a><a href="mailto:info@esentech.com">info@esentech.com</a></div></div>
@@ -900,5 +900,26 @@ const DEMO=[
 })();
 
 </script>
-</body>
+<script>
+(function(){
+var M={anasayfa:'top',yaklasim:'yaklasim',hizmetler:'hizmetler',konseptler:'projeler',surec:'surec',fiyatlar:'fiyatlar',yorumlar:'yorumlar',sss:'sss',iletisim:'iletisim'};
+var R={};for(var k in M)R[M[k]]=k;
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function go(slug,push){var id=M[slug],el=id&&document.getElementById(id);if(!el)return false;
+ el.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+ try{history[push?'pushState':'replaceState'](null,'','/'+slug)}catch(e){}return true}
+document.addEventListener('click',function(e){
+ if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;
+ var a=e.target.closest&&e.target.closest('a[href^="/"]');if(!a)return;
+ var slug=a.getAttribute('href').slice(1);if(!M[slug])return;
+ e.preventDefault();go(slug,true)},true);
+var q=null;try{q=sessionStorage.getItem('esen_yol');sessionStorage.removeItem('esen_yol')}catch(e){}
+var slug=(q||location.pathname).replace(/^\/+|\/+$/g,'').replace(/\.html$/,'').toLowerCase();
+if(M[slug])addEventListener('load',function(){setTimeout(function(){go(slug,false)},350)});
+else if(slug&&slug!=='index'&&location.protocol!=='file:'){try{history.replaceState(null,'','/')}catch(e){}}
+if('IntersectionObserver' in window){var t;var io=new IntersectionObserver(function(es){es.forEach(function(x){
+ if(x.isIntersecting&&R[x.target.id]){clearTimeout(t);var n=R[x.target.id];t=setTimeout(function(){try{if(location.pathname!=='/'+n)history.replaceState(null,'','/'+n)}catch(e){}},250)}})},{rootMargin:'-45% 0px -50% 0px'});
+ Object.keys(R).forEach(function(i){var el=document.getElementById(i);el&&io.observe(el)})}
+})();
+</script></body>
 </html>
