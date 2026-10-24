@@ -17,12 +17,12 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c3aed'/%3E%3Cpath d='M43 17H25a10 10 0 0 0-10 10v10a10 10 0 0 0 10 10h18v-8H25a2 2 0 0 1-2-2v-2h20v-8H23v-2a2 2 0 0 1 2-2h18z' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ESENTECH Technology","telephone":"+905349644975","email":"info@esentech.com","description":"Web tasarım, e-ticaret, video kurgu, grafik ve 3D tasarım hizmetleri.","areaServed":"TR","serviceType":["Web tasarım","E-ticaret sitesi","Video kurgu","Grafik tasarım","3D tasarım"]}</script>
 <script>
 (function(){var r=document.documentElement;r.classList.add('js');var s=0;try{s=sessionStorage.getItem('esen_intro')}catch(e){}
 var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(s||rm)r.classList.add('skip-intro');
-setTimeout(function(){r.classList.add('ready');try{sessionStorage.setItem('esen_intro','1')}catch(e){}},(s||rm)?40:1750);
+setTimeout(function(){r.classList.add('ready');try{sessionStorage.setItem('esen_intro','1')}catch(e){}},(s||rm)?40:2400);
 setTimeout(function(){r.classList.add('ready','skip-intro')},4500);})();
 </script>
 <style>
@@ -56,20 +56,20 @@ section{position:relative}
 .btn-bn{background:linear-gradient(to right,#7c3aed,#d946ef);color:#fff}.btn-bn:hover{filter:brightness(1.1)}
 .btn-s{padding:10px 16px;font-size:14px;min-height:44px;flex:1 1 auto}
 .lnk{font-weight:700;font-size:14px;color:var(--pink);padding:6px 2px;display:inline-flex;gap:8px;align-items:center}.lnk:hover{color:#fff}.lnk .i{transition:transform .3s var(--ease)}.lnk:hover .i{transform:translateX(4px)}
-/* AÇILIŞ PERDESİ */
-#loader{position:fixed;inset:0;z-index:3000;display:none;place-items:center;background:var(--ink);color:#fff}
-.js #loader{display:grid}.skip-intro #loader{display:none!important}
-.ld-in{display:flex;flex-direction:column;align-items:center;gap:24px}
-.ld-mark{width:76px;height:76px;border-radius:24px;background:linear-gradient(to top right,#7c3aed,#d946ef,#f43f5e);display:grid;place-items:center;color:#fff;box-shadow:0 0 60px rgba(217,70,239,.55);animation:ldPulse 1.3s ease-in-out infinite}
-.ld-mark .i{width:38px;height:38px}
-.ld-word{display:flex;overflow:hidden;font:800 clamp(28px,7vw,44px)/1.1 var(--disp);letter-spacing:-.04em}
-.ld-word span{display:inline-block;transform:translateY(115%);animation:chIn .75s var(--ease) forwards;animation-delay:calc(var(--i)*55ms + 150ms)}
-.ld-bar{width:190px;height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden}
-.ld-bar i{display:block;height:100%;background:var(--grad);transform:scaleX(0);transform-origin:left;animation:ldBar 1.15s var(--ease) .1s forwards}
-.ready #loader{animation:ldOut .9s cubic-bezier(.77,0,.18,1) forwards}
-@keyframes chIn{to{transform:none}}@keyframes ldBar{to{transform:scaleX(1)}}
-@keyframes ldPulse{50%{transform:scale(1.07)}}
-@keyframes ldOut{to{transform:translateY(-100%);visibility:hidden}}
+/* AÇILIŞ SEKANSI */
+#loader{position:fixed;inset:0;z-index:3000;display:none;color:#fff;background:transparent;overflow:hidden}
+.js #loader{display:block}.skip-intro #loader{display:none!important}
+#introCv{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ld-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;pointer-events:none}
+.ld-mark{width:92px;height:92px;border-radius:28px;background:linear-gradient(to top right,#7c3aed,#d946ef,#f43f5e);display:grid;place-items:center;color:#fff;box-shadow:0 0 70px rgba(217,70,239,.6),0 0 0 1px rgba(255,255,255,.18) inset;opacity:0;will-change:transform,opacity}
+.ld-mark .i{width:46px;height:46px}
+.ld-word{display:flex;overflow:hidden;padding:.1em .1em .14em;font:800 clamp(30px,8vw,48px)/1.1 var(--disp);letter-spacing:-.04em}
+.ld-word span{display:inline-block;transform:translateY(120%);animation:chIn .7s var(--ease) forwards;animation-delay:calc(var(--i)*45ms + 1300ms)}
+.ld-sub{font:700 10px/1 var(--font);letter-spacing:.46em;text-indent:.46em;color:var(--pink);opacity:0;animation:ldFade .8s ease 1.75s forwards}
+.ld-skip{position:absolute;left:50%;bottom:calc(26px + env(safe-area-inset-bottom));translate:-50% 0;min-height:44px;padding:0 20px;border-radius:99px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#c3c8e6;font:600 13px var(--font);opacity:0;animation:ldFade .6s ease .7s forwards}
+.ld-skip[hidden]{display:none}.ld-skip:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.ready #loader:not(.iris){opacity:0;visibility:hidden;transition:opacity .6s,visibility 0s .6s}
+@keyframes chIn{to{transform:none}}@keyframes ldFade{to{opacity:1}}
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
 .nav.menu-on{background:rgba(5,7,26,.98)}
@@ -501,11 +501,11 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
 
 <a class="skip" href="#icerik">İçeriğe geç</a>
 
-<div id="loader" aria-hidden="true"><div class="ld-in">
- <div class="ld-mark"><svg class="i"><use href="#i-node"/></svg></div>
- <div class="ld-word" aria-hidden="true"><span style="--i:0">E</span><span style="--i:1">S</span><span style="--i:2">E</span><span style="--i:3">N</span><span style="--i:4">T</span><span style="--i:5">E</span><span style="--i:6">C</span><span style="--i:7">H</span></div>
- <div class="ld-bar"><i></i></div>
-</div></div>
+<div id="loader"><canvas id="introCv" aria-hidden="true"></canvas><div class="ld-in" aria-hidden="true">
+ <div class="ld-mark" id="ldMark"><svg class="i"><use href="#i-node"/></svg></div>
+ <div class="ld-word"><span style="--i:0">E</span><span style="--i:1">S</span><span style="--i:2">E</span><span style="--i:3">N</span><span style="--i:4">T</span><span style="--i:5">E</span><span style="--i:6">C</span><span style="--i:7">H</span></div>
+ <div class="ld-sub">TECHNOLOGY</div>
+</div><button class="ld-skip" id="ldSkip" type="button">Girişi geç</button></div>
 
 <header class="nav" id="nav"><div class="wrap nav-in">
  <a href="/anasayfa" class="logo" aria-label="ESENTECH Technology ana sayfa"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a>
@@ -1021,6 +1021,83 @@ const PRINC=[
  go(0);play();
 })();
 
+</script>
+<script>
+/* Sinematik açılış: canvas parçacıklar, ağ, şok halkası ve iris geçişi. Sayfa kaynaklarını beklemez; 4,5 sn'de ne olursa olsun kapanır. */
+(function(){
+ var root=document.documentElement,ld=document.getElementById('loader'),cv=document.getElementById('introCv');
+ if(!ld||!cv||root.classList.contains('skip-intro'))return;
+ var ctx=cv.getContext&&cv.getContext('2d');if(!ctx)return;
+ var small=matchMedia('(max-width:700px)').matches;
+ var mark=document.getElementById('ldMark'),inner=ld.querySelector('.ld-in'),skip=document.getElementById('ldSkip');
+ var W=0,H=0,cx=0,cy=0,U=0,dpr=1,raf=0,start=performance.now(),IRIS=2150,END=2950,rdy=false,seed=11;
+ var N=small?64:120,M=9,P=[],NODES=[];
+ function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}
+ function cl(x){return x<0?0:x>1?1:x}
+ function eo(x){x=cl(x);return 1-Math.pow(1-x,3)}
+ function eio(x){x=cl(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+ function eob(x){x=cl(x);var c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)}
+ var COLS=[[139,92,246],[217,70,239],[56,189,248],[244,114,182],[196,181,253]];
+ var SPR=COLS.map(function(c){var s=document.createElement('canvas');s.width=s.height=32;var x=s.getContext('2d'),g=x.createRadialGradient(16,16,0,16,16,16);g.addColorStop(0,'rgba('+c+',1)');g.addColorStop(.35,'rgba('+c+',.4)');g.addColorStop(1,'rgba('+c+',0)');x.fillStyle=g;x.fillRect(0,0,32,32);return s});
+ for(var i=0;i<N;i++)P.push({a:rnd()*6.2832,r0:1.0+rnd()*.9,r1:.12+rnd()*.26,sw:(rnd()-.5)*5,d:rnd()*.32,c:Math.floor(rnd()*5),s:.5+rnd()*1.1,o:(rnd()<.5?-1:1)*(.00012+rnd()*.0002)});
+ for(var k=0;k<M;k++)NODES.push({a:k/M*6.2832+(rnd()-.5)*.4,r:.2+rnd()*.07});
+ var LN=[];for(var l=0;l<4;l++)LN.push({y:.16+rnd()*.68,ph:rnd()*.5,len:.28+rnd()*.2});
+ function size(){dpr=Math.min(devicePixelRatio||1,small?1.5:1.75);W=innerWidth;H=innerHeight;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+  U=Math.min(W,H)*(small?1.15:1.05);cx=W/2;cy=(mark?mark.offsetTop+mark.offsetHeight/2:H/2)+(inner?inner.offsetTop:0)}
+ function pos(p,t){var q=eio((t/1250-p.d)/.7);var r=(p.r0*(1-q)+p.r1*q)*U*.62;var ang=p.a+p.sw*(1-q)+p.o*Math.max(0,t-900);return [cx+Math.cos(ang)*r,cy+Math.sin(ang)*r*.9,q]}
+ function finish(){if(raf)cancelAnimationFrame(raf);raf=0;ld.style.display='none';removeEventListener('resize',size)}
+ function markReady(){if(rdy)return;rdy=true;root.classList.add('ready');try{sessionStorage.setItem('esen_intro','1')}catch(e){}}
+ function frame(now){
+  var t=now-start;
+  ctx.globalCompositeOperation='source-over';ctx.globalAlpha=1;
+  ctx.fillStyle='#05071a';ctx.fillRect(0,0,W,H);
+  var ga=cl(t/900),g=ctx.createRadialGradient(cx,cy,0,cx,cy,U*.7);
+  g.addColorStop(0,'rgba(124,58,237,'+(.42*ga)+')');g.addColorStop(.55,'rgba(76,29,149,'+(.16*ga)+')');g.addColorStop(1,'rgba(5,7,26,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  var ip=cl((t-IRIS)/(END-IRIS)),fade=1-cl(ip*1.4);
+  ctx.globalCompositeOperation='lighter';
+  /* enerji çizgileri */
+  if(t<1500){for(var l=0;l<LN.length;l++){var L=LN[l],p=cl((t-L.ph*300)/950);if(p<=0||p>=1)continue;var hx=(-.25+p*1.5)*W,tx=hx-L.len*W,y=L.y*H,gr=ctx.createLinearGradient(tx,0,hx,0);gr.addColorStop(0,'rgba(139,92,246,0)');gr.addColorStop(1,'rgba(232,121,249,'+(.5*Math.sin(p*3.14159))+')');ctx.strokeStyle=gr;ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(tx,y);ctx.lineTo(hx,y);ctx.stroke()}}
+  /* parçacıklar */
+  var sz=small?9:11;
+  for(var i=0;i<P.length;i++){var pp=P[i],a=pos(pp,t),al=Math.min(1,a[2]*1.6+.15)*(.35+.4*pp.s/1.6)*fade;
+   if(al<=.01)continue;
+   if(a[2]<.98&&i%3===0){var b=pos(pp,Math.max(0,t-55));ctx.strokeStyle='rgba('+COLS[pp.c]+','+(al*.55)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(b[0],b[1]);ctx.lineTo(a[0],a[1]);ctx.stroke()}
+   ctx.globalAlpha=al;var s=sz*pp.s;ctx.drawImage(SPR[pp.c],a[0]-s,a[1]-s,s*2,s*2)}
+  ctx.globalAlpha=1;
+  /* ağ */
+  var np=cl((t-1250)/700);
+  if(np>0){var rot=t*.00018,pts=[];
+   for(var k=0;k<M;k++){var n=NODES[k],an=n.a+rot,r=n.r*U*.62;pts.push([cx+Math.cos(an)*r*1.25,cy+Math.sin(an)*r*1.05])}
+   ctx.lineWidth=1;
+   for(k=0;k<M;k++){var pk=cl(np*1.7-k*.09),q=pts[k];if(pk<=0)continue;
+    ctx.strokeStyle='rgba(196,181,253,'+(.34*fade)+')';ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(cx+(q[0]-cx)*pk,cy+(q[1]-cy)*pk);ctx.stroke();
+    var q2=pts[(k+1)%M];if(pk>.6){ctx.strokeStyle='rgba(232,121,249,'+(.16*fade*pk)+')';ctx.beginPath();ctx.moveTo(q[0],q[1]);ctx.lineTo(q2[0],q2[1]);ctx.stroke()}
+    if(pk>.95){var ns=(7+2*Math.sin(t*.004+k))*(small?1:1.2);ctx.globalAlpha=.9*fade;ctx.drawImage(SPR[k%2?1:2],q[0]-ns,q[1]-ns,ns*2,ns*2);ctx.globalAlpha=1}}}
+  /* şok halkaları */
+  for(var w=0;w<2;w++){var tr=(t-1150-w*220)/900;if(tr>0&&tr<1){var rr=U*(.05+.5*eo(tr))*.62*1.15;ctx.strokeStyle='rgba('+(w?'56,189,248':'217,70,239')+','+((1-tr)*.5*fade)+')';ctx.lineWidth=.6+2.2*(1-tr);ctx.beginPath();ctx.arc(cx,cy,rr,0,6.2832);ctx.stroke()}}
+  ctx.globalCompositeOperation='source-over';
+  /* logo (DOM) */
+  if(mark){var m=cl((t-650)/700);mark.style.opacity=Math.min(1,m*1.8);mark.style.transform='scale('+((.5+.5*eob(m))*(1+ip*.55)).toFixed(3)+')'}
+  if(inner)inner.style.opacity=ip>0?String(Math.max(0,1-ip*2.3)):'1';
+  /* iris geçişi */
+  if(t>=IRIS-60){markReady();if(skip&&!skip.hidden)skip.hidden=true}
+  if(ip>0){
+   var far=Math.hypot(Math.max(cx,W-cx),Math.max(cy,H-cy)),rad=eio(ip)*(far+U*.2);
+   ctx.globalCompositeOperation='destination-out';
+   var hg=ctx.createRadialGradient(cx,cy,Math.max(0,rad-U*.2),cx,cy,rad+1);hg.addColorStop(0,'rgba(0,0,0,1)');hg.addColorStop(1,'rgba(0,0,0,0)');
+   ctx.fillStyle=hg;ctx.fillRect(0,0,W,H);
+   ctx.globalCompositeOperation='lighter';
+   if(ip<.92){ctx.strokeStyle='rgba(217,70,239,'+(.5*(1-ip))+')';ctx.lineWidth=10*(1-ip)+2;ctx.beginPath();ctx.arc(cx,cy,rad,0,6.2832);ctx.stroke();ctx.strokeStyle='rgba(255,255,255,'+(.55*(1-ip))+')';ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(cx,cy,rad,0,6.2832);ctx.stroke()}
+   ctx.globalCompositeOperation='source-over'}
+  if(t>=END){finish();return}
+  raf=requestAnimationFrame(frame)}
+ function skipNow(){var t=performance.now()-start;if(t<IRIS)start=performance.now()-IRIS}
+ if(skip)skip.addEventListener('click',skipNow);
+ addEventListener('keydown',function(e){if(e.key==='Escape')skipNow()});
+ ld.classList.add('iris');size();addEventListener('resize',size);raf=requestAnimationFrame(frame);
+ document.addEventListener('visibilitychange',function(){if(document.hidden&&!rdy){markReady();finish()}});
+})();
 </script>
 <script>
 (function(){
