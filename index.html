@@ -195,3 +195,816 @@ h1 .l3>span{background:linear-gradient(90deg,#a78bfa,#e879f9 55%,#fb7185);-webki
 .b1{background:#f6f7fb;color:#14122e}
 .b1 .mast{position:absolute;left:7cqw;right:7cqw;top:6cqw;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #14122e;padding-bottom:3cqw;font:800 4cqw var(--disp);letter-spacing:-.04em}.b1 .mast i{display:block;width:12cqw;height:2cqw;border-radius:2cqw;background:#c5c9e2}
 .b1 .hd{position:absolute;left:7cqw;right:7cqw;top:22cqw;font:800 11cqw/.95 var(--disp);letter-spacing:-.05em}
+.b1 .im{position:absolute;left:7cqw;top:55cqw;width:42cqw;height:26cqw;border-radius:2.4cqw;background:linear-gradient(135deg,#c4b5fd,#f0abfc 55%,#fda4af)}
+.b1 .tx{position:absolute;left:54cqw;right:7cqw;top:55cqw;display:grid;gap:2cqw}.b1 .tx i{display:block;height:1.5cqw;border-radius:1cqw;background:#c5c9e2}
+.c1{background:#fbbf24;color:#14122e}
+.c1 .pc{position:absolute;left:-6cqw;top:-10cqw;font:800 92cqw/1 var(--disp);letter-spacing:-.08em;color:#14122e}
+.c1 .ttl{position:absolute;right:8cqw;top:10cqw;font:800 9cqw/.95 var(--disp);letter-spacing:-.04em;text-align:right;color:#fff;-webkit-text-stroke:0;mix-blend-mode:normal}
+.c1 .bst{position:absolute;right:10cqw;top:44cqw;width:26cqw;height:26cqw;border-radius:50%;background:#dc2626;color:#fff;display:grid;place-items:center;font:800 7cqw var(--disp);transform:rotate(-12deg)}
+.d1{background:#07091f}
+.d1 .k{position:absolute;left:8cqw;top:8cqw;font:800 21cqw/.86 var(--disp);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:.3cqw rgba(255,255,255,.75)}.d1 .k span{display:block;animation:kin 6s ease-in-out infinite}.d1 .k span:nth-child(2){color:#fff;-webkit-text-stroke:0}
+@keyframes kin{0%,100%{transform:translateX(0)}50%{transform:translateX(5cqw)}}
+.d1 .trk{position:absolute;left:8cqw;right:8cqw;bottom:34cqw;display:grid;gap:1.6cqw}.d1 .trk i{display:block;height:2.4cqw;border-radius:1cqw;width:var(--w);margin-left:var(--l,0);background:var(--c)}
+.d1 .ph{position:absolute;left:8cqw;right:8cqw;bottom:30cqw;height:20cqw;pointer-events:none}.d1 .ph::after{content:"";position:absolute;top:0;bottom:0;width:.4cqw;background:#fff;left:5%;}
+.e1{background:linear-gradient(135deg,#0d1233,#1b1450)}
+.e1 .lg{position:absolute;left:8cqw;top:8cqw;width:24cqw;height:24cqw;border-radius:7cqw;background:linear-gradient(to top right,#7c3aed,#d946ef,#f43f5e);display:grid;place-items:center;color:#fff;box-shadow:0 4cqw 10cqw rgba(124,58,237,.6)}.e1 .lg .i{width:12cqw;height:12cqw}
+.e1 .aa{position:absolute;right:8cqw;top:6cqw;font:800 26cqw/1 var(--disp);letter-spacing:-.06em;color:#fff}
+.e1 .sw{position:absolute;left:8cqw;right:8cqw;top:44cqw;display:flex;gap:2cqw}.e1 .sw i{display:block;flex:1;height:15cqw;border-radius:3cqw}
+.e1 .fn{position:absolute;left:8cqw;top:35cqw;font:600 2.4cqw var(--font);color:#a9afd3;letter-spacing:.04em}
+/* SÜREÇ */
+.proc{background:var(--ink);color:#fff;padding:clamp(80px,10vw,136px) 0;overflow:hidden}
+.proc::before{content:"";position:absolute;right:-20%;top:10%;width:70vmin;height:70vmin;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.35),transparent 65%)}
+.proc-grid{position:relative;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px)}
+.proc-sticky{position:sticky;top:120px;align-self:start}
+.tlw{position:relative;padding-left:64px;--pr:0}
+.tlw::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:rgba(255,255,255,.13)}
+.tl-fill{position:absolute;left:19px;top:20px;width:2px;height:calc((100% - 40px)*var(--pr));background:linear-gradient(#7c3aed,#d946ef,#f43f5e);box-shadow:0 0 20px var(--fuc)}
+.st{position:relative;padding:0 0 clamp(56px,8vw,104px);opacity:.36;transition:opacity .6s}.st:last-child{padding-bottom:0}.st.on{opacity:1}
+.st .dot{position:absolute;left:-64px;top:-2px;width:40px;height:40px;border-radius:50%;background:var(--ink);border:2px solid rgba(255,255,255,.22);display:grid;place-items:center;font:800 .95rem var(--disp);transition:background .5s,border-color .5s,box-shadow .5s}
+.st.on .dot{background:var(--grad);border-color:transparent;box-shadow:0 0 0 9px rgba(217,70,239,.16)}
+.st h3{font:800 clamp(1.6rem,3.2vw,2.6rem)/1.05 var(--disp);letter-spacing:-.035em}
+.st p{color:var(--mutd);max-width:46ch;margin-top:12px}
+.st .out{display:inline-flex;gap:8px;align-items:center;margin-top:16px;font-size:.82rem;font-weight:700;color:var(--pink)}
+/* FİYAT PANOSU */
+.board{background:linear-gradient(180deg,var(--navy),var(--ink));color:#fff;padding:clamp(72px,9vw,120px) 0}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,7vw,110px);margin-top:clamp(24px,4vw,44px)}
+.row{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"n d p" "s s s";align-items:baseline;gap:2px 14px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.12);text-align:left;width:100%;color:#fff;transition:padding .45s var(--ease)}
+.row .rn{grid-area:n;font:700 1.1rem/1.25 var(--disp)}
+.row .rd{grid-area:d;border-bottom:2px dotted rgba(255,255,255,.25);transform:translateY(-5px);min-width:16px}
+.row .rp{grid-area:p;font:800 1.45rem/1 var(--disp);letter-spacing:-.04em;transition:color .3s;white-space:nowrap}
+.row .rs{grid-area:s;font-size:.8rem;color:var(--mutd);font-weight:500}
+.row:hover{padding-left:12px}.row:hover .rp{color:var(--pink)}
+.tf{margin-top:clamp(28px,4vw,48px);display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:clamp(20px,3vw,32px)}
+.tf p{color:var(--mutd);font-size:.95rem}.tf p b{color:#fff}
+.tf .cta{flex:none}
+/* YORUMLAR */
+.rev{position:relative;overflow:hidden;color:#fff;padding:clamp(80px,10vw,136px) 0;background:radial-gradient(ellipse at 12% 20%,rgba(124,58,237,.28),transparent 45%),radial-gradient(ellipse at 88% 80%,rgba(217,70,239,.2),transparent 42%),linear-gradient(135deg,#070a20,#15132f 58%,#211039)}
+.rev .title{color:#fff}.rev .lead{color:#b8b8d3}
+.rev-box{width:min(100%,940px);margin:clamp(32px,5vw,56px) auto 0;outline-offset:8px}
+.rev-track{display:grid}
+.rev-slide{position:relative;grid-area:1/1;opacity:0;visibility:hidden;transform:translateX(34px) scale(.985);transition:opacity .55s ease,transform .55s var(--ease),visibility .55s;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.17);border-radius:34px;padding:clamp(28px,6vw,64px);box-shadow:0 30px 90px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;min-width:0;overflow:hidden}
+.rev-slide::before{content:"“";position:absolute;top:-.1em;right:.12em;font:800 clamp(8rem,22vw,18rem)/1 var(--disp);color:rgba(217,70,239,.22);pointer-events:none}
+.rev-slide.active{opacity:1;visibility:visible;transform:none}.rev-slide.before{transform:translateX(-34px) scale(.985)}
+.rev-q{font:600 clamp(1.1rem,2.5vw,1.85rem)/1.5 var(--disp);letter-spacing:-.015em;color:#eef0fb;margin:16px 0 28px;overflow-wrap:anywhere;position:relative}
+.rev-stars{color:var(--amber);letter-spacing:4px;font-size:18px}
+.rev-who{display:flex;align-items:center;gap:14px}.rev-av{width:48px;height:48px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:800;flex:none}
+.rev-who b{display:block}.rev-who span{font-size:.85rem;color:#b8b8d3}
+.demo{align-self:flex-start;margin-bottom:14px;padding:4px 12px;border-radius:99px;background:rgba(251,191,36,.15);border:1px solid rgba(251,191,36,.55);color:#fcd34d;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.rev-ctl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px;flex-wrap:wrap}
+.rev-btn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;transition:background .2s,transform .2s;display:grid;place-items:center}.rev-btn:hover{background:rgba(217,70,239,.38);transform:translateY(-2px)}
+.rev-dots{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;max-width:55%}
+.rev-dot{width:9px;height:9px;border-radius:99px;background:#6f7194;transition:.3s;padding:0}.rev-dot.active{width:30px;background:var(--pink)}
+.rev-count{font-size:12px;font-weight:700;letter-spacing:.08em;color:#c5c6df;min-width:44px;text-align:center}
+/* SSS */
+.faq-s{background:linear-gradient(180deg,var(--ink),#0c0a28);color:#fff;padding:clamp(72px,9vw,120px) 0}
+.faq-g{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,6vw,96px);align-items:start}
+.faq-g .sticky{position:sticky;top:110px}
+.faq{display:grid;gap:12px}
+.faq details{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:0 26px;transition:border-color .3s}
+.faq details[open]{border-color:rgba(217,70,239,.55)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;font:700 1.08rem/1.3 var(--disp);color:#fff;cursor:pointer;list-style:none;padding:20px 0;min-height:60px}
+.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--pink);flex:none;transition:transform .4s var(--ease)}.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--mutd);padding-bottom:22px;max-width:62ch}
+/* İLETİŞİM */
+.contact{background:linear-gradient(125deg,#3b1480,#7e1d8f 55%,#9f1239);color:#fff;padding:clamp(88px,11vw,152px) 0;overflow:hidden}
+.contact::before{content:"";position:absolute;left:-10%;bottom:-40%;width:80vmin;height:80vmin;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 65%)}
+.contact .eyebrow{color:#fde7ff}
+.big-t{font:800 clamp(2.6rem,8.4vw,7.4rem)/.92 var(--disp);letter-spacing:-.05em;margin-top:20px}
+.big-t span{display:block;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.85)}
+.cgrid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,6vw,88px);align-items:end}
+.contact .lead{color:#f3dcff}
+.pick{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.pick select{flex:1;min-width:210px;padding:14px 18px;border-radius:999px;border:2px solid rgba(255,255,255,.35);background:rgba(0,0,0,.2);color:#fff;font:inherit;font-size:16px;min-height:52px}
+.pick select option{color:#111}
+.ccards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cc{display:flex;flex-direction:column;gap:6px;padding:22px;border-radius:22px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);transition:transform .4s var(--ease),background .3s;min-width:0}
+.cc:hover{background:rgba(255,255,255,.2);transform:translateY(-4px)}.cc .i{width:26px;height:26px}.cc b{font-size:1rem}.cc span{font-size:.86rem;color:#f3dcff;overflow-wrap:anywhere}
+/* FOOTER */
+footer{background:var(--ink);color:#9aa0c4;padding:72px 0 0;font-size:.92rem;overflow:hidden}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+footer li{margin-bottom:10px}footer a:hover,footer button:hover{color:#fff}
+.fbot{border-top:1px solid #181d3f;margin-top:48px;padding:22px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem}
+.fbot div{display:flex;flex-wrap:wrap;gap:6px 22px}
+.fw{font:800 clamp(3.4rem,17vw,13.5rem)/.8 var(--disp);letter-spacing:-.065em;text-align:center;white-space:nowrap;color:transparent;background:linear-gradient(180deg,rgba(217,70,239,.55),rgba(124,58,237,.06) 78%);-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:1.5px rgba(255,255,255,.2);user-select:none;padding:40px 0 .06em}
+/* ORTAK ARKA PLAN DOKUSU */
+section.dark{isolation:isolate}
+section.dark::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 80%,transparent)}
+/* SCROLL REVEAL */
+.js .rv{opacity:0;transform:translateY(34px)}
+.js .rv.in{opacity:1;transform:none;transition:opacity .9s var(--ease) calc(var(--d,0)*1ms),transform 1s var(--ease) calc(var(--d,0)*1ms)}
+/* RESPONSIVE */
+@media(max-width:1060px){.menu{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:rgba(5,7,26,.98);padding:8px 20px 22px;border-bottom:1px solid rgba(255,255,255,.1)}.menu.open{display:flex}.menu a{padding:16px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}.menu a::after{display:none}.burger{display:grid}.nav-r .btn{display:none}}
+@media(max-width:980px){
+ .hero{padding:92px 0 56px;min-height:0}
+ .studio-grid,.proc-grid,.faq-g,.cgrid{grid-template-columns:minmax(0,1fr)}
+ .discs{position:static;flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;margin-inline:-20px;padding-inline:20px}
+ .disc{display:inline-flex;flex:none;padding:12px 20px;border:1px solid rgba(255,255,255,.2);border-radius:99px;scroll-snap-align:start;background:rgba(255,255,255,.04)}
+ .disc::before{display:none}.d-name{font-size:1.05rem;letter-spacing:-.01em}.disc small,.d-from{display:none}
+ .disc[aria-selected="true"]{padding-left:20px;background:var(--grad);border-color:transparent}.disc[aria-selected="true"] .d-name{-webkit-text-fill-color:#fff}
+ .proc-sticky,.faq-g .sticky{position:static}
+ .bento{gap:16px}.cn.a,.cn.b,.cn.c,.cn.d,.cn.e{grid-column:1/-1;aspect-ratio:auto;min-height:min(420px,112vw)}
+ .rows{grid-template-columns:minmax(0,1fr)}
+ .prin{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:700px){
+ .wrap{width:min(1200px,100% - 32px)}
+ h1{font-size:clamp(2rem,9.2vw,3rem)}.stage3d{aspect-ratio:1/.9}.cta .btn{flex:1 1 100%}
+ .core{width:17cqw}.sat b{display:none}.sat{padding:2.4cqw}.prin>div{padding:18px}
+ .d-name .i{width:1em;height:1em}
+ .svcs{margin:-24px 8px 0;padding:4px 18px}.svc-h{flex-direction:column;gap:10px}.svc-p{text-align:left}.svc-act .btn-s{flex:1 1 100%}
+ .tf{flex-direction:column;align-items:stretch}.tf .cta{flex-direction:column}
+ .ccards{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}.rev-dots{max-width:100%;order:3;width:100%}
+ .tlw{padding-left:54px}.st .dot{left:-54px}
+ .viz{border-radius:22px}.rev-slide{border-radius:26px}
+ .discs{margin-inline:-16px;padding-inline:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+ .js .rv,.js .rv-up,.js h1 .ln>span,.js .stage3d{opacity:1;transform:none}
+}
+
+/* WA FLOAT, PANEL, DİYALOG */
+.wa-f{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:55;width:58px;height:58px;border-radius:50%;background:#1faa59;color:#fff;display:grid;place-items:center;font-size:30px;box-shadow:0 12px 30px rgba(31,170,89,.45);transition:.2s}.wa-f:hover{transform:scale(1.08)}
+.overlay{position:fixed;inset:0;background:rgba(5,8,25,.55);backdrop-filter:blur(4px);z-index:998;opacity:0;visibility:hidden;transition:.3s}.overlay.on{opacity:1;visibility:visible}
+#sidePanel{position:fixed;top:0;right:0;width:100%;max-width:460px;height:100%;background:#fff;z-index:999;transform:translateX(100%);visibility:hidden;transition:transform .45s cubic-bezier(.19,1,.22,1),visibility .45s;box-shadow:-20px 0 50px rgba(0,0,0,.18);padding:28px 28px max(28px,env(safe-area-inset-bottom));display:flex;flex-direction:column;overflow-y:auto}
+#sidePanel.open{transform:none;visibility:visible}
+.p-x{align-self:flex-start;width:44px;height:44px;border-radius:12px;font-size:20px;border:1px solid var(--line);margin-bottom:16px}
+#pTitle{font-size:1.5rem;line-height:1.2;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
+#pPrice{font-size:2rem;font-weight:800;color:var(--ink)}#pMeta{font-size:.85rem;color:#8a90ad;margin-bottom:10px}#pDesc{font-size:.92rem;color:var(--mut);margin-bottom:10px}
+#pList{display:grid;gap:7px;margin-bottom:12px;font-size:.9rem;color:#475569}#pList li::before{content:"✓";color:var(--fuc);font-weight:800;margin-right:8px}
+.ex{display:flex;justify-content:space-between;gap:10px;font-size:.88rem;padding:7px 0;border-bottom:1px solid var(--line)}.ex span:last-child{color:var(--mut);text-align:right}
+.p-lab{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8a90ad;margin:14px 0 8px}
+.fld{width:100%;padding:14px 16px;margin-bottom:10px;border-radius:14px;border:2px solid #eef0f6;background:#f8fafc;font:inherit;font-size:16px;font-weight:600;outline:none;transition:.25s}.fld:focus{border-color:var(--fuc)}
+.kv{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:var(--mut);margin:4px 0 8px;cursor:pointer}.kv input{width:18px;height:18px;margin-top:2px;accent-color:#7c3aed;flex:none}
+.kv button,.ck-bar button.u{text-decoration:underline;color:var(--vio);font-weight:700}
+.err{font-size:.85rem;color:#e11d48;min-height:22px}
+.ck-bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:1100;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 24px 60px rgba(8,11,32,.35)}
+.ck-bar[hidden]{display:none}.ck-bar p{font-size:.88rem;color:var(--mut);margin-bottom:14px}
+.ck-act{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.ck-act button{padding:12px 8px;border-radius:12px;font-weight:700;font-size:.85rem;border:2px solid var(--line);min-height:46px}.ck-act .ok{background:var(--grad);border-color:transparent;color:#fff}
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;margin:auto}
+dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
+.dlg{background:#fff;border-radius:26px;width:calc(100vw - 24px);max-width:640px;max-height:88vh;overflow-y:auto;padding:28px}
+.dlg-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}.dlg-h h2{font-size:1.3rem}.dlg-h button{width:40px;height:40px;font-size:20px;border-radius:10px;border:1px solid var(--line);flex:none}
+.legal h3{font-weight:800;font-size:1.02rem;margin:1.1rem 0 .4rem;color:#0f172a}.legal p,.legal li{font-size:.9rem;color:#475569;line-height:1.7}.legal ul{list-style:disc;padding-left:1.2rem}
+.sw-row{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}.sw-row:last-of-type{border:0}.sw-row b{font-size:.92rem}.sw-row p{font-size:.8rem;color:var(--mut)}
+.cookie-sw{appearance:none;-webkit-appearance:none;width:46px;height:26px;border-radius:99px;background:#cbd5e1;position:relative;cursor:pointer;transition:.2s;flex:none}.cookie-sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s}.cookie-sw:checked{background:#7c3aed}.cookie-sw:checked::after{left:23px}.cookie-sw:disabled{opacity:.6;cursor:not-allowed}
+.d-act{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.d-act button{padding:13px;border-radius:12px;font-weight:700;border:2px solid var(--line);min-height:46px}.d-act .ok{background:var(--grad);border-color:transparent;color:#fff}
+
+/* ===== MOBİL İYİLEŞTİRMELER ===== */
+.menu-cta{display:none}
+.nav{padding-top:env(safe-area-inset-top)}
+@media(max-width:1060px){
+ .nav.menu-on{backdrop-filter:none;-webkit-backdrop-filter:none}
+ .menu{position:fixed;top:calc(76px + env(safe-area-inset-top));left:0;right:0;bottom:0;height:auto;overflow-y:auto;overscroll-behavior:contain;padding:12px 20px calc(28px + env(safe-area-inset-bottom));background:radial-gradient(70vmax 50vmax at 100% 0,rgba(124,58,237,.38),transparent 60%),radial-gradient(60vmax 40vmax at 0 100%,rgba(217,70,239,.22),transparent 60%),#05071a;border:0;font-size:inherit;letter-spacing:0;text-transform:none}
+ .menu.open{display:flex;animation:menuIn .35s var(--ease)}
+ .menu a:not(.menu-cta){font:800 clamp(1.5rem,6.4vw,2.1rem)/1.1 var(--disp);letter-spacing:-.03em;color:#fff;padding:18px 4px;min-height:60px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.1)}
+ .menu a:not(.menu-cta):active{color:var(--pink)}
+ .menu a.menu-cta{display:inline-flex;margin-top:24px;width:100%;padding:15px 28px;font:700 15px var(--font);letter-spacing:0;text-transform:none;border-bottom:0;min-height:54px}
+}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media(max-width:700px){
+ /* bölüm boşlukları */
+ .mani{padding:52px 0}.studio{padding:64px 0}.work{padding:60px 0}.proc{padding:64px 0}.board{padding:60px 0}.rev{padding:64px 0}.faq-s{padding:60px 0}.contact{padding:72px 0 64px}
+ .studio-grid{margin-top:26px}.bento{margin-top:26px}.rows{margin-top:18px}
+ .title{font-size:clamp(1.9rem,9vw,2.6rem)}.mani-t{font-size:clamp(1.9rem,9vw,2.6rem)}.big-t{font-size:clamp(2.4rem,13vw,3.6rem)}
+ /* hero */
+ .hero{padding:88px 0 40px}
+ h1{font-size:clamp(1.9rem,10vw,3.4rem)}
+ .hero-stage{width:min(520px,100%)}
+ .stage3d{aspect-ratio:1/.98}
+ .hero p.sub{letter-spacing:.02em;text-wrap:balance;margin:14px 0 22px}
+ .hero-txt{margin-top:-18px}
+ .cta .btn{min-height:52px}
+ /* hizmet kartları */
+ .svcs{margin:-20px 6px 0;padding:2px 16px}
+ .svc{padding:18px 0}
+ .svc h3{font-size:1.08rem}.svc-p{font-size:1.6rem}
+ .svc p.o{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:10px 0 14px;font-size:.9rem}
+ .svc-act{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .svc-act .btn-s{flex:none;min-width:0;width:100%;padding:10px 8px;gap:7px}
+ .svc-act .lnk{grid-column:1/-1;justify-content:center;min-height:44px;border:1px solid rgba(255,255,255,.16);border-radius:99px}
+ .discs .disc{min-height:44px}
+ /* konsept kartları */
+ .cn{min-height:0}
+ .cn.a,.cn.b,.cn.c,.cn.d,.cn.e{min-height:0}
+ .cn.a{aspect-ratio:auto;height:min(78vw,340px)}
+ .cn.b{height:min(108vw,460px)}
+ .cn.c{height:min(86vw,380px)}
+ .cn.d{height:min(84vw,360px)}
+ .cn.e{height:min(80vw,340px)}
+ .d1 .k span{animation:none}
+ /* fiyat satırları */
+ .row{padding:16px 0}.row .rn{font-size:1rem}.row .rp{font-size:1.3rem}
+ /* yorum */
+ .rev-slide{padding:26px 22px}.rev-q{font-size:1.08rem;line-height:1.5;margin:12px 0 22px}
+ .rev-btn{width:46px;height:46px}
+ /* SSS */
+ .faq details{padding:0 18px;border-radius:18px}.faq summary{font-size:1rem;min-height:56px;padding:16px 0}
+ /* iletişim */
+ .pick select,.pick .btn{width:100%;flex:1 1 100%}
+ .cc{padding:18px}
+ /* footer */
+ footer{padding-top:52px}.fbot{padding-right:64px}.fgrid{gap:30px}.fbot{margin-top:32px}
+ /* sabit butonlar ve çerez */
+ .wa-f{width:52px;height:52px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}
+ .wa-f .i{width:26px!important;height:26px!important}
+ .ck-bar{left:10px;right:10px;padding:14px 14px 12px;border-radius:20px}
+ .ck-bar>p{font-size:.78rem;line-height:1.45;margin-bottom:10px}
+ .ck-bar>p>.i{display:none}
+ .ck-act{gap:6px}.ck-act button{padding:8px 4px;font-size:.78rem;min-height:44px;line-height:1.2}
+ .dlg{padding:20px 18px;border-radius:22px;max-height:86dvh}
+ #sidePanel{padding:20px 18px max(24px,env(safe-area-inset-bottom));max-height:100dvh}
+ #pPrice{font-size:1.7rem}
+}
+@media(max-width:360px){
+ .wrap{width:min(1200px,100% - 28px)}
+ .btn{padding:13px 18px;font-size:14px}
+ .svc-act .btn-s{font-size:13px}
+ .nav-in{gap:8px}.logo-t b{font-size:20px}
+ .discs{margin-inline:-14px;padding-inline:14px}
+}
+@media(hover:none){.btn-p:hover,.cc:hover,.rev-btn:hover{transform:none}.row:hover{padding-left:0}}
+
+@media(max-width:980px){
+ .svc-act .lnk{min-height:44px}
+ footer li{margin-bottom:0}
+ footer li a,footer li button{display:inline-flex;align-items:center;min-height:44px}
+ .fbot div a{display:inline-flex;align-items:center;min-height:44px}
+ footer .logo{min-height:44px}
+}
+</style>
+</head>
+<body id="body">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-node" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8 7l3 8M16 7l-3 8M8.4 6h7.2"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.47 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-cookie" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9 4 4 0 0 0 5 5 4 4 0 0 0 4 4z"/><path d="M8.5 10h.01M12 15h.01M15.5 14.5h.01M8 14.5h.01"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
+<symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2 11h10l2-8H7"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></symbol>
+<symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10 9.5v5l4.5-2.5z"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19z"/><path d="M14.5 6.5l3 3"/></symbol>
+<symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+</defs></svg>
+
+<a class="skip" href="#icerik">İçeriğe geç</a>
+
+<div id="loader" aria-hidden="true"><div class="ld-in">
+ <div class="ld-mark"><svg class="i"><use href="#i-node"/></svg></div>
+ <div class="ld-word" aria-hidden="true"><span style="--i:0">E</span><span style="--i:1">S</span><span style="--i:2">E</span><span style="--i:3">N</span><span style="--i:4">T</span><span style="--i:5">E</span><span style="--i:6">C</span><span style="--i:7">H</span></div>
+ <div class="ld-bar"><i></i></div>
+</div></div>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+ <a href="/anasayfa" class="logo" aria-label="ESENTECH Technology ana sayfa"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a>
+ <nav class="menu" id="menu" aria-label="Ana menü">
+  <a href="/yaklasim">Yaklaşım</a><a href="/hizmetler">Hizmetler</a><a href="/konseptler">Konseptler</a><a href="/surec">Süreç</a><a href="/fiyatlar">Fiyatlar</a><a href="/yorumlar">Yorumlar</a><a href="/sss">SSS</a>
+  <a id="menuWa" class="menu-cta btn btn-p" href="#" target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp ile Teklif Al</a>
+ </nav>
+ <div class="nav-r">
+  <a id="navWa" class="btn btn-p btn-s" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-wa"/></svg> Teklif Al</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç"><svg class="i"><use href="#i-menu"/></svg></button>
+ </div>
+</div></header>
+
+<main id="icerik">
+<section class="hero" id="top" aria-label="Giriş">
+ <canvas class="fx" id="orb" aria-hidden="true"></canvas>
+ <div class="hero-in">
+  <div class="hero-stage" id="heroStage" aria-hidden="true">
+   <div class="stage3d" id="stage3d">
+    <div class="halo"></div>
+    <div class="scene">
+     <svg class="links" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M50 50L16 20"/><path d="M50 50L84 20"/><path d="M50 50L10 76"/><path d="M50 50L90 76"/><path d="M50 50L50 6"/></svg>
+     <canvas class="core3d" id="core3d" aria-hidden="true"></canvas>
+     <div class="core"><div class="plate p-mid"><svg class="i mark"><use href="#i-node"/></svg></div></div>
+     <div class="lyr" style="left:16%;top:20%;--z:50px;--d:14"><span class="sat"><svg class="i"><use href="#i-web"/></svg><b>Web</b></span></div>
+     <div class="lyr" style="left:84%;top:20%;--z:110px;--d:24"><span class="sat"><svg class="i"><use href="#i-cart"/></svg><b>E-Ticaret</b></span></div>
+     <div class="lyr" style="left:10%;top:76%;--z:130px;--d:28"><span class="sat"><svg class="i"><use href="#i-film"/></svg><b>Video</b></span></div>
+     <div class="lyr" style="left:90%;top:76%;--z:70px;--d:18"><span class="sat"><svg class="i"><use href="#i-pen"/></svg><b>Grafik</b></span></div>
+     <div class="lyr" style="left:50%;top:10%;--z:160px;--d:32"><span class="sat"><svg class="i"><use href="#i-cube"/></svg><b>3D</b></span></div>
+    </div>
+   </div>
+  </div>
+  <div class="hero-txt">
+   <h1 aria-label="Markanı dijitalde farklılaştır.">
+    <span class="ln l1" style="--d:80" aria-hidden="true"><span>Markanı dijitalde</span></span>
+    <span class="ln l3" style="--d:200" aria-hidden="true"><span>farklılaştır.</span></span>
+   </h1>
+   <p class="sub rv-up" style="--d:420">Web tasarım. E-ticaret. Video. Kreatif tasarım.</p>
+   <div class="cta rv-up" style="--d:540">
+    <a class="btn btn-p" href="/iletisim">Projeni Başlat <svg class="i"><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-g" href="/hizmetler">Hizmetleri Keşfet</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<section class="mani dark" id="yaklasim"><div class="wrap">
+ <p class="eyebrow">Yaklaşım</p>
+ <p class="mani-t">Tasarım, kod ve video. <em>Aynı masada.</em></p>
+ <div class="prin">
+  <div class="rv"><svg class="i"><use href="#i-layers"/></svg><h3>Tek elden üretim</h3></div>
+  <div class="rv" style="--d:80"><svg class="i"><use href="#i-bolt"/></svg><h3>Mobil öncelikli tasarım</h3></div>
+  <div class="rv" style="--d:160"><svg class="i"><use href="#i-shield"/></svg><h3>Açık fiyat, net kapsam</h3></div>
+ </div>
+</div></section>
+
+<section class="studio dark" id="hizmetler"><div class="wrap">
+ <p class="eyebrow">Hizmet stüdyosu</p>
+ <h2 class="title">Beş disiplin.</h2>
+ <p class="lead">Seç, incele; WhatsApp veya Bionluk'tan devam et.</p>
+ <div class="studio-grid">
+  <div class="discs" role="tablist" aria-label="Hizmet alanları" aria-orientation="vertical" id="discs"></div>
+  <div id="panes"></div>
+ </div>
+</div></section>
+
+<section class="work dark" id="projeler"><div class="wrap">
+ <p class="eyebrow">Portfolyo</p>
+ <h2 class="title">Konsept çalışmalar.</h2>
+ <p class="note"><svg class="i"><use href="#i-info"/></svg><span>Kendi ürettiğimiz konseptlerdir; müşteri projesi değildir.</span></p>
+ <div class="bento">
+  <article class="cn a rv"><div class="cn-art a1"><div class="nvb"><i></i><i></i><i></i></div><div class="big">Yeni<span>Sezon</span></div><span class="tagp">-30%</span><div class="prod p1"></div><div class="prod p2"></div><div class="prod p3"></div><span class="cta2">Mağazaya git</span></div><div class="cn-cap"><span class="tag-c">Konsept · E-ticaret</span><h3>Dijital vitrin</h3></div></article>
+  <article class="cn b rv" style="--d:100"><div class="cn-art b1"><div class="mast"><span>Günlük</span><i></i></div><div class="hd">Yazıya<br>alan aç.</div><div class="im"></div><div class="tx"><i></i><i></i><i></i><i></i></div></div><div class="cn-cap"><span class="tag-c">Konsept · Blog</span><h3>Editoryal düzen</h3></div></article>
+  <article class="cn c rv"><div class="cn-art c1"><span class="pc">%</span><span class="ttl">İNDİRİM<br>HAFTASI</span><span class="bst">-50</span></div><div class="cn-cap"><span class="tag-c">Konsept · Afiş</span><h3>Kampanya afişi</h3></div></article>
+  <article class="cn d rv" style="--d:100"><div class="cn-art d1"><div class="k"><span>HAREKET</span><span>İZ BIRAK</span><span>KESME</span></div><div class="trk"><i style="--w:55%;--c:#8b5cf6"></i><i style="--w:38%;--l:14%;--c:#e879f9"></i><i style="--w:62%;--l:5%;--c:#fb7185"></i></div><div class="ph"></div></div><div class="cn-cap"><span class="tag-c">Konsept · Video</span><h3>Kinetik tipografi</h3></div></article>
+  <article class="cn e rv" style="--d:200"><div class="cn-art e1"><div class="lg"><svg class="i"><use href="#i-node"/></svg></div><div class="aa">Aa</div><div class="fn">Bricolage · Plus Jakarta</div><div class="sw"><i style="background:#0a0f2e;border:1px solid #333a70"></i><i style="background:#7c3aed"></i><i style="background:#d946ef"></i><i style="background:#f43f5e"></i></div></div><div class="cn-cap"><span class="tag-c">Konsept · Marka</span><h3>Kimlik sistemi</h3></div></article>
+ </div>
+</div></section>
+
+<section class="proc dark" id="surec"><div class="wrap proc-grid">
+ <div class="proc-sticky"><p class="eyebrow">Süreç</p><h2 class="title">Dört adım.</h2></div>
+ <div class="tlw" id="tlw"><div class="tl-fill"></div>
+  <div class="st"><span class="dot">1</span><h3>Tanışma</h3><p>İhtiyacınızı dinleriz.</p></div>
+  <div class="st"><span class="dot">2</span><h3>Kapsam ve fiyat</h3><p>Her şey sipariş öncesi netleşir.</p></div>
+  <div class="st"><span class="dot">3</span><h3>Üretim ve revizyon</h3><p>Paket kapsamında revizyon yaparız.</p></div>
+  <div class="st"><span class="dot">4</span><h3>Teslim</h3><p>Dosyalar ve erişimler size teslim edilir.</p></div>
+ </div>
+</div></section>
+
+<section class="board dark" id="fiyatlar"><div class="wrap">
+ <p class="eyebrow">Fiyat panosu</p>
+ <h2 class="title">Fiyatlar.</h2>
+ <p class="lead">Satıra tıklayın, detayı görün.</p>
+ <div class="rows" id="rows"></div>
+ <div class="tf"><p><b>İlan fiyatlarıdır.</b> Domain, hosting ve lisanslar dahil değildir.</p>
+  <div class="cta"><a class="btn btn-wa" id="ctaWa2" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-wa"/></svg> Teklif iste</a><a class="btn btn-bn" id="ctaBn2" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-bag"/></svg> Bionluk'ta gör</a></div></div>
+</div></section>
+
+<section class="rev dark" id="yorumlar" aria-labelledby="revTitle"><div class="wrap">
+ <p class="eyebrow">Müşteri yorumları</p>
+ <h2 class="title" id="revTitle">Yorumlar.</h2>
+ <p class="lead" id="revNote"></p>
+ <div class="rev-box" id="revBox" role="region" aria-roledescription="carousel" aria-label="Müşteri yorumları" tabindex="0">
+  <div class="rev-track" id="revTrack" aria-live="off"></div>
+  <div class="rev-ctl">
+   <button class="rev-btn" id="revPrev" aria-label="Önceki yorum"><svg class="i"><use href="#i-left"/></svg></button>
+   <span class="rev-count" id="revCount" aria-hidden="true"></span>
+   <div class="rev-dots" id="revDots"></div>
+   <button class="rev-btn" id="revPause" aria-label="Otomatik geçişi durdur" aria-pressed="false"><svg class="i"><use href="#i-pause"/></svg></button>
+   <button class="rev-btn" id="revNext" aria-label="Sonraki yorum"><svg class="i"><use href="#i-right"/></svg></button>
+  </div>
+ </div>
+</div></section>
+
+<section class="faq-s dark" id="sss"><div class="wrap faq-g">
+ <div class="sticky"><p class="eyebrow">SSS</p><h2 class="title">SSS.</h2></div>
+ <div class="faq" id="faqList"></div>
+</div></section>
+
+<section class="contact dark" id="iletisim"><div class="wrap">
+ <p class="eyebrow">İletişim</p>
+ <h2 class="big-t">Projeni<span>başlatalım.</span></h2>
+ <div class="cgrid" style="margin-top:44px">
+  <div>
+   <p class="lead">Hizmeti seçin, WhatsApp veya Bionluk'tan devam edin.</p>
+   <div class="pick"><label class="sr" for="pickSel">Hizmet seçin</label><select id="pickSel"></select><button class="btn btn-p" id="pickGo">Detayı gör <svg class="i"><use href="#i-arrow"/></svg></button></div>
+   <div class="cta" style="margin-top:18px"><a class="btn btn-wa" id="ctaWa" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-wa"/></svg> WhatsApp</a><a class="btn btn-g" id="ctaBn" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-bag"/></svg> Bionluk</a></div>
+  </div>
+  <div class="ccards">
+   <a class="cc" href="tel:+905349644975"><svg class="i"><use href="#i-phone"/></svg><b>Telefon</b><span>+90 534 964 4975</span></a>
+   <a class="cc" href="mailto:info@esentech.com"><svg class="i"><use href="#i-mail"/></svg><b>E-posta</b><span>info@esentech.com</span></a>
+  </div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><a href="/anasayfa" class="logo" aria-label="Başa dön"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a><p style="margin-top:16px;max-width:36ch">Web. E-ticaret. Video. Kreatif tasarım.</p></div>
+  <div><h4>Sayfalar</h4><ul><li><a href="/hizmetler">Hizmetler</a></li><li><a href="/konseptler">Konseptler</a></li><li><a href="/surec">Süreç</a></li><li><a href="/fiyatlar">Fiyatlar</a></li><li><a href="/sss">SSS</a></li></ul></div>
+  <div><h4>Yasal</h4><ul><li><button data-legal="kvkk">KVKK Aydınlatma Metni</button></li><li><button data-legal="gizlilik">Gizlilik Politikası</button></li><li><button data-legal="cerez">Çerez Politikası</button></li><li><button onclick="openCookiePrefs()">Çerez Tercihleri</button></li></ul></div>
+ </div>
+ <div class="fbot"><span>© <span id="yr"></span> ESENTECH Technology. Tüm hakları saklıdır.</span><div><a href="tel:+905349644975">+90 534 964 4975</a><a href="mailto:info@esentech.com">info@esentech.com</a></div></div>
+</div><div class="fw" aria-hidden="true">ESENTECH</div></footer>
+
+<a href="#" id="waFloat" target="_blank" rel="noopener noreferrer" class="wa-f" aria-label="WhatsApp ile yazın"><svg class="i" style="width:30px;height:30px"><use href="#i-wa"/></svg></a>
+<div class="overlay" id="overlay"></div>
+
+<aside id="sidePanel" role="dialog" aria-modal="true" aria-labelledby="pTitle" aria-hidden="true">
+ <button class="p-x" id="pClose" aria-label="Kapat"><svg class="i"><use href="#i-x"/></svg></button>
+ <h2 id="pTitle"></h2><p id="pPrice"></p><p id="pMeta"></p><p id="pDesc"></p>
+ <ul id="pList"></ul><div id="pExtra"></div>
+ <div id="pBn" style="display:flex;gap:8px;margin:6px 0 4px;flex-wrap:wrap"></div>
+ <p class="p-lab">veya bilgilerinizi bırakın</p>
+ <input class="fld" id="name" placeholder="Ad Soyad" autocomplete="name" aria-label="Ad Soyad">
+ <input class="fld" id="city" placeholder="Şehir" autocomplete="address-level2" aria-label="Şehir">
+ <input class="fld" id="tel" type="tel" placeholder="Telefon" autocomplete="tel" aria-label="Telefon">
+ <label class="kv"><input type="checkbox" id="kvkkOk"><span><button type="button" data-legal="kvkk">KVKK Aydınlatma Metni</button>'ni okudum. Bilgilerimin talebimin iletilmesi amacıyla kullanılmasını onaylıyorum.</span></label>
+ <p class="err" id="pErr" role="alert"></p>
+ <button class="btn btn-wa" id="pSend" style="width:100%"><svg class="i"><use href="#i-wa"/></svg> WhatsApp ile talep gönder</button>
+</aside>
+
+<div class="ck-bar" id="cookieBar" hidden role="region" aria-label="Çerez bildirimi">
+ <p><svg class="i" style="color:var(--fuc)"><use href="#i-cookie"/></svg> Sitemizde tercihlerinizi hatırlamak için zorunlu tarayıcı depolaması kullanıyoruz. İsteğe bağlı analitik ve pazarlama çerezlerini siz belirlersiniz. Ayrıntılar için <button class="u" data-legal="cerez">Çerez Politikası</button> ve <button class="u" data-legal="kvkk">KVKK Aydınlatma Metni</button>'ni inceleyebilirsiniz.</p>
+ <div class="ck-act"><button onclick="saveConsent({a:0,m:0})">Reddet</button><button onclick="openCookiePrefs()">Tercihler</button><button class="ok" onclick="saveConsent({a:1,m:1})">Tümünü Kabul Et</button></div>
+</div>
+
+<dialog id="cookieDlg" aria-label="Çerez tercihleri"><div class="dlg">
+ <div class="dlg-h"><h2>Çerez Tercihleri</h2><button onclick="$('cookieDlg').close()" aria-label="Kapat"><svg class="i"><use href="#i-x"/></svg></button></div>
+ <div class="sw-row"><div><b>Zorunlu</b><p>Sitenin çalışması ve tercihinizin saklanması için gereklidir. Kapatılamaz.</p></div><input type="checkbox" class="cookie-sw" checked disabled aria-label="Zorunlu çerezler"></div>
+ <div class="sw-row"><div><b>Analitik</b><p>Ziyaretçi istatistikleri. Şu anda sitede analitik araç kullanılmamaktadır.</p></div><input type="checkbox" id="ckA" class="cookie-sw" aria-label="Analitik çerezler"></div>
+ <div class="sw-row"><div><b>Pazarlama</b><p>Reklam ve yeniden hedefleme. Şu anda sitede kullanılmamaktadır.</p></div><input type="checkbox" id="ckM" class="cookie-sw" aria-label="Pazarlama çerezleri"></div>
+ <div class="d-act"><button onclick="saveConsent({a:0,m:0});$('cookieDlg').close()">Tümünü Reddet</button><button class="ok" onclick="saveConsent({a:$('ckA').checked?1:0,m:$('ckM').checked?1:0});$('cookieDlg').close()">Seçimi Kaydet</button></div>
+</div></dialog>
+
+<dialog id="legalDlg" aria-label="Yasal metin"><div class="dlg">
+ <div class="dlg-h"><h2 id="legalTitle"></h2><button onclick="$('legalDlg').close()" aria-label="Kapat"><svg class="i"><use href="#i-x"/></svg></button></div>
+ <div id="legalBody" class="legal"></div>
+</div></dialog>
+
+<script>
+/* ==== YÖNETİM ALANI: fiyatlar ve Bionluk bağlantıları BURADAN değişir ==== */
+const WHATSAPP = "905349644975";
+/* Bionluk PROFİL adresiniz (herkese açık). Örn: "https://bionluk.com/kullaniciadiniz"  — ilan bağlantısı yoksa bu kullanılır */
+const BIONLUK_PROFIL = "";
+const TESLIM_YOK = "Kapsama göre, sipariş öncesi netleştirilir";
+/* Her hizmetin "url" alanına o ilanın herkese açık adresini yapıştırın (panel adresi DEĞİL). */
+const SERVICES = [
+ { id:"eticaret", grup:"Web Tasarım ve Yazılım", tip:"shop", ad:"E-Ticaret Sitesi Yapımı", fiyat:"20.500 TL", teslim:"20 gün", revizyon:"2 revizyon",
+   ozet:"Ürünlerinizi çevrim içi satabileceğiniz, mobil uyumlu ve profesyonel e-ticaret sitesi geliştirme.",
+   detay:["Kapsamlı e-ticaret sitesi","Özel arayüz düzenlemeleri","Gelişmiş kullanıcı deneyimi ve entegrasyonlar"],
+   ekstra:[["Ekstra sayfa","3.500 TL","+3 gün"],["Tasarım özelleştirme","1.500 TL","+3 gün"],["Responsive tasarım","2.000 TL","+2 gün"],["Plugin entegrasyonu","1.500 TL","+2 gün"],["Ekstra revizyon","2.000 TL","+2 gün"]], url:"" },
+ { id:"blog", grup:"Web Tasarım ve Yazılım", tip:"blog", ad:"Blog Tarzı Web Sitesi Yapımı", fiyat:"5.000 TL", teslim:"3 gün", revizyon:"1 revizyon",
+   ozet:"İçeriklerinizi ve yazılarınızı profesyonel biçimde yayınlayabileceğiniz modern web sitesi.",
+   detay:["Modern ve özgün tasarım","Mobil ve tablet uyumluluğu","Blog yazıları ve kategori sistemi","Kolay içerik yönetimi","Temel SEO ayarları","İletişim sayfası","Domain, hosting ve ücretli lisanslar fiyata dahil değildir"], url:"" },
+ { id:"uygulama", grup:"Web Tasarım ve Yazılım", tip:"app", ad:"Uygulama Geliştirme", fiyat:"30.000 TL", fiyatEk:"başlangıç fiyatı", teslim:TESLIM_YOK,
+   ozet:"İhtiyaçlara ve proje kapsamına göre özel uygulama geliştirme çözümleri.", detay:["Fiyat başlangıç fiyatıdır","Kapsam görüşmede belirlenir"], url:"" },
+ { id:"shopify", grup:"E-Ticaret Altyapıları", tip:"shop2", ad:"Shopify ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
+   ozet:"Shopify altyapısıyla modern, kullanıcı dostu ve satış odaklı çevrim içi mağaza kurulumu.", detay:["Mağaza kurulumu ve tasarımı","Ürün ve ödeme ayarları"], url:"" },
+ { id:"ikea", grup:"E-Ticaret Altyapıları", tip:"shop", ad:"IKEA ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
+   ozet:"Kapsam ve kullanılacak platform sipariş öncesinde birlikte netleştirilir.", detay:["Kapsam görüşmede belirlenir"], url:"" /* TODO: ilan adını/açıklamasını doğrulayın */ },
+ { id:"pazaryeri", grup:"E-Ticaret Altyapıları", tip:"market", ad:"Trendyol, Amazon ve Diğer Pazaryerleri", fiyat:"Teklif alın", teslim:TESLIM_YOK,
+   ozet:"Pazaryeri mağazası kurulumu, ürün listeleme ve satış süreçlerine yönelik hizmetler.", detay:["Mağaza kurulumu","Ürün listeleme"], url:"" },
+ { id:"video", grup:"Video ve Tasarım", tip:"video", ad:"Video Kurgulama ve Edit", fiyat:"2.500 TL", teslim:TESLIM_YOK,
+   ozet:"Sosyal medya, reklam ve tanıtım videoları için profesyonel kurgu, geçişler, hareketli grafikler ve görsel düzenleme.", detay:["Kurgu ve geçişler","Hareketli grafikler","Sosyal medya ve reklam formatları"], url:"" },
+ { id:"sketchup", grup:"Video ve Tasarım", tip:"cube", ad:"SketchUp ile 3D Tasarım ve Proje Çizimi", fiyat:"5.000 TL", teslim:TESLIM_YOK,
+   ozet:"Mekân, ürün ve mimari projeler için üç boyutlu modelleme ve proje çizimi.", detay:["3D modelleme","Proje çizimi"], url:"" },
+ { id:"corel", grup:"Video ve Tasarım", tip:"print", ad:"CorelDRAW ile Market Broşürü ve Reklam Tasarımı", fiyat:"500 TL", teslim:TESLIM_YOK,
+   ozet:"Market insertleri, kampanya broşürleri, ürün fiyat görselleri ve basılı reklam tasarımları.", detay:["Kampanya broşürleri","Ürün fiyat görselleri","Basılı reklam tasarımı"], url:"" }
+ ,{ id:"kurumsal", grup:"Web Tasarım ve Yazılım", tip:"web", ad:"Kurumsal Web Tasarımı", fiyat:"Teklif alın", teslim:TESLIM_YOK, ozet:"Markanıza özel, mobil uyumlu kurumsal web sitesi.", detay:["Kapsam görüşmede belirlenir"], url:"" }
+ ,{ id:"logo", grup:"Video ve Tasarım", tip:"pen", ad:"Logo ve Marka Tasarımı", fiyat:"Teklif alın", teslim:TESLIM_YOK, ozet:"Logo, renk ve yazı sistemiyle marka kimliği.", detay:["Kapsam görüşmede belirlenir"], url:"" }
+ ,{ id:"sosyal", grup:"Video ve Tasarım", tip:"pen", ad:"Sosyal Medya Tasarımı", fiyat:"Teklif alın", teslim:TESLIM_YOK, ozet:"Gönderi, hikaye ve kampanya görselleri.", detay:["Kapsam görüşmede belirlenir"], url:"" }
+ ,{ id:"portfolyo", grup:"Video ve Tasarım", tip:"pen", ad:"Portfolyo ve İlan Tasarımı", fiyat:"Teklif alın", teslim:TESLIM_YOK, ozet:"Portfolyo sayfası ve ilan görselleri.", detay:["Kapsam görüşmede belirlenir"], url:"" }
+];
+const FAQ=[["Fiyatlara domain ve hosting dahil mi?","Hayır. Domain, hosting ve ücretli lisanslar fiyatlara dahil değildir. Kapsam sipariş öncesinde netleştirilir."],["Sipariş nasıl veriliyor?","İsterseniz doğrudan Bionluk'tan sipariş verebilir, isterseniz önce WhatsApp'tan kapsamı konuşabilirsiniz."],["Revizyon hakkı var mı?","Evet. Her ilanda dahil olan revizyon sayısı belirtilmiştir. Ek revizyon satın alınabilir."],["Fiyatlar sabit mi?","Fiyatlar ilan fiyatlarıdır. Uygulama geliştirme başlangıç fiyatıdır, pazaryeri hizmetleri tekliflidir."]];
+
+
+const $=id=>document.getElementById(id);
+const wa=m=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`;
+const bnUrl=s=>s.url||BIONLUK_PROFIL||"https://bionluk.com";
+/* ==== Yasal bilgiler: kendi bilgilerinizle doldurun ==== */
+const LEGAL={unvan:"ESENTECH (EsenTech Technology)",adres:"",eposta:"info@esentech.com",tel:"+90 534 964 4975"};
+const iletisim=()=>`${LEGAL.unvan}${LEGAL.adres?', '+LEGAL.adres:''} · E-posta: ${LEGAL.eposta} · Telefon: ${LEGAL.tel}`;
+const TXT={
+kvkk:{t:'KVKK Aydınlatma Metni',b:()=>`<p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") m.10 uyarınca, kişisel verilerinizin işlenmesine ilişkin bilgilendirme aşağıdadır.</p>
+<h3>1. Veri sorumlusu</h3><p>${iletisim()}</p>
+<h3>2. İşlenen kişisel veriler</h3><ul><li>Kimlik ve iletişim: ad soyad, şehir, telefon numarası</li><li>Talep bilgisi: ilgilendiğiniz hizmet ve WhatsApp üzerinden paylaştığınız her türlü bilgi</li><li>Çerez tercihiniz (tarayıcınızda saklanır)</li></ul>
+<h3>3. İşleme amaçları</h3><p>Taleplerinizin alınması ve yanıtlanması, teklif hazırlanması, hizmetin sunulması, iletişim kurulması ve yasal yükümlülüklerin yerine getirilmesi.</p>
+<h3>4. Hukuki sebepler</h3><p>KVKK m.5/2 (c) sözleşmenin kurulması veya ifası, (ç) hukuki yükümlülüğün yerine getirilmesi ve (f) meşru menfaat.</p>
+<h3>5. Verilerin aktarımı</h3><p>Sitedeki form, bilgilerinizi sunucumuza kaydetmez; bilgilerinizi içeren bir WhatsApp mesajı hazırlar ve mesajı siz gönderirsiniz. Mesaj, WhatsApp (Meta) altyapısı üzerinden bize iletilir. Bionluk üzerinden verdiğiniz siparişler Bionluk'un kendi gizlilik koşullarına tabidir. Yasal zorunluluk dışında verileriniz üçüncü kişilerle paylaşılmaz. Bu hizmetlerin sunucuları yurt dışında olabileceğinden, aktarım kapsamında KVKK m.9 hükümleri geçerlidir.</p>
+<h3>6. Saklama süresi</h3><p>Verileriniz, işleme amacının gerektirdiği süre ve ilgili mevzuattaki zamanaşımı süreleri boyunca saklanır, süre sonunda silinir veya anonim hale getirilir.</p>
+<h3>7. Haklarınız (KVKK m.11)</h3><p>Verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, düzeltme, silme veya yok etme, işlemeye itiraz etme ve zarar halinde tazminat talep etme haklarına sahipsiniz.</p>
+<h3>8. Başvuru</h3><p>Taleplerinizi ${LEGAL.eposta} adresine veya WhatsApp hattımıza iletebilirsiniz. Başvurunuz en geç 30 gün içinde sonuçlandırılır.</p>`},
+gizlilik:{t:'Gizlilik Politikası',b:()=>`<p>Bu site, ziyaretçilerinin gizliliğine önem verir. Politikamız aşağıdaki gibidir.</p>
+<h3>Topladığımız bilgiler</h3><p>Siteyi gezmeniz için hesap açmanız gerekmez. Talep formunu doldurursanız yazdığınız ad, şehir ve telefon bilgisi yalnızca hazırlanan WhatsApp mesajında kullanılır; sunucularımızda saklanmaz.</p>
+<h3>Üçüncü taraf kaynaklar</h3><p>Sayfa görünümü için Google Fonts yazı tipi hizmeti gibi dış kaynaklar yüklenir. Bu sağlayıcılar, kaynakları sunarken IP adresinizi ve tarayıcı bilgilerinizi teknik olarak işleyebilir.</p>
+<h3>Dış bağlantılar</h3><p>Sitedeki WhatsApp ve Bionluk bağlantıları sizi bu platformlara yönlendirir. Bu platformlardaki veri işleme, ilgili platformların kendi politikalarına tabidir.</p>
+<h3>Güvenlik</h3><p>Verilerinizin korunması için makul teknik ve idari tedbirler uygulanır. Ancak internet üzerinden iletimin tamamen risksiz olduğu garanti edilemez.</p>
+<h3>İletişim</h3><p>${iletisim()}</p>`},
+cerez:{t:'Çerez Politikası',b:()=>`<p>Çerezler ve benzeri teknolojiler, tarayıcınızda saklanan küçük veri parçalarıdır.</p>
+<h3>Kullandığımız türler</h3><ul><li><b>Zorunlu:</b> Çerez tercihinizi hatırlamak için tarayıcınızın yerel depolamasında "esen_cerez" kaydı tutulur. Kapatılamaz.</li><li><b>Analitik:</b> Şu anda kullanılmamaktadır. İleride eklenirse yalnızca onayınızla çalışır.</li><li><b>Pazarlama:</b> Şu anda kullanılmamaktadır. İleride eklenirse yalnızca onayınızla çalışır.</li></ul>
+<h3>Tercihlerinizi yönetme</h3><p>Sayfanın altındaki "Çerez Tercihleri" bağlantısından seçiminizi istediğiniz zaman değiştirebilirsiniz. Ayrıca tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz.</p>
+<h3>Üçüncü taraf kaynaklar</h3><p>Yazı tipi ve simge kaynakları (Google Fonts) dış sunucudan yüklenir. Ayrıntılar için Gizlilik Politikası'na bakın.</p>
+<h3>İletişim</h3><p>${LEGAL.eposta}</p>`}};
+function openLegal(k){$('legalTitle').textContent=TXT[k].t;$('legalBody').innerHTML=TXT[k].b();$('legalDlg').showModal();$('legalDlg').querySelector('div').scrollTop=0}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-legal]');if(b){e.preventDefault();if($('cookieDlg').open)$('cookieDlg').close();openLegal(b.dataset.legal)}});
+['legalDlg','cookieDlg'].forEach(id=>$(id).addEventListener('click',e=>{if(e.target===$(id))$(id).close()}));
+
+/* ==== Çerez onayı ==== */
+const CK='esen_cerez';
+function getConsent(){try{return JSON.parse(localStorage.getItem(CK))}catch(e){return null}}
+function applyConsent(c){/* Analitik/pazarlama araçları eklerseniz yalnızca c.a / c.m === 1 ise yükleyin. */}
+function saveConsent(c){try{localStorage.setItem(CK,JSON.stringify({a:c.a,m:c.m,t:Date.now()}))}catch(e){}$('cookieBar').hidden=true;applyConsent(c)}
+function openCookiePrefs(){const c=getConsent()||{a:0,m:0};$('ckA').checked=!!c.a;$('ckM').checked=!!c.m;$('cookieDlg').showModal()}
+(function(){const c=getConsent();if(c)applyConsent(c);else $('cookieBar').hidden=false})();
+
+
+/* ==== Sayfa ==== */
+const root=document.documentElement;
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const isSmall=matchMedia('(max-width:700px)').matches;
+const ic=n=>`<svg class="i" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const waBtn=s=>`<a class="btn btn-wa btn-s" href="${wa('Merhaba, '+s.ad+' hizmeti için bilgi almak istiyorum.')}" target="_blank" rel="noopener noreferrer">${ic('wa')} WhatsApp</a>`;
+const bnBtn=s=>`<a class="btn btn-bn btn-s" href="${esc(bnUrl(s))}" target="_blank" rel="noopener noreferrer">${ic('bag')} Bionluk</a>`;
+const priceOf=s=>esc(s.fiyat);
+
+/* Genel bağlantılar */
+['navWa','menuWa','ctaWa','ctaWa2','waFloat'].forEach(id=>$(id).href=wa('Merhaba, bilgi almak istiyorum.'));
+['ctaBn','ctaBn2'].forEach(id=>$(id).href=bnUrl({}));
+$('yr').textContent=new Date().getFullYear();
+
+/* Hizmet stüdyosu */
+const DISC=[
+ {k:'web',ic:'web',ad:'Web',alt:'Site ve uygulama',ids:['kurumsal','blog','uygulama']},
+ {k:'shop',ic:'cart',ad:'E-Ticaret',alt:'Mağaza ve pazaryeri',ids:['eticaret','shopify','ikea','pazaryeri']},
+ {k:'video',ic:'film',ad:'Video',alt:'Kurgu ve hareket',ids:['video']},
+ {k:'graf',ic:'pen',ad:'Grafik',alt:'Broşür ve reklam',ids:['corel','logo','sosyal','portfolyo']},
+ {k:'td',ic:'cube',ad:'3D',alt:'Modelleme ve proje',ids:['sketchup']}
+];
+const VIZ={
+web:`<div class="vl2" style="--d:6;left:7%;top:12%;width:62%;height:70%"><div class="vwin lt" style="inset:0"><div class="vbar"><i></i><i></i><i></i></div><div style="padding:2.4cqw"><div style="height:17cqw;border-radius:1.4cqw;background:linear-gradient(120deg,#7c3aed,#d946ef 60%,#f43f5e);padding:2.2cqw;display:grid;gap:1cqw;align-content:center"><span class="vl w" style="width:55%;height:2.2cqw"></span><span class="vl w" style="width:35%;opacity:.6"></span><span class="vl w" style="width:16%;height:2.6cqw;margin-top:1cqw"></span></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw;margin-top:2cqw"><i class="vimg" style="height:11cqw;background:#c4b5fd"></i><i class="vimg" style="height:11cqw;background:#f0abfc"></i><i class="vimg" style="height:11cqw;background:#fda4af"></i></div></div></div></div>
+<div class="vl2" style="--d:16;right:6%;top:24%;width:20%;height:56%"><div class="vwin" style="inset:0;border-radius:2.6cqw"><div style="width:30%;height:1cqw;border-radius:1cqw;background:rgba(255,255,255,.25);margin:2cqw auto"></div><div style="margin:0 2cqw;height:30%;border-radius:1.6cqw;background:linear-gradient(150deg,#6d28d9,#db2777)"></div><div style="padding:2cqw;display:grid;gap:1.2cqw"><span class="vl"></span><span class="vl" style="width:60%"></span><span class="vl" style="width:30%;height:2.4cqw;background:#d946ef"></span></div></div></div>
+<span class="vchip vl2" style="--d:26;left:4%;bottom:7%"><b></b>Mobil uyumlu</span><span class="vchip vl2" style="--d:30;right:26%;top:8%"><b></b>Hızlı yükleme</span>`,
+shop:`<div class="vl2" style="--d:6;left:6%;top:12%;width:58%;height:72%"><div class="vwin lt" style="inset:0"><div class="vbar"><i></i><i></i><i></i></div><div style="padding:2.2cqw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8cqw"><div><i class="vimg" style="display:block;height:15cqw;background:radial-gradient(circle at 30% 30%,#fbcfe8,#c026d3)"></i><span class="vl d" style="margin-top:1.2cqw;width:70%"></span><span class="vl" style="margin-top:.8cqw;width:40%"></span></div><div><i class="vimg" style="display:block;height:15cqw;background:radial-gradient(circle at 30% 30%,#fde68a,#f59e0b)"></i><span class="vl d" style="margin-top:1.2cqw;width:60%"></span><span class="vl" style="margin-top:.8cqw;width:44%"></span></div><div><i class="vimg" style="display:block;height:15cqw;background:radial-gradient(circle at 30% 30%,#a5f3fc,#0891b2)"></i><span class="vl d" style="margin-top:1.2cqw;width:76%"></span><span class="vl" style="margin-top:.8cqw;width:36%"></span></div></div><div style="margin:1cqw 2.2cqw;height:5cqw;border-radius:99px;background:linear-gradient(90deg,#7c3aed,#d946ef);display:grid;place-items:center;color:#fff;font:700 2cqw var(--font)">Sepete ekle</div></div></div>
+<div class="vcard vl2" style="--d:20;right:8%;top:16%;width:24%;height:28%;transform-origin:center;rotate:6deg"><span style="font-size:4.6cqw">₺ 20.500</span></div>
+<span class="vchip vl2" style="--d:28;right:12%;bottom:30%"><b></b>Güvenli ödeme</span><span class="vchip vl2" style="--d:14;right:20%;bottom:12%"><b style="background:#fbbf24"></b>Sipariş #1042</span>`,
+video:`<div class="vl2" style="--d:6;left:6%;top:9%;width:60%;height:50%"><div class="vwin" style="inset:0"><div style="position:absolute;inset:0;background:linear-gradient(180deg,#1e1b4b,#7c3aed 55%,#f472b6)"></div><div style="position:absolute;left:60%;top:26%;width:9cqw;height:9cqw;border-radius:50%;background:#fde68a;box-shadow:0 0 6cqw #fbbf24"></div><svg viewBox="0 0 100 40" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:50%"><path d="M0 40V22l16-10 14 8 18-14 20 12 18-8 14 10v20z" fill="#14122e" opacity=".9"/></svg><span style="position:absolute;left:50%;top:50%;width:7cqw;height:7cqw;margin:-3.5cqw;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center"><i style="border-left:2.6cqw solid #14122e;border-top:1.6cqw solid transparent;border-bottom:1.6cqw solid transparent;margin-left:.7cqw"></i></span></div></div>
+<div class="vl2" style="--d:12;left:6%;bottom:8%;width:88%;height:26%"><div class="vwin" style="inset:0"><div class="vtl"><i style="--w:46%;--c:#8b5cf6"></i><i style="--w:30%;--l:14%;--c:#e879f9"></i><i style="--w:58%;--l:6%;--c:#fb7185"></i><b class="ph"></b></div></div></div>
+<div class="vl2" style="--d:22;right:6%;top:12%;width:22%"><div class="wv" style="--l:0"><i style="--h:30%"></i><i style="--h:70%"></i><i style="--h:100%"></i><i style="--h:55%"></i><i style="--h:85%"></i><i style="--h:40%"></i><i style="--h:90%"></i><i style="--h:60%"></i><i style="--h:25%"></i><i style="--h:75%"></i></div></div>
+<span class="vchip vl2" style="--d:30;right:8%;top:34%"><b></b>9:16 · 16:9</span>`,
+graf:`<div class="vl2" style="--d:8;left:8%;top:9%;width:30%;height:80%"><div class="vwin" style="inset:0;background:#fbbf24;border:0;border-radius:1.6cqw"><span style="position:absolute;left:5%;top:-4%;font:800 25cqw/1 var(--disp);color:#14122e;letter-spacing:-.06em">%</span><span style="position:absolute;left:10%;bottom:10%;font:800 3.6cqw/1.05 var(--disp);color:#14122e">BÜYÜK<br>KAMPANYA</span><i style="position:absolute;right:10%;bottom:36%;width:6cqw;height:6cqw;border-radius:50%;background:#dc2626"></i></div></div>
+<div class="vl2" style="--d:18;left:36%;top:18%;width:34%;height:44%"><div class="vwin lt" style="inset:0;padding:2.4cqw"><span style="font:800 15cqw/1 var(--disp);color:#14122e;letter-spacing:-.05em">Aa</span><span class="vl d" style="margin-top:1cqw;width:70%"></span><span class="vl" style="margin-top:.8cqw;width:50%"></span></div></div>
+<div class="vsw vl2" style="--d:28;left:38%;bottom:12%"><i style="background:#0a0f2e"></i><i style="background:#7c3aed"></i><i style="background:#d946ef"></i><i style="background:#f43f5e"></i><i style="background:#fbbf24"></i></div>
+<div class="vl2" style="--d:14;right:6%;top:12%;width:22%;height:70%"><div class="vwin" style="inset:0;background:linear-gradient(160deg,#7c3aed,#d946ef);border:0"><span style="position:absolute;left:12%;top:14%;font:800 5.4cqw/.95 var(--disp);color:#fff;letter-spacing:-.04em">Yeni<br>Sezon</span><i style="position:absolute;left:12%;right:12%;bottom:12%;height:9cqw;border-radius:1.4cqw;background:rgba(255,255,255,.22)"></i></div></div>
+<span class="vchip vl2" style="--d:30;left:6%;bottom:6%"><b style="background:#fbbf24"></b>Baskıya hazır</span>`,
+td:`<div class="vl2" style="--d:10;left:50%;top:50%;width:0;height:0"><div style="position:absolute;left:-14cqw;top:-14cqw;width:28cqw;height:28cqw;perspective:1100px"><div class="cube3" style="--h:14cqw"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+<svg class="vl2" style="--d:20;left:8%;top:16%;width:30%" viewBox="0 0 120 90" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.2"><path d="M10 60L60 82l50-22V28L60 6 10 28z"/><path d="M10 28l50 22 50-22M60 50v32"/></svg>
+<svg class="vl2" style="--d:24;right:8%;bottom:14%;width:26%" viewBox="0 0 120 90" fill="none" stroke="rgba(244,114,182,.8)" stroke-width="1.2"><path d="M10 70h100M10 70V20M10 20h40v50"/><path d="M50 40h60v30"/><path d="M20 70v-8M40 70v-8M70 70v-8M90 70v-8"/></svg>
+<span class="vchip vl2" style="--d:30;left:8%;bottom:8%"><b></b>SketchUp modelleme</span><span class="vchip vl2" style="--d:26;right:8%;top:10%"><b style="background:#fbbf24"></b>Proje çizimi</span>`
+};
+const svcHTML=s=>`<article class="svc"><div class="svc-h"><div><h3>${esc(s.ad)}</h3><p class="svc-meta">${s.teslim!==TESLIM_YOK?'Teslim: '+esc(s.teslim)+(s.revizyon?' · '+esc(s.revizyon):''):'Kapsam sipariş öncesi netleşir'}</p></div><div class="svc-p">${priceOf(s)}${s.fiyatEk?`<small>${esc(s.fiyatEk)}</small>`:''}</div></div><p class="o">${esc(s.ozet)}</p><div class="svc-act">${waBtn(s)}${bnBtn(s)}<button class="lnk" data-open="${s.id}">Hizmeti İncele ${ic('arrow')}</button></div></article>`;
+const numOf=p=>{const m=/([\d.]+)\s*TL/.exec(p);return m?parseInt(m[1].replace(/\./g,''),10):null};
+const fromTxt=list=>{const n=list.map(s=>numOf(s.fiyat)).filter(x=>x!=null);return n.length?'₺'+Math.min(...n).toLocaleString('tr-TR')+'’den':'Teklif alın'};
+(function(){
+ const tabs=$('discs'),panes=$('panes');
+ DISC.forEach((d,i)=>{
+  const list=d.ids.map(id=>SERVICES.find(s=>s.id===id)).filter(Boolean);
+  tabs.insertAdjacentHTML('beforeend',`<button class="disc" role="tab" id="tab-${d.k}" aria-controls="pane-${d.k}" aria-selected="${i===0}" tabindex="${i===0?0:-1}"><span class="d-name">${d.ad}</span><small>${d.alt}</small><span class="d-from">${fromTxt(list)}</span></button>`);
+  panes.insertAdjacentHTML('beforeend',`<div class="pane${i===0?' on':''}" role="tabpanel" id="pane-${d.k}" aria-labelledby="tab-${d.k}" tabindex="0"><div class="viz" aria-hidden="true">${VIZ[d.k]}</div><div class="svcs">${list.map(svcHTML).join('')}</div></div>`);
+ });
+ const all=[...tabs.children];
+ const pick=i=>{all.forEach((t,k)=>{const on=k===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;$('pane-'+DISC[k].k).classList.toggle('on',on)})};
+ all.forEach((t,i)=>t.addEventListener('click',()=>pick(i)));
+ tabs.addEventListener('keydown',e=>{
+  const i=all.indexOf(document.activeElement);if(i<0)return;
+  const vert=innerWidth>980;let n=-1;
+  if(e.key===(vert?'ArrowDown':'ArrowRight')||e.key==='ArrowRight'&&!vert)n=(i+1)%all.length;
+  else if(e.key===(vert?'ArrowUp':'ArrowLeft')||e.key==='ArrowLeft'&&!vert)n=(i-1+all.length)%all.length;
+  else if(e.key==='Home')n=0;else if(e.key==='End')n=all.length-1;
+  if(n>=0){e.preventDefault();pick(n);all[n].focus()}
+ });
+})();
+
+/* Fiyat panosu, SSS, seçici */
+$('rows').innerHTML=SERVICES.map(s=>`<button class="row rv" data-open="${s.id}" aria-label="${esc(s.ad)}, ${esc(s.fiyat)}, detayı aç"><span class="rn">${esc(s.ad)}</span><span class="rd" aria-hidden="true"></span><span class="rp">${priceOf(s)}</span><span class="rs">${s.fiyatEk?esc(s.fiyatEk)+' · ':''}${s.teslim!==TESLIM_YOK?'Teslim '+esc(s.teslim):'Kapsam görüşmede netleşir'}</span></button>`).join('');
+$('faqList').innerHTML=FAQ.map(([q,a],i)=>`<details class="rv" style="--d:${i*60}"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('');
+$('pickSel').innerHTML=SERVICES.map(s=>`<option value="${s.id}">${esc(s.ad)}</option>`).join('');
+$('pickGo').onclick=()=>openPanel($('pickSel').value);
+document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o)openPanel(o.dataset.open)});
+
+/* Menü */
+const burger=$('burger'),menu=$('menu'),nav=$('nav');
+const setMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');nav.classList.toggle('menu-on',o);root.style.overflow=o?'hidden':(panel&&panel.classList.contains('open')?'hidden':'')};
+burger.onclick=()=>setMenu(!menu.classList.contains('open'));
+menu.onclick=e=>{if(e.target.tagName==='A')setMenu(false)};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);burger.focus()}});
+
+
+/* Süreç çizgisi */
+const tlw=$('tlw'),steps=[...tlw.querySelectorAll('.st')];
+
+/* Tek scroll döngüsü */
+let ticking=false;
+function onScroll(){
+ const y=scrollY,vh=innerHeight;
+ nav.classList.toggle('solid',y>30);
+ root.style.setProperty('--hp',Math.min(1,y/(vh*.9)).toFixed(3));
+ const tr=tlw.getBoundingClientRect();
+ let last=-1;steps.forEach((s,i)=>{const sr=s.getBoundingClientRect();const act=sr.top<vh*.62;s.classList.toggle('on',act);if(act)last=i});
+ const fp=last<0?0:Math.min(1,Math.max(0,(vh*.62-tr.top)/tr.height));
+ tlw.style.setProperty('--pr',fp.toFixed(3));
+ ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+addEventListener('resize',()=>{if(innerWidth>1060&&menu.classList.contains('open'))setMenu(false);onScroll()});onScroll();
+
+/* Giriş animasyonları (scroll reveal) */
+(function(){const els=document.querySelectorAll('.rv');
+ if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+ els.forEach(e=>io.observe(e));})();
+
+/* Fare ile derinlik (yalnızca ince imleçli cihazlar) */
+if(finePointer&&!reduceMotion){
+ const tilt=(host,target)=>{
+  let tx=0,ty=0,cx=0,cy=0,run=false;
+  const step=()=>{cx+=(tx-cx)*.08;cy+=(ty-cy)*.08;target.style.setProperty('--mx',cx.toFixed(3));target.style.setProperty('--my',cy.toFixed(3));if(Math.abs(tx-cx)>.002||Math.abs(ty-cy)>.002)requestAnimationFrame(step);else run=false};
+  host.addEventListener('pointermove',e=>{const r=host.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5)*2;ty=((e.clientY-r.top)/r.height-.5)*2;if(!run){run=true;requestAnimationFrame(step)}},{passive:true});
+  host.addEventListener('pointerleave',()=>{tx=0;ty=0;if(!run){run=true;requestAnimationFrame(step)}});
+ };
+ tilt(document.querySelector('.hero'),$('stage3d'));
+ document.querySelectorAll('.viz').forEach(v=>tilt(v,v));
+ /* Manyetik butonlar */
+ document.querySelectorAll('.hero .btn,.contact .btn').forEach(b=>{
+  b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=`${((e.clientX-r.left)/r.width-.5)*10}px ${((e.clientY-r.top)/r.height-.5)*8}px`});
+  b.addEventListener('pointerleave',()=>{b.style.translate=''});
+ });
+}
+
+/* Hero: parçacık heykeli (canvas) */
+(function(){
+ const cv=$('orb'),ctx=cv.getContext&&cv.getContext('2d');if(!ctx)return;
+ const st=$('stage3d'),hero=$('top');
+ const NK=isSmall?700:1500,NC=isSmall?120:260,NR=isSmall?60:140,N=NK+NC+2*NR;
+ const T=new Float32Array(N*3),S=new Float32Array(N*3),F=new Float32Array(N),Cb=new Uint8Array(N),Sz=new Float32Array(N);
+ const g=()=>(Math.random()+Math.random()+Math.random()-1.5)/1.5;
+ let k=0;
+ for(let i=0;i<NK;i++,k++){const t=i/NK*6.2832,r=2+Math.cos(3*t);T[k*3]=r*Math.cos(2*t)+g()*.2;T[k*3+1]=r*Math.sin(2*t)+g()*.2;T[k*3+2]=Math.sin(3*t)*1.3+g()*.2;Cb[k]=Math.floor(i/NK*10);Sz[k]=.8+Math.random()*.9}
+ for(let i=0;i<NC;i++,k++){const u=Math.random()*6.2832,v=Math.acos(2*Math.random()-1),r=.7+Math.random()*.2;T[k*3]=r*Math.sin(v)*Math.cos(u);T[k*3+1]=r*Math.sin(v)*Math.sin(u);T[k*3+2]=r*Math.cos(v);Cb[k]=11;Sz[k]=1.2+Math.random()}
+ for(let q=0;q<2;q++)for(let i=0;i<NR;i++,k++){const a=i/NR*6.2832,R=3.7+q*.55,tl=q?.5:-.4;const x=R*Math.cos(a),y=R*Math.sin(a)*.32;T[k*3]=x;T[k*3+1]=y*Math.cos(tl);T[k*3+2]=y*Math.sin(tl)+g()*.05;Cb[k]=q?3:7;Sz[k]=.6+Math.random()*.6}
+ for(let i=0;i<N;i++){const a=Math.random()*6.2832,b=Math.acos(2*Math.random()-1),r=7+Math.random()*5;S[i*3]=r*Math.sin(b)*Math.cos(a);S[i*3+1]=r*Math.sin(b)*Math.sin(a);S[i*3+2]=r*Math.cos(b);F[i]=Math.random()*.45}
+ /* parlama sprite'ları */
+ const cols=[[139,92,246],[168,85,247],[192,80,240],[217,70,239],[232,121,249],[244,114,182],[251,113,133],[240,171,252],[196,181,253],[216,180,254],[236,72,153],[255,255,255]];
+ const spr=cols.map(c=>{const s=document.createElement('canvas');s.width=s.height=32;const x=s.getContext('2d'),gr=x.createRadialGradient(16,16,0,16,16,16);gr.addColorStop(0,`rgba(${c},1)`);gr.addColorStop(.35,`rgba(${c},.45)`);gr.addColorStop(1,`rgba(${c},0)`);x.fillStyle=gr;x.fillRect(0,0,32,32);return s});
+ /* arka plan ağı */
+ const NP=isSmall?26:48,P=[];for(let i=0;i<NP;i++)P.push({x:Math.random(),y:Math.random(),vx:(Math.random()-.5)*.00005,vy:(Math.random()-.5)*.00004});
+ let W=0,H=0,dpr=1,vis=true,raf=0,mx=0,my=0,tx=0,ty=0,t0=0,time=0;
+ function size(){dpr=Math.min(devicePixelRatio||1,isSmall?1.5:1.75);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+ const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+ function draw(){
+  ctx.globalCompositeOperation='source-over';ctx.clearRect(0,0,W,H);
+  mx+=(tx-mx)*.05;my+=(ty-my)*.05;
+  const hp=+getComputedStyle(root).getPropertyValue('--hp')||0;
+  /* ağ */
+  const L=isSmall?90:130;ctx.lineWidth=1;
+  const pos=P.map(p=>[p.x*W+mx*12,p.y*H+my*9]);
+  for(let i=0;i<NP;i++)for(let j=i+1;j<NP;j++){const dx=pos[i][0]-pos[j][0],dy=pos[i][1]-pos[j][1],d=dx*dx+dy*dy;if(d<L*L){ctx.strokeStyle=`rgba(196,181,253,${(1-Math.sqrt(d)/L)*.16})`;ctx.beginPath();ctx.moveTo(pos[i][0],pos[i][1]);ctx.lineTo(pos[j][0],pos[j][1]);ctx.stroke()}}
+  ctx.fillStyle='rgba(240,171,252,.5)';for(const p of pos){ctx.beginPath();ctx.arc(p[0],p[1],1,0,6.283);ctx.fill()}
+  /* heykel */
+  const hr=hero.getBoundingClientRect(),sr=st.getBoundingClientRect();
+  const cx=sr.left-hr.left+sr.width/2,cy=sr.top-hr.top+sr.height/2,R=Math.min(sr.width*.5,sr.height*(isSmall?.62:.9))*.24*(1-hp*.1);
+  const prog=(time-t0)/(root.classList.contains('skip-intro')?700:2600);
+  const ay=time*.00022+mx*.7,ax=.28+my*.25+hp*.9,cy_=Math.cos(ay),sy=Math.sin(ay),cx_=Math.cos(ax),sx=Math.sin(ax);
+  const f=9,breath=1+Math.sin(time*.0012)*.015;
+  ctx.globalCompositeOperation='lighter';
+  const sc=1+hp*1.8,al=1-hp*.92;
+  for(let i=0;i<N;i++){
+   const e=ease((prog-F[i])/.6);
+   let X=S[i*3]+(T[i*3]-S[i*3])*e,Y=S[i*3+1]+(T[i*3+1]-S[i*3+1])*e,Z=S[i*3+2]+(T[i*3+2]-S[i*3+2])*e;
+   X*=sc*breath;Y*=sc*breath;Z*=sc*breath;
+   let x=X*cy_+Z*sy,z=-X*sy+Z*cy_,y=Y*cx_-z*sx;z=Y*sx+z*cx_;
+   const s=f/(f+z+1.5);
+   const px=cx+x*R*s,py=cy+y*R*s;
+   if(px<-20||px>W+20||py<-20||py>H+20)continue;
+   const depth=Math.min(1,Math.max(0,(z+4)/8)),a=(.22+.6*depth)*al*Math.min(1,e*1.4+.05);
+   const size=Sz[i]*s*(isSmall?3.6:4.6)*(Cb[i]===11?1.4:1);
+   ctx.globalAlpha=a;ctx.drawImage(spr[Cb[i]],px-size,py-size,size*2,size*2);
+  }
+  ctx.globalAlpha=1;
+ }
+ let lastT=0;
+ function loop(ts){if(!vis||document.hidden){raf=0;return}if(isSmall&&ts-lastT<30){raf=requestAnimationFrame(loop);return}lastT=ts;time=ts;if(!t0&&root.classList.contains('ready'))t0=ts;
+  for(const p of P){p.x=(p.x+p.vx*16+1)%1;p.y=(p.y+p.vy*16+1)%1}
+  draw();raf=requestAnimationFrame(loop)}
+ const kick=()=>{if(!raf&&!reduceMotion)raf=requestAnimationFrame(loop)};
+ size();
+ if(reduceMotion){t0=-1e6;time=0;draw();addEventListener('resize',()=>{size();draw()});return}
+ addEventListener('resize',size);
+ if(finePointer)hero.addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2},{passive:true});
+ if('IntersectionObserver' in window)new IntersectionObserver(e=>{vis=e[0].isIntersecting;if(vis)kick()}).observe(cv);
+ document.addEventListener('visibilitychange',kick);kick();
+})();
+
+/* Hizmet detay paneli */
+let cur=null,lastFocus=null;
+const panel=$('sidePanel');
+function openPanel(id){
+ cur=SERVICES.find(s=>s.id===id);if(!cur)return;lastFocus=document.activeElement;
+ $('pTitle').textContent=cur.ad;$('pPrice').textContent=cur.fiyat+(cur.fiyatEk?' ('+cur.fiyatEk+')':'');
+ $('pMeta').textContent=cur.teslim!==TESLIM_YOK?'Teslimat: '+cur.teslim+(cur.revizyon?' · '+cur.revizyon:''):'Teslimat: '+TESLIM_YOK;
+ $('pDesc').textContent=cur.ozet;
+ $('pList').innerHTML=cur.detay.map(d=>`<li>${esc(d)}</li>`).join('');
+ $('pExtra').innerHTML=cur.ekstra?'<p class="p-lab">Ekstralar</p>'+cur.ekstra.map(r=>`<div class="ex"><span>${esc(r[0])}</span><span>${esc(r[1])} · ${esc(r[2])}</span></div>`).join(''):'';
+ $('pBn').innerHTML=waBtn(cur)+bnBtn(cur);$('pErr').textContent='';
+ panel.classList.add('open');panel.setAttribute('aria-hidden','false');$('overlay').classList.add('on');root.style.overflow='hidden';
+ setTimeout(()=>$('pClose').focus(),60);
+}
+function closePanel(){panel.classList.remove('open');panel.setAttribute('aria-hidden','true');$('overlay').classList.remove('on');root.style.overflow='';if(lastFocus)lastFocus.focus()}
+$('pClose').onclick=closePanel;$('overlay').onclick=closePanel;
+document.addEventListener('keydown',e=>{
+ if(!panel.classList.contains('open'))return;
+ if(e.key==='Escape'&&!$('legalDlg').open){closePanel();return}
+ if(e.key==='Tab'&&!$('legalDlg').open){
+  const f=[...panel.querySelectorAll('a[href],button,input,select,textarea')].filter(x=>x.offsetParent!==null);
+  if(!f.length)return;const a=f[0],z=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
+ }
+});
+$('pSend').onclick=()=>{
+ const n=$('name').value.trim(),c=$('city').value.trim(),t=$('tel').value.trim();
+ if(!n||!c||t.replace(/\D/g,'').length<10){$('pErr').textContent='Lütfen ad soyad, şehir ve telefon numaranızı eksiksiz yazın.';return}
+ if(!$('kvkkOk').checked){$('pErr').textContent='Devam etmek için KVKK Aydınlatma Metni onay kutusunu işaretleyin.';return}
+ $('pErr').textContent='';
+ window.open(wa(`*YENİ TALEP*\n\n*Hizmet:* ${cur.ad}\n*İsim:* ${n}\n*Şehir:* ${c}\n*Tel:* ${t}`),'_blank','noopener');
+};
+
+/* Müşteri yorumları: tek kartlı sahne */
+/* Gerçek yorumlarınızı REVIEWS listesine ekleyin. Liste boşken aşağıdaki ÖRNEK içerik, açıkça işaretlenmiş olarak gösterilir.
+   Biçim: {ad:"Ad S.", hizmet:"Blog Tarzı Web Sitesi", yorum:"Yorum metni", puan:5} */
+const REVIEWS=[];
+const DEMO=[
+ {ad:"Örnek Müşteri",hizmet:"Örnek hizmet",yorum:"Bu alan örnek bir yorum metnidir. Siparişin her aşamasında bilgilendirildim ve teslimat konuşulan sürede yapıldı.",puan:5},
+ {ad:"Örnek Müşteri",hizmet:"Örnek hizmet",yorum:"Bu alan örnek bir yorum metnidir. Revizyon taleplerime hızlı dönüş yapıldı, sonuç beklentimi karşıladı.",puan:5},
+ {ad:"Örnek Müşteri",hizmet:"Örnek hizmet",yorum:"Bu alan örnek bir yorum metnidir. Fiyat ve kapsam baştan netti, süreç boyunca sürpriz yaşamadım.",puan:5}
+];
+(function(){
+ const isDemo=!REVIEWS.length,L=isDemo?DEMO:REVIEWS,N=L.length;let i=0,timer=null,paused=false;
+ $('revNote').textContent=isDemo?'Örnek içeriktir; gerçek yorumlar eklenince yerini alır.':'';
+ $('revTrack').innerHTML=L.map((r,k)=>`<article class="rev-slide" role="group" aria-roledescription="slide" aria-label="${k+1} / ${N}">${isDemo?'<span class="demo">Örnek içerik</span>':''}<div class="rev-stars" role="img" aria-label="${r.puan||5} yıldız">${'★'.repeat(r.puan||5)}</div><blockquote class="rev-q">${esc(r.yorum)}</blockquote><div class="rev-who"><span class="rev-av" aria-hidden="true">${esc((r.ad||'?').charAt(0))}</span><div><b>${esc(r.ad)}</b><span>${esc(r.hizmet)}</span></div></div></article>`).join('');
+ $('revDots').innerHTML=L.map((_,k)=>`<button class="rev-dot" data-i="${k}" aria-label="${k+1}. yoruma git"></button>`).join('');
+ const slides=[...$('revTrack').children],ds=[...$('revDots').children];
+ function go(n){
+  i=(n+N)%N;
+  slides.forEach((s,k)=>{s.classList.toggle('active',k===i);s.classList.toggle('before',k!==i&&(k<i||(i===0&&k===N-1)));s.setAttribute('aria-hidden',k!==i);s.inert=k!==i});
+  ds.forEach((d,k)=>{d.classList.toggle('active',k===i);d.setAttribute('aria-current',k===i?'true':'false')});
+  $('revCount').textContent=(i+1)+' / '+N;
+ }
+ const stop=()=>clearInterval(timer);
+ const play=()=>{stop();if(N<2||paused||reduceMotion)return;timer=setInterval(()=>go(i+1),6500)};
+ const setPaused=p=>{paused=p;const b=$('revPause');b.setAttribute('aria-pressed',p);b.setAttribute('aria-label',p?'Otomatik geçişi başlat':'Otomatik geçişi durdur');b.innerHTML=ic(p?'play':'pause');$('revTrack').setAttribute('aria-live',p?'polite':'off');play()};
+ $('revPrev').onclick=()=>{go(i-1);play()};$('revNext').onclick=()=>{go(i+1);play()};$('revPause').onclick=()=>setPaused(!paused);
+ $('revDots').onclick=e=>{const b=e.target.closest('[data-i]');if(b){go(+b.dataset.i);play()}};
+ $('revBox').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){go(i+1);play()}else if(e.key==='ArrowLeft'){go(i-1);play()}});
+ const sec=$('yorumlar');sec.addEventListener('mouseenter',stop);sec.addEventListener('mouseleave',play);sec.addEventListener('focusin',stop);sec.addEventListener('focusout',play);
+ let x0=null;$('revBox').addEventListener('touchstart',e=>{x0=e.touches[0].clientX;stop()},{passive:true});
+ $('revBox').addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(i+(d<0?1:-1));x0=null;play()});
+ if(N<2){['revPrev','revNext','revPause','revCount'].forEach(id=>$(id).style.display='none')}
+ /* En uzun yorum kadar yükseklik: kartlar aynı grid hücresinde üst üste, yükseklik otomatik eşitlenir */
+ go(0);play();
+})();
+
+</script>
+<script>
+(function(){
+var M={anasayfa:'top',yaklasim:'yaklasim',hizmetler:'hizmetler',konseptler:'projeler',surec:'surec',fiyatlar:'fiyatlar',yorumlar:'yorumlar',sss:'sss',iletisim:'iletisim'};
+var R={};for(var k in M)R[M[k]]=k;
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function go(slug,push){var id=M[slug],el=id&&document.getElementById(id);if(!el)return false;
+ el.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+ try{history[push?'pushState':'replaceState'](null,'','/'+slug)}catch(e){}return true}
+document.addEventListener('click',function(e){
+ if(e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey)return;
+ var a=e.target.closest&&e.target.closest('a[href^="/"]');if(!a)return;
+ var slug=a.getAttribute('href').slice(1);if(!M[slug])return;
+ e.preventDefault();go(slug,true)},true);
+var q=null;try{q=sessionStorage.getItem('esen_yol');sessionStorage.removeItem('esen_yol')}catch(e){}
+var slug=(q||location.pathname).replace(/^\/+|\/+$/g,'').replace(/\.html$/,'').toLowerCase();
+if(M[slug])addEventListener('load',function(){setTimeout(function(){go(slug,false)},350)});
+else if(slug&&slug!=='index'&&location.protocol!=='file:'){try{history.replaceState(null,'','/')}catch(e){}}
+if('IntersectionObserver' in window){var t;var io=new IntersectionObserver(function(es){es.forEach(function(x){
+ if(x.isIntersecting&&R[x.target.id]){clearTimeout(t);var n=R[x.target.id];t=setTimeout(function(){try{if(location.pathname!=='/'+n)history.replaceState(null,'','/'+n)}catch(e){}},250)}})},{rootMargin:'-45% 0px -50% 0px'});
+ Object.keys(R).forEach(function(i){var el=document.getElementById(i);el&&io.observe(el)})}
+})();
+</script></body>
+</html>
