@@ -249,7 +249,6 @@ h1 .l3>span{background:linear-gradient(90deg,#a78bfa,#e879f9 55%,#fb7185);-webki
 .rev-stars{color:var(--amber);letter-spacing:4px;font-size:18px}
 .rev-who{display:flex;align-items:center;gap:14px}.rev-av{width:48px;height:48px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:800;flex:none}
 .rev-who b{display:block}.rev-who span{font-size:.85rem;color:#b8b8d3}
-.demo{align-self:flex-start;margin-bottom:14px;padding:4px 12px;border-radius:99px;background:rgba(251,191,36,.15);border:1px solid rgba(251,191,36,.55);color:#fcd34d;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .rev-ctl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px;flex-wrap:wrap}
 .rev-btn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;transition:background .2s,transform .2s;display:grid;place-items:center}.rev-btn:hover{background:rgba(217,70,239,.38);transform:translateY(-2px)}
 .rev-dots{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;max-width:55%}
@@ -358,8 +357,8 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
  .nav.menu-on{backdrop-filter:none;-webkit-backdrop-filter:none}
  .menu{position:fixed;top:calc(76px + env(safe-area-inset-top));left:0;right:0;bottom:0;height:auto;overflow-y:auto;overscroll-behavior:contain;padding:12px 20px calc(28px + env(safe-area-inset-bottom));background:radial-gradient(70vmax 50vmax at 100% 0,rgba(124,58,237,.38),transparent 60%),radial-gradient(60vmax 40vmax at 0 100%,rgba(217,70,239,.22),transparent 60%),#05071a;border:0;font-size:inherit;letter-spacing:0;text-transform:none}
  .menu.open{display:flex;animation:menuIn .35s var(--ease)}
- .menu a:not(.menu-cta){font:800 clamp(1.5rem,6.4vw,2.1rem)/1.1 var(--disp);letter-spacing:-.03em;color:#fff;padding:18px 4px;min-height:60px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.1)}
- .menu a:not(.menu-cta):active{color:var(--pink)}
+ .menu>a:not(.menu-cta){font:800 clamp(1.5rem,6.4vw,2.1rem)/1.1 var(--disp);letter-spacing:-.03em;color:#fff;padding:18px 4px;min-height:60px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.1)}
+ .menu>a:not(.menu-cta):active{color:var(--pink)}
  .menu a.menu-cta{display:inline-flex;margin-top:24px;width:100%;padding:15px 28px;font:700 15px var(--font);letter-spacing:0;text-transform:none;border-bottom:0;min-height:54px}
 }
 @keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
@@ -433,6 +432,43 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
  .fbot div a{display:inline-flex;align-items:center;min-height:44px}
  footer .logo{min-height:44px}
 }
+
+/* ===== YENİ MOBİL MENÜ ===== */
+.menu-foot{display:none}
+@media(max-width:1060px){
+ .menu{counter-reset:m;gap:0;padding:6px 22px calc(26px + env(safe-area-inset-bottom));background:radial-gradient(80vmax 56vmax at 108% -6%,rgba(124,58,237,.46),transparent 58%),radial-gradient(60vmax 44vmax at -12% 104%,rgba(217,70,239,.26),transparent 60%),linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px) 0 0/56px 56px,linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px) 0 0/56px 56px,#05071a}
+ .menu>a:not(.menu-cta){counter-increment:m;position:relative;display:flex;align-items:center;gap:16px;padding:clamp(12px,2.3vh,19px) 6px;min-height:58px;font:800 clamp(1.7rem,7.4vw,2.4rem)/1.05 var(--disp);letter-spacing:-.035em;color:#f4f2ff;border-bottom:1px solid rgba(255,255,255,.07);-webkit-tap-highlight-color:transparent;transition:color .25s,background .3s,padding .35s var(--ease)}
+ .menu>a:not(.menu-cta)::before{content:counter(m,decimal-leading-zero);font:700 11px/1 var(--font);letter-spacing:.14em;color:var(--pink);min-width:22px}
+ .menu>a:not(.menu-cta)::after{display:block;position:static;left:auto;right:auto;bottom:auto;width:9px;height:9px;margin-left:auto;margin-right:6px;background:none;border:solid rgba(255,255,255,.4);border-width:2px 2px 0 0;transform:rotate(45deg);transform-origin:center;transition:transform .35s var(--ease),border-color .25s}
+ .menu>a:not(.menu-cta):active{background:linear-gradient(90deg,rgba(217,70,239,.18),transparent);padding-left:14px;color:#fff}
+ .menu>a:not(.menu-cta):active::after{transform:translateX(5px) rotate(45deg);border-color:var(--pink)}
+ .menu a.menu-cta{gap:12px;margin-top:clamp(18px,3.2vh,30px);min-height:56px;font-size:16px;box-shadow:0 16px 36px -14px rgba(217,70,239,.8)}
+ .menu a.menu-cta .i{width:22px;height:22px}
+ .menu-foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+ .menu-foot a{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 14px;border-radius:99px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#d8d6f3;font:600 13px var(--font);letter-spacing:0;text-transform:none;white-space:nowrap}
+ .menu-foot a::after{display:none!important}
+ .menu-foot .i{color:var(--pink);width:17px;height:17px}
+ .menu.open>*{animation:linkIn .6s var(--ease) both}
+ .menu.open>*:nth-child(1){animation-delay:.04s}.menu.open>*:nth-child(2){animation-delay:.08s}.menu.open>*:nth-child(3){animation-delay:.12s}.menu.open>*:nth-child(4){animation-delay:.16s}.menu.open>*:nth-child(5){animation-delay:.2s}.menu.open>*:nth-child(6){animation-delay:.24s}.menu.open>*:nth-child(7){animation-delay:.28s}.menu.open>*:nth-child(8){animation-delay:.34s}.menu.open>*:nth-child(9){animation-delay:.4s}
+}
+@keyframes linkIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.burger .i{width:22px;height:22px}
+/* ===== İLKELER KARTLARI ===== */
+.rev-slide.pr::before{content:none}
+.pr-n{font:800 clamp(3.4rem,10vw,6rem)/.9 var(--disp);letter-spacing:-.06em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}
+.pr-t{font:800 clamp(1.5rem,4vw,2.4rem)/1.1 var(--disp);letter-spacing:-.03em;color:#fff}
+.rev-slide.pr .rev-q{margin:12px 0 0;max-width:34ch}
+.svc-t{display:flex;gap:14px;align-items:flex-start;min-width:0}.svc-ic{display:none}
+@media(max-width:700px){
+ .svc-ic{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,rgba(124,58,237,.55),rgba(217,70,239,.32));border:1px solid rgba(255,255,255,.2);color:#f5d0fe;box-shadow:0 10px 22px -10px rgba(217,70,239,.7)}
+ .svc-ic .i{width:21px;height:21px;stroke-width:1.7}
+ .svc-t>div{min-width:0}
+ main{counter-reset:sec}
+ section.dark .eyebrow{counter-increment:sec}
+ section.dark .eyebrow::before{content:counter(sec,decimal-leading-zero);width:auto;height:auto;background:none;font-weight:800;color:inherit;opacity:.75}
+ .pr-n{font-size:3.4rem}
+ .rev-slide.pr{padding:30px 24px}
+}
 </style>
 </head>
 <body id="body">
@@ -474,8 +510,9 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
 <header class="nav" id="nav"><div class="wrap nav-in">
  <a href="/anasayfa" class="logo" aria-label="ESENTECH Technology ana sayfa"><span class="logo-mark"><svg class="i"><use href="#i-node"/></svg></span><span class="logo-t"><b>ESENTECH</b><small>TECHNOLOGY</small></span></a>
  <nav class="menu" id="menu" aria-label="Ana menü">
-  <a href="/yaklasim">Yaklaşım</a><a href="/hizmetler">Hizmetler</a><a href="/konseptler">Konseptler</a><a href="/surec">Süreç</a><a href="/fiyatlar">Fiyatlar</a><a href="/yorumlar">Yorumlar</a><a href="/sss">SSS</a>
-  <a id="menuWa" class="menu-cta btn btn-p" href="#" target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp ile Teklif Al</a>
+  <a href="/yaklasim">Yaklaşım</a><a href="/hizmetler">Hizmetler</a><a href="/konseptler">Konseptler</a><a href="/surec">Süreç</a><a href="/fiyatlar">Fiyatlar</a><a href="/ilkeler">İlkeler</a><a href="/sss">SSS</a>
+  <a id="menuWa" class="menu-cta btn btn-p" href="#" target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp ile Teklif Al</span></a>
+  <div class="menu-foot"><a href="tel:+905349644975"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>+90 534 964 4975</a><a href="mailto:info@esentech.com"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>info@esentech.com</a></div>
  </nav>
  <div class="nav-r">
   <a id="navWa" class="btn btn-p btn-s" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-wa"/></svg> Teklif Al</a>
@@ -540,7 +577,6 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
 <section class="work dark" id="projeler"><div class="wrap">
  <p class="eyebrow">Portfolyo</p>
  <h2 class="title">Konsept çalışmalar.</h2>
- <p class="note"><svg class="i"><use href="#i-info"/></svg><span>Kendi ürettiğimiz konseptlerdir; müşteri projesi değildir.</span></p>
  <div class="bento">
   <article class="cn a rv"><div class="cn-art a1"><div class="nvb"><i></i><i></i><i></i></div><div class="big">Yeni<span>Sezon</span></div><span class="tagp">-30%</span><div class="prod p1"></div><div class="prod p2"></div><div class="prod p3"></div><span class="cta2">Mağazaya git</span></div><div class="cn-cap"><span class="tag-c">Konsept · E-ticaret</span><h3>Dijital vitrin</h3></div></article>
   <article class="cn b rv" style="--d:100"><div class="cn-art b1"><div class="mast"><span>Günlük</span><i></i></div><div class="hd">Yazıya<br>alan aç.</div><div class="im"></div><div class="tx"><i></i><i></i><i></i><i></i></div></div><div class="cn-cap"><span class="tag-c">Konsept · Blog</span><h3>Editoryal düzen</h3></div></article>
@@ -569,11 +605,10 @@ dialog::backdrop{background:rgba(5,8,25,.6);backdrop-filter:blur(3px)}
   <div class="cta"><a class="btn btn-wa" id="ctaWa2" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-wa"/></svg> Teklif iste</a><a class="btn btn-bn" id="ctaBn2" href="#" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-bag"/></svg> Bionluk'ta gör</a></div></div>
 </div></section>
 
-<section class="rev dark" id="yorumlar" aria-labelledby="revTitle"><div class="wrap">
- <p class="eyebrow">Müşteri yorumları</p>
- <h2 class="title" id="revTitle">Yorumlar.</h2>
- <p class="lead" id="revNote"></p>
- <div class="rev-box" id="revBox" role="region" aria-roledescription="carousel" aria-label="Müşteri yorumları" tabindex="0">
+<section class="rev dark" id="ilkeler" aria-labelledby="revTitle"><div class="wrap">
+ <p class="eyebrow" id="revEyebrow">Çalışma ilkeleri</p>
+ <h2 class="title" id="revTitle">Nasıl çalışırız.</h2>
+ <div class="rev-box" id="revBox" role="region" aria-roledescription="carousel" aria-label="Çalışma ilkeleri" tabindex="0">
   <div class="rev-track" id="revTrack" aria-live="off"></div>
   <div class="rev-ctl">
    <button class="rev-btn" id="revPrev" aria-label="Önceki yorum"><svg class="i"><use href="#i-left"/></svg></button>
@@ -671,7 +706,7 @@ const SERVICES = [
  { id:"shopify", grup:"E-Ticaret Altyapıları", tip:"shop2", ad:"Shopify ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
    ozet:"Shopify altyapısıyla modern, kullanıcı dostu ve satış odaklı çevrim içi mağaza kurulumu.", detay:["Mağaza kurulumu ve tasarımı","Ürün ve ödeme ayarları"], url:"" },
  { id:"ikea", grup:"E-Ticaret Altyapıları", tip:"shop", ad:"IKEA ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
-   ozet:"Kapsam ve kullanılacak platform sipariş öncesinde birlikte netleştirilir.", detay:["Kapsam görüşmede belirlenir"], url:"" /* TODO: ilan adını/açıklamasını doğrulayın */ },
+   ozet:"Kapsam ve kullanılacak platform sipariş öncesinde birlikte netleştirilir.", detay:["Kapsam görüşmede belirlenir"], url:"" },
  { id:"pazaryeri", grup:"E-Ticaret Altyapıları", tip:"market", ad:"Trendyol, Amazon ve Diğer Pazaryerleri", fiyat:"Teklif alın", teslim:TESLIM_YOK,
    ozet:"Pazaryeri mağazası kurulumu, ürün listeleme ve satış süreçlerine yönelik hizmetler.", detay:["Mağaza kurulumu","Ürün listeleme"], url:"" },
  { id:"video", grup:"Video ve Tasarım", tip:"video", ad:"Video Kurgulama ve Edit", fiyat:"2.500 TL", teslim:TESLIM_YOK,
@@ -758,7 +793,7 @@ web:`<div class="vl2" style="--d:6;left:7%;top:12%;width:62%;height:70%"><div cl
 <span class="vchip vl2" style="--d:26;left:4%;bottom:7%"><b></b>Mobil uyumlu</span><span class="vchip vl2" style="--d:30;right:26%;top:8%"><b></b>Hızlı yükleme</span>`,
 shop:`<div class="vl2" style="--d:6;left:6%;top:12%;width:58%;height:72%"><div class="vwin lt" style="inset:0"><div class="vbar"><i></i><i></i><i></i></div><div style="padding:2.2cqw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8cqw"><div><i class="vimg" style="display:block;height:15cqw;background:radial-gradient(circle at 30% 30%,#fbcfe8,#c026d3)"></i><span class="vl d" style="margin-top:1.2cqw;width:70%"></span><span class="vl" style="margin-top:.8cqw;width:40%"></span></div><div><i class="vimg" style="display:block;height:15cqw;background:radial-gradient(circle at 30% 30%,#fde68a,#f59e0b)"></i><span class="vl d" style="margin-top:1.2cqw;width:60%"></span><span class="vl" style="margin-top:.8cqw;width:44%"></span></div><div><i class="vimg" style="display:block;height:15cqw;background:radial-gradient(circle at 30% 30%,#a5f3fc,#0891b2)"></i><span class="vl d" style="margin-top:1.2cqw;width:76%"></span><span class="vl" style="margin-top:.8cqw;width:36%"></span></div></div><div style="margin:1cqw 2.2cqw;height:5cqw;border-radius:99px;background:linear-gradient(90deg,#7c3aed,#d946ef);display:grid;place-items:center;color:#fff;font:700 2cqw var(--font)">Sepete ekle</div></div></div>
 <div class="vcard vl2" style="--d:20;right:8%;top:16%;width:24%;height:28%;transform-origin:center;rotate:6deg"><span style="font-size:4.6cqw">₺ 20.500</span></div>
-<span class="vchip vl2" style="--d:28;right:12%;bottom:30%"><b></b>Güvenli ödeme</span><span class="vchip vl2" style="--d:14;right:20%;bottom:12%"><b style="background:#fbbf24"></b>Sipariş #1042</span>`,
+<span class="vchip vl2" style="--d:28;right:12%;bottom:30%"><b></b>Güvenli ödeme</span><span class="vchip vl2" style="--d:14;right:20%;bottom:12%"><b style="background:#fbbf24"></b>Sipariş onayı</span>`,
 video:`<div class="vl2" style="--d:6;left:6%;top:9%;width:60%;height:50%"><div class="vwin" style="inset:0"><div style="position:absolute;inset:0;background:linear-gradient(180deg,#1e1b4b,#7c3aed 55%,#f472b6)"></div><div style="position:absolute;left:60%;top:26%;width:9cqw;height:9cqw;border-radius:50%;background:#fde68a;box-shadow:0 0 6cqw #fbbf24"></div><svg viewBox="0 0 100 40" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:0;width:100%;height:50%"><path d="M0 40V22l16-10 14 8 18-14 20 12 18-8 14 10v20z" fill="#14122e" opacity=".9"/></svg><span style="position:absolute;left:50%;top:50%;width:7cqw;height:7cqw;margin:-3.5cqw;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center"><i style="border-left:2.6cqw solid #14122e;border-top:1.6cqw solid transparent;border-bottom:1.6cqw solid transparent;margin-left:.7cqw"></i></span></div></div>
 <div class="vl2" style="--d:12;left:6%;bottom:8%;width:88%;height:26%"><div class="vwin" style="inset:0"><div class="vtl"><i style="--w:46%;--c:#8b5cf6"></i><i style="--w:30%;--l:14%;--c:#e879f9"></i><i style="--w:58%;--l:6%;--c:#fb7185"></i><b class="ph"></b></div></div></div>
 <div class="vl2" style="--d:22;right:6%;top:12%;width:22%"><div class="wv" style="--l:0"><i style="--h:30%"></i><i style="--h:70%"></i><i style="--h:100%"></i><i style="--h:55%"></i><i style="--h:85%"></i><i style="--h:40%"></i><i style="--h:90%"></i><i style="--h:60%"></i><i style="--h:25%"></i><i style="--h:75%"></i></div></div>
@@ -773,7 +808,8 @@ td:`<div class="vl2" style="--d:10;left:50%;top:50%;width:0;height:0"><div style
 <svg class="vl2" style="--d:24;right:8%;bottom:14%;width:26%" viewBox="0 0 120 90" fill="none" stroke="rgba(244,114,182,.8)" stroke-width="1.2"><path d="M10 70h100M10 70V20M10 20h40v50"/><path d="M50 40h60v30"/><path d="M20 70v-8M40 70v-8M70 70v-8M90 70v-8"/></svg>
 <span class="vchip vl2" style="--d:30;left:8%;bottom:8%"><b></b>SketchUp modelleme</span><span class="vchip vl2" style="--d:26;right:8%;top:10%"><b style="background:#fbbf24"></b>Proje çizimi</span>`
 };
-const svcHTML=s=>`<article class="svc"><div class="svc-h"><div><h3>${esc(s.ad)}</h3><p class="svc-meta">${s.teslim!==TESLIM_YOK?'Teslim: '+esc(s.teslim)+(s.revizyon?' · '+esc(s.revizyon):''):'Kapsam sipariş öncesi netleşir'}</p></div><div class="svc-p">${priceOf(s)}${s.fiyatEk?`<small>${esc(s.fiyatEk)}</small>`:''}</div></div><p class="o">${esc(s.ozet)}</p><div class="svc-act">${waBtn(s)}${bnBtn(s)}<button class="lnk" data-open="${s.id}">Hizmeti İncele ${ic('arrow')}</button></div></article>`;
+const iconOf=s=>(DISC.find(d=>d.ids.includes(s.id))||{ic:'web'}).ic;
+const svcHTML=s=>`<article class="svc"><div class="svc-h"><div class="svc-t"><span class="svc-ic" aria-hidden="true">${ic(iconOf(s))}</span><div><h3>${esc(s.ad)}</h3><p class="svc-meta">${s.teslim!==TESLIM_YOK?'Teslim: '+esc(s.teslim)+(s.revizyon?' · '+esc(s.revizyon):''):'Kapsam sipariş öncesi netleşir'}</p></div></div><div class="svc-p">${priceOf(s)}${s.fiyatEk?`<small>${esc(s.fiyatEk)}</small>`:''}</div></div><p class="o">${esc(s.ozet)}</p><div class="svc-act">${waBtn(s)}${bnBtn(s)}<button class="lnk" data-open="${s.id}">Hizmeti İncele ${ic('arrow')}</button></div></article>`;
 const numOf=p=>{const m=/([\d.]+)\s*TL/.exec(p);return m?parseInt(m[1].replace(/\./g,''),10):null};
 const fromTxt=list=>{const n=list.map(s=>numOf(s.fiyat)).filter(x=>x!=null);return n.length?'₺'+Math.min(...n).toLocaleString('tr-TR')+'’den':'Teklif alın'};
 (function(){
@@ -805,7 +841,7 @@ document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if
 
 /* Menü */
 const burger=$('burger'),menu=$('menu'),nav=$('nav');
-const setMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');nav.classList.toggle('menu-on',o);root.style.overflow=o?'hidden':(panel&&panel.classList.contains('open')?'hidden':'')};
+const setMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.innerHTML=ic(o?'x':'menu');burger.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');nav.classList.toggle('menu-on',o);root.style.overflow=o?'hidden':(panel&&panel.classList.contains('open')?'hidden':'')};
 burger.onclick=()=>setMenu(!menu.classList.contains('open'));
 menu.onclick=e=>{if(e.target.tagName==='A')setMenu(false)};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);burger.focus()}});
@@ -950,18 +986,19 @@ $('pSend').onclick=()=>{
 };
 
 /* Müşteri yorumları: tek kartlı sahne */
-/* Gerçek yorumlarınızı REVIEWS listesine ekleyin. Liste boşken aşağıdaki ÖRNEK içerik, açıkça işaretlenmiş olarak gösterilir.
+/* Doğrulanmış gerçek yorumlarınızı REVIEWS listesine ekleyin. Liste boşken bölüm "çalışma ilkeleri" olarak görünür; sahte yorum gösterilmez.
    Biçim: {ad:"Ad S.", hizmet:"Blog Tarzı Web Sitesi", yorum:"Yorum metni", puan:5} */
 const REVIEWS=[];
-const DEMO=[
- {ad:"Örnek Müşteri",hizmet:"Örnek hizmet",yorum:"Bu alan örnek bir yorum metnidir. Siparişin her aşamasında bilgilendirildim ve teslimat konuşulan sürede yapıldı.",puan:5},
- {ad:"Örnek Müşteri",hizmet:"Örnek hizmet",yorum:"Bu alan örnek bir yorum metnidir. Revizyon taleplerime hızlı dönüş yapıldı, sonuç beklentimi karşıladı.",puan:5},
- {ad:"Örnek Müşteri",hizmet:"Örnek hizmet",yorum:"Bu alan örnek bir yorum metnidir. Fiyat ve kapsam baştan netti, süreç boyunca sürpriz yaşamadım.",puan:5}
+const PRINC=[
+ {baslik:"Net kapsam",metin:"Fiyat ve kapsam, sipariş verilmeden önce birlikte netleştirilir."},
+ {baslik:"Revizyon payı",metin:"İlanda belirtilen revizyon sayısı pakete dahildir. Ek revizyon ayrıca alınabilir."},
+ {baslik:"Mobil öncelikli",metin:"Her tasarım önce telefon ekranında düşünülür, sonra büyük ekrana uyarlanır."},
+ {baslik:"Teslimde sahiplik",metin:"Dosyalar ve erişimler size teslim edilir."}
 ];
 (function(){
- const isDemo=!REVIEWS.length,L=isDemo?DEMO:REVIEWS,N=L.length;let i=0,timer=null,paused=false;
- $('revNote').textContent=isDemo?'Örnek içeriktir; gerçek yorumlar eklenince yerini alır.':'';
- $('revTrack').innerHTML=L.map((r,k)=>`<article class="rev-slide" role="group" aria-roledescription="slide" aria-label="${k+1} / ${N}">${isDemo?'<span class="demo">Örnek içerik</span>':''}<div class="rev-stars" role="img" aria-label="${r.puan||5} yıldız">${'★'.repeat(r.puan||5)}</div><blockquote class="rev-q">${esc(r.yorum)}</blockquote><div class="rev-who"><span class="rev-av" aria-hidden="true">${esc((r.ad||'?').charAt(0))}</span><div><b>${esc(r.ad)}</b><span>${esc(r.hizmet)}</span></div></div></article>`).join('');
+ const isDemo=!REVIEWS.length,L=isDemo?PRINC:REVIEWS,N=L.length;let i=0,timer=null,paused=false;
+ if(!isDemo){$('revEyebrow').textContent='Müşteri yorumları';$('revTitle').textContent='Yorumlar.'}
+ $('revTrack').innerHTML=L.map((r,k)=>isDemo?`<article class="rev-slide pr" role="group" aria-roledescription="slide" aria-label="${k+1} / ${N}"><span class="pr-n" aria-hidden="true">0${k+1}</span><h3 class="pr-t">${esc(r.baslik)}</h3><p class="rev-q">${esc(r.metin)}</p></article>`:`<article class="rev-slide" role="group" aria-roledescription="slide" aria-label="${k+1} / ${N}"><div class="rev-stars" role="img" aria-label="${r.puan||5} yıldız">${'★'.repeat(r.puan||5)}</div><blockquote class="rev-q">${esc(r.yorum)}</blockquote><div class="rev-who"><span class="rev-av" aria-hidden="true">${esc((r.ad||'?').charAt(0))}</span><div><b>${esc(r.ad)}</b><span>${esc(r.hizmet)}</span></div></div></article>`).join('');
  $('revDots').innerHTML=L.map((_,k)=>`<button class="rev-dot" data-i="${k}" aria-label="${k+1}. yoruma git"></button>`).join('');
  const slides=[...$('revTrack').children],ds=[...$('revDots').children];
  function go(n){
@@ -976,7 +1013,7 @@ const DEMO=[
  $('revPrev').onclick=()=>{go(i-1);play()};$('revNext').onclick=()=>{go(i+1);play()};$('revPause').onclick=()=>setPaused(!paused);
  $('revDots').onclick=e=>{const b=e.target.closest('[data-i]');if(b){go(+b.dataset.i);play()}};
  $('revBox').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){go(i+1);play()}else if(e.key==='ArrowLeft'){go(i-1);play()}});
- const sec=$('yorumlar');sec.addEventListener('mouseenter',stop);sec.addEventListener('mouseleave',play);sec.addEventListener('focusin',stop);sec.addEventListener('focusout',play);
+ const sec=$('ilkeler');sec.addEventListener('mouseenter',stop);sec.addEventListener('mouseleave',play);sec.addEventListener('focusin',stop);sec.addEventListener('focusout',play);
  let x0=null;$('revBox').addEventListener('touchstart',e=>{x0=e.touches[0].clientX;stop()},{passive:true});
  $('revBox').addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(i+(d<0?1:-1));x0=null;play()});
  if(N<2){['revPrev','revNext','revPause','revCount'].forEach(id=>$(id).style.display='none')}
@@ -987,7 +1024,7 @@ const DEMO=[
 </script>
 <script>
 (function(){
-var M={anasayfa:'top',yaklasim:'yaklasim',hizmetler:'hizmetler',konseptler:'projeler',surec:'surec',fiyatlar:'fiyatlar',yorumlar:'yorumlar',sss:'sss',iletisim:'iletisim'};
+var M={anasayfa:'top',yaklasim:'yaklasim',hizmetler:'hizmetler',konseptler:'projeler',surec:'surec',fiyatlar:'fiyatlar',ilkeler:'ilkeler',sss:'sss',iletisim:'iletisim'};
 var R={};for(var k in M)R[M[k]]=k;
 var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function go(slug,push){var id=M[slug],el=id&&document.getElementById(id);if(!el)return false;
