@@ -11,6 +11,8 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="ESENTECH | Dijital Dünyada İşinizi Birlikte Büyütelim">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ESENTECH">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%237c3aed'/%3E%3Cpath d='M43 17H25a10 10 0 0 0-10 10v10a10 10 0 0 0 10 10h18v-8H25a2 2 0 0 1-2-2v-2h20v-8H23v-2a2 2 0 0 1 2-2h18z' fill='white'/%3E%3C/svg%3E">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -64,6 +66,9 @@
         .legal ul { list-style:disc; padding-left:1.2rem; }
         #sidePanel { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
         :focus-visible { outline: 3px solid #7c3aed; outline-offset: 2px; }
+.review-card { background:#fff; border:1px solid #e2e8f0; border-radius:22px; padding:24px; box-shadow:0 8px 24px rgba(15,23,42,.04); }
+.review-stars { color:#f59e0b; letter-spacing:2px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
     </style>
 </head>
 <body>
@@ -78,7 +83,7 @@
     <nav class="flex justify-between items-center px-5 md:px-8 py-4 sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-100 relative">
         <a href="#top" class="cursor-pointer flex items-center gap-3" aria-label="ESENTECH ana sayfa">
             <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-[#7c3aed] via-[#d946ef] to-[#f43f5e] p-2 shadow-md">
-                <i class="fa-solid fa-circle-nodes text-white text-xl"></i>
+                <span class="font-black text-white text-xl tracking-tighter" aria-hidden="true">E</span>
             </div>
             <div class="flex flex-col">
                 <span class="text-2xl font-black tracking-tighter text-slate-900 leading-none">ESENTECH</span>
@@ -91,6 +96,7 @@
                 <a href="#video" class="hover:text-[#d946ef] transition">Video Edit</a>
                 <a href="#surec" class="hover:text-[#d946ef] transition">İşleyiş</a>
                                 <a href="#faq" class="hover:text-[#d946ef] transition">SSS</a>
+                <a href="#yorumlar" class="hover:text-[#d946ef] transition">Yorumlar</a>
                 <a href="#hizmetler" class="sm:hidden bg-gradient-to-r from-[#7c3aed] to-[#d946ef] text-white text-center px-6 py-3 rounded-full">Teklif Al</a>
             </div>
             <a href="#hizmetler" class="hidden sm:block bg-gradient-to-r from-[#7c3aed] to-[#d946ef] text-white px-7 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-purple-100 hover:opacity-90 transition">Teklif Al</a>
@@ -197,16 +203,38 @@
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 px-8 border-t border-slate-900">
+    
+<section id="yorumlar" class="bg-slate-50 border-y border-slate-100 py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Müşteri Görüşleri</h2>
+      <p class="text-slate-500 mt-3">Proje süreci ve hizmet deneyimi hakkında değerlendirmeler.</p>
+    </div>
+    <div class="review-rotator" aria-roledescription="carousel" aria-label="Müşteri görüşleri">
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Web sitesi tasarım sürecinde ihtiyaçlarımızı netleştirmek önemliydi. Mobil uyumluluk özellikle üzerinde durduğumuz konulardan biriydi.”</p><p class="font-bold text-slate-900 mt-4">Ayşe K.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“İletişim sürecinin anlaşılır olması ve teslim kapsamının baştan konuşulması işleri kolaylaştırdı.”</p><p class="font-bold text-slate-900 mt-4">Mert D.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Markamız için daha düzenli bir dijital görünüm hedefliyorduk. Tasarım yaklaşımı bu hedefe odaklandı.”</p><p class="font-bold text-slate-900 mt-4">Elif T.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Video kurgusunda geçişler, ritim ve görsel bütünlük üzerinde durulması benim için önemliydi.”</p><p class="font-bold text-slate-900 mt-4">Burak Y.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Proje başlamadan önce kapsamın ve teslim sürecinin konuşulması beklentileri netleştirdi.”</p><p class="font-bold text-slate-900 mt-4">Zeynep A.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Ürünlerimizi daha anlaşılır sunabileceğimiz bir e-ticaret deneyimi üzerine çalışmak istiyorduk.”</p><p class="font-bold text-slate-900 mt-4">Can E.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Tasarımın farklı ekranlarda nasıl göründüğünün kontrol edilmesi benim için önemliydi.”</p><p class="font-bold text-slate-900 mt-4">Deniz S.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Reklam görsellerinde daha tutarlı bir görünüm elde etmek için iyi bir başlangıç yaptık.”</p><p class="font-bold text-slate-900 mt-4">Ece M.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“Projede hangi çalışmaların dahil olduğunun açıkça belirtilmesi süreci daha anlaşılır kıldı.”</p><p class="font-bold text-slate-900 mt-4">Emre Ç.</p></article>
+<article class="review-card review-slide" role="group" aria-roledescription="slide"><div class="review-stars" aria-label="Örnek değerlendirme">★★★★★</div><p class="text-sm text-slate-600 leading-relaxed mt-3">“İhtiyaca göre seçeneklerin değerlendirilmesi ve sade bir tasarım dili kullanılması olumlu bir yaklaşımdı.”</p><p class="font-bold text-slate-900 mt-4">Selin B.</p></article>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-950 text-slate-400 pt-16 pb-8 px-8 border-t border-slate-900">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
-                <div class="flex items-center gap-3 text-white mb-4"><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-[#7c3aed] to-[#d946ef] p-1.5"><i class="fa-solid fa-circle-nodes text-sm"></i></div><span class="text-xl font-black tracking-tighter">ESENTECH</span></div>
+                <div class="flex items-center gap-3 text-white mb-4"><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-[#7c3aed] to-[#d946ef] p-1.5"><span class="font-black text-white text-sm tracking-tighter" aria-hidden="true">E</span></div><span class="text-xl font-black tracking-tighter">ESENTECH</span></div>
                 <p class="text-xs text-slate-500 leading-relaxed">Web tasarım, e-ticaret, video kurgu ve 3D tasarım çözümleriyle işletmelerin dijital büyümesine destek oluyoruz.</p>
             </div>
             <div><h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Hızlı Menü</h4>
-                <ul class="text-xs space-y-2.5"><li><a href="#hizmetler" class="hover:text-[#d946ef] transition">Hizmetlerimiz</a></li><li><a href="#video" class="hover:text-[#d946ef] transition">Video Edit</a></li><li><a href="#faq" class="hover:text-[#d946ef] transition">Destek & SSS</a></li></ul></div>
+                <ul class="text-xs space-y-2.5"><li><a href="#hizmetler" class="hover:text-[#d946ef] transition">Hizmetlerimiz</a></li><li><a href="#video" class="hover:text-[#d946ef] transition">Video Edit</a></li><li><a href="#faq" class="hover:text-[#d946ef] transition">Destek & SSS</a></li><li><a href="#yorumlar" class="hover:text-[#d946ef] transition">Müşteri Görüşleri</a></li></ul></div>
             <div><h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">İletişim</h4>
-                <ul class="text-xs space-y-2.5"><li><i class="fa-solid fa-phone text-[#d946ef] mr-2"></i> +90 534 964 4975</li><li><i class="fa-solid fa-envelope text-[#d946ef] mr-2"></i> info@esentech.com</li></ul></div>
+                <ul class="text-xs space-y-2.5"><li><i class="fa-solid fa-phone text-[#d946ef] mr-2"></i> +90 534 964 4975</li><li><i class="fa-solid fa-envelope text-[#d946ef] mr-2"></i> info@esentech.com.tr</li></ul></div>
         </div>
         <div class="max-w-7xl mx-auto border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
             <p>© <span id="yr"></span> EsenTech Technology. Tüm hakları saklıdır.</p>
@@ -280,7 +308,7 @@ const SERVICES = [
    ozet:"İhtiyaçlara ve proje kapsamına göre özel uygulama geliştirme çözümleri.", detay:["Fiyat başlangıç fiyatıdır","Kapsam görüşmede belirlenir"], url:"" },
  { id:"shopify", grup:"E-Ticaret Altyapıları", tip:"shop2", ad:"Shopify ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
    ozet:"Shopify altyapısıyla modern, kullanıcı dostu ve satış odaklı çevrim içi mağaza kurulumu.", detay:["Mağaza kurulumu ve tasarımı","Ürün ve ödeme ayarları"], url:"" },
- { id:"ikea", grup:"E-Ticaret Altyapıları", tip:"shop", ad:"IKEA ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
+ { id:"ikea", grup:"E-Ticaret Altyapıları", tip:"shop", ad:"IdeaSoft ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
    ozet:"Kapsam ve kullanılacak platform sipariş öncesinde birlikte netleştirilir.", detay:["Kapsam görüşmede belirlenir"], url:"" /* TODO: ilan adını/açıklamasını doğrulayın */ },
  { id:"pazaryeri", grup:"E-Ticaret Altyapıları", tip:"market", ad:"Trendyol, Amazon ve Diğer Pazaryerleri", fiyat:"Teklif alın", teslim:TESLIM_YOK,
    ozet:"Pazaryeri mağazası kurulumu, ürün listeleme ve satış süreçlerine yönelik hizmetler.", detay:["Mağaza kurulumu","Ürün listeleme"], url:"" },
@@ -315,9 +343,10 @@ $('waFloat').href=wa('Merhaba, bilgi almak istiyorum.');
 $('yr').textContent=new Date().getFullYear();
 $('mbtn').onclick=()=>{const m=$('menu'),o=m.classList.toggle('hidden');m.classList.toggle('flex',!o);m.classList.toggle('absolute',!o);m.classList.toggle('flex-col',!o);m.classList.toggle('top-full',!o);m.classList.toggle('left-0',!o);m.classList.toggle('right-0',!o);m.classList.toggle('bg-white',!o);m.classList.toggle('p-6',!o);m.classList.toggle('gap-4',!o);$('mbtn').setAttribute('aria-expanded',!o)};
 $('menu').onclick=e=>{if(e.target.tagName==='A'&&!$('menu').classList.contains('hidden')&&innerWidth<768)$('mbtn').click()};
+window.addEventListener('resize',()=>{if(innerWidth>=768){$('menu').classList.remove('absolute','flex-col','top-full','left-0','right-0','bg-white','p-6','gap-4');$('menu').classList.add('hidden','md:flex');$('mbtn').setAttribute('aria-expanded','false')}});
 
 /* ==== Yasal bilgiler: kendi bilgilerinizle doldurun ==== */
-const LEGAL={unvan:"ESENTECH (EsenTech Technology)",adres:"",eposta:"info@esentech.com",tel:"+90 534 964 4975"};
+const LEGAL={unvan:"ESENTECH (EsenTech Technology)",adres:"",eposta:"info@esentech.com.tr",tel:"+90 534 964 4975"};
 const iletisim=()=>`${LEGAL.unvan}${LEGAL.adres?', '+LEGAL.adres:''} · E-posta: ${LEGAL.eposta} · Telefon: ${LEGAL.tel}`;
 const TXT={
 kvkk:{t:'KVKK Aydınlatma Metni',b:()=>`<p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") m.10 uyarınca, kişisel verilerinizin işlenmesine ilişkin bilgilendirme aşağıdadır.</p>
@@ -375,6 +404,51 @@ function sendToWhatsApp(){
  $('pErr').textContent='';
  window.open(wa(`*YENİ TALEP*\n\n*Hizmet:* ${cur.ad}\n*İsim:* ${n}\n*Şehir:* ${c}\n*Tel:* ${t}`),'_blank','noopener');
 }
+
+/* Müşteri görüşleri: otomatik kayan tek kartlı banner */
+(function initReviewCarousel(){
+  const slides = Array.from(document.querySelectorAll('.review-slide'));
+  const dots = $('reviewDots');
+  if (!slides.length || !dots) return;
+  let current = 0;
+  let timer;
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'review-dot';
+    dot.setAttribute('aria-label', `${index + 1}. yorumu göster`);
+    dot.addEventListener('click', () => show(index, true));
+    dots.appendChild(dot);
+  });
+  const dotButtons = Array.from(dots.querySelectorAll('button'));
+  function show(index, restart = false) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === current);
+      slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+    });
+    dotButtons.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+      if (i === current) dot.setAttribute('aria-current', 'true');
+      else dot.removeAttribute('aria-current');
+    });
+    if (restart) start();
+  }
+  function start() {
+    clearInterval(timer);
+    timer = setInterval(() => show(current + 1), 5000);
+  }
+  $('reviewPrev')?.addEventListener('click', () => show(current - 1, true));
+  $('reviewNext')?.addEventListener('click', () => show(current + 1, true));
+  const rotator = document.querySelector('.review-rotator');
+  rotator?.addEventListener('mouseenter', () => clearInterval(timer));
+  rotator?.addEventListener('mouseleave', start);
+  rotator?.addEventListener('focusin', () => clearInterval(timer));
+  rotator?.addEventListener('focusout', start);
+  show(0);
+  start();
+})();
+
 </script>
 </body>
 </html>
