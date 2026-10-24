@@ -2,67 +2,81 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESEN | Grafik Tasarım, Web ve E-Ticaret Çözümleri</title>
-    
-    <meta name="description" content="EsenTech e-ticaret satış sitesi, sosyal medya yönetimi, web tasarım, grafik tasarım ve dijital marka çözümleri.">
-    <meta name="keywords" content="esentech, pc tamiri, web yazılım, anakart onarımı, sistem toplama, kurumsal bakım anlaşması">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0e1330">
+    <title>ESENTECH | Web Tasarım, E-Ticaret, Video Kurgu ve 3D Tasarım</title>
+    <meta name="description" content="Web tasarımından e-ticarete, video kurgusundan 3D projelere kadar işletmenizin dijital ihtiyaçlarına profesyonel çözümler.">
+    <meta name="keywords" content="esentech, web tasarım, e-ticaret sitesi, shopify, video kurgu, sketchup, coreldraw, bionluk">
     <meta name="author" content="EsenTech">
     <meta name="robots" content="index, follow">
-    
+    <meta property="og:title" content="ESENTECH | Dijital Dünyada İşinizi Birlikte Büyütelim">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: radial-gradient(at 0% 0%, rgba(217, 70, 239, 0.08) 0, transparent 50%), 
-                        radial-gradient(at 100% 100%, rgba(241, 245, 249, 1) 0, transparent 50%),
-                        #FFFFFF;
+            background: radial-gradient(at 0% 0%, rgba(217, 70, 239, 0.08) 0, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(241, 245, 249, 1) 0, transparent 50%), #FFFFFF;
             color: #1E293B; scroll-behavior: smooth;
         }
+        html { scroll-padding-top: 90px; }
         .premium-card {
-            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .premium-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 25px 50px -12px rgba(217, 70, 239, 0.15); 
-            border-color: #d946ef; 
-            background: white; 
-        }
-        
-        /* Sponsor Şeridi Animasyonu */
-        .sponsor-track { display: flex; gap: 40px; width: calc(250px * 10); animation: scroll 20s linear infinite; }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-250px * 5)); } }
-        
-        .ref-img { width: 100%; height: 220px; object-fit: cover; border-radius: 24px; transition: 0.4s; border: 1px solid rgba(0,0,0,0.05); }
-        .ref-img:hover { transform: scale(1.03); }
-
-        #sidePanel { position: fixed; top: 0; right: -100%; width: 100%; max-width: 450px; height: 100%; background: white; z-index: 1000; transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); box-shadow: -20px 0 50px rgba(0,0,0,0.1); padding: 40px; display: flex; flex-direction: column; }
+        .premium-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(217, 70, 239, 0.18); border-color: #d946ef; background: white; }
+        .sponsor-track { display: flex; gap: 40px; width: max-content; animation: scroll 30s linear infinite; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .pv { aspect-ratio: 16/9; overflow: hidden; border-radius: 24px 24px 0 0; background: #0e1330; }
+        .pv svg, .pv img { width: 100%; height: 100%; display: block; object-fit: cover; }
+        #sidePanel { position: fixed; top: 0; right: -100%; width: 100%; max-width: 450px; height: 100%; background: white; z-index: 1000; transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1); box-shadow: -20px 0 50px rgba(0,0,0,0.1); padding: 32px; display: flex; flex-direction: column; overflow-y: auto; }
         #sidePanel.open { right: 0; }
         .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); display: none; z-index: 999; }
-        
-        .input-box { position: relative; margin-bottom: 15px; }
+        .input-box { position: relative; margin-bottom: 12px; }
         .input-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #d946ef; }
-        .custom-input { width: 100%; background: #F8FAFC; border: 2px solid #F1F5F9; padding: 16px 16px 16px 48px; border-radius: 16px; outline: none; transition: 0.3s; font-weight: 600; }
+        .custom-input { width: 100%; background: #F8FAFC; border: 2px solid #F1F5F9; padding: 14px 16px 14px 48px; border-radius: 16px; outline: none; transition: 0.3s; font-weight: 600; }
         .custom-input:focus { border-color: #d946ef; }
-
         .faq-item details summary::-webkit-details-marker { display: none; }
         .faq-item details[open] summary i { transform: rotate(180deg); }
+        .btn-wa { background: #1faa59; } .btn-wa:hover { background: #178a47; }
+        .btn-bn { background: linear-gradient(to right, #7c3aed, #d946ef); } .btn-bn:hover { opacity: .9; }
+        .btn-off { background: #e2e8f0; color: #64748b; cursor: not-allowed; }
+
+        html, body { overflow-x: hidden; }
+        .custom-input { font-size: 16px; }
+        dialog { border: 0; padding: 0; background: transparent; max-width: 100vw; }
+        dialog::backdrop { background: rgba(14,19,48,.6); backdrop-filter: blur(3px); }
+        .hero-bg { background: radial-gradient(900px 500px at 88% 8%, rgba(217,70,239,.32), transparent 60%), radial-gradient(700px 520px at 0% 100%, rgba(124,58,237,.45), transparent 60%), linear-gradient(180deg,#0b0f2a,#0e1330); overflow: hidden; }
+        .hero-bg::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 44px 44px; -webkit-mask-image: radial-gradient(ellipse at 60% 40%, #000 25%, transparent 75%); mask-image: radial-gradient(ellipse at 60% 40%, #000 25%, transparent 75%); }
+        .hero-bg::after { content:""; position:absolute; top:0; right:-80px; width:680px; height:100%; opacity:.55; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600' fill='none'><g stroke='%23a78bfa' stroke-opacity='.4' stroke-width='1.2'><path d='M60 120L210 70L360 150L520 90M210 70L190 250L360 150L400 320L520 90M190 250L80 380L260 440L400 320L540 430M260 440L200 560M400 320L330 520M80 380L60 120'/></g><g fill='%23d946ef'><circle cx='60' cy='120' r='5'/><circle cx='210' cy='70' r='6'/><circle cx='360' cy='150' r='7'/><circle cx='520' cy='90' r='5'/><circle cx='190' cy='250' r='6'/><circle cx='400' cy='320' r='8'/></g><g fill='%2338bdf8'><circle cx='80' cy='380' r='5'/><circle cx='260' cy='440' r='6'/><circle cx='540' cy='430' r='5'/><circle cx='200' cy='560' r='4'/><circle cx='330' cy='520' r='5'/></g></svg>") no-repeat right center / contain; pointer-events:none; }
+        @media (max-width: 1023px) { .hero-bg::after { opacity:.22; right:-200px; } }
+        .cookie-sw { appearance:none; width:44px; height:24px; border-radius:999px; background:#cbd5e1; position:relative; cursor:pointer; transition:.2s; flex-shrink:0; }
+        .cookie-sw::after { content:""; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:#fff; transition:.2s; }
+        .cookie-sw:checked { background:#7c3aed; } .cookie-sw:checked::after { left:23px; }
+        .cookie-sw:disabled { opacity:.6; cursor:not-allowed; }
+        .legal h3 { font-weight:800; font-size:1.05rem; margin:1.1rem 0 .4rem; color:#0f172a; }
+        .legal p, .legal li { font-size:.9rem; color:#475569; line-height:1.7; }
+        .legal ul { list-style:disc; padding-left:1.2rem; }
+        #sidePanel { padding-bottom: max(32px, env(safe-area-inset-bottom)); }
+        :focus-visible { outline: 3px solid #7c3aed; outline-offset: 2px; }
     </style>
 </head>
 <body>
+
     <div id="overlay" class="overlay" onclick="closePanel()"></div>
 
-    <a href="https://wa.me/905349644975" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-[#7c3aed] to-[#d946ef] text-white shadow-2xl shadow-purple-400 animate-bounce group">
+    <a href="#" id="waFloat" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-[#7c3aed] to-[#d946ef] text-white shadow-2xl shadow-purple-400 group" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
-        <span class="absolute right-16 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300 shadow-md">7/24 Destek Hattı</span>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300 shadow-md">WhatsApp'tan Yazın</span>
     </a>
 
-    <nav class="flex justify-between items-center px-8 py-5 sticky top-0 bg-white/70 backdrop-blur-md z-50 border-b border-slate-100">
-        <div onclick="location.reload()" class="cursor-pointer flex items-center gap-3">
+    <nav class="flex justify-between items-center px-5 md:px-8 py-4 sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-100 relative">
+        <a href="#top" class="cursor-pointer flex items-center gap-3" aria-label="ESENTECH ana sayfa">
             <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-[#7c3aed] via-[#d946ef] to-[#f43f5e] p-2 shadow-md">
                 <i class="fa-solid fa-circle-nodes text-white text-xl"></i>
             </div>
@@ -70,366 +84,297 @@
                 <span class="text-2xl font-black tracking-tighter text-slate-900 leading-none">ESENTECH</span>
                 <span class="text-[9px] font-bold tracking-[0.2em] text-[#d946ef] uppercase">TECHNOLOGY</span>
             </div>
-        </div>
-        
-        <div class="flex items-center gap-6">
-            <div class="hidden md:flex items-center gap-6 text-[11px] font-extrabold uppercase tracking-widest text-slate-500">
-                <a href="#kurumsal" class="hover:text-[#d946ef] transition">Kurumsal</a>
-                <a href="#sorgulama" class="hover:text-[#d946ef] transition">Cihaz Takip</a>
+        </a>
+        <div class="flex items-center gap-4">
+            <div id="menu" class="hidden md:flex items-center gap-6 text-[11px] font-extrabold uppercase tracking-widest text-slate-500">
                 <a href="#hizmetler" class="hover:text-[#d946ef] transition">Hizmetler</a>
+                <a href="#video" class="hover:text-[#d946ef] transition">Video Edit</a>
                 <a href="#surec" class="hover:text-[#d946ef] transition">İşleyiş</a>
-                <a href="#yorumlar" class="hover:text-[#d946ef] transition">Yorumlar</a>
-                <a href="#about" class="hover:text-[#d946ef] transition">Referanslar</a>
+                                <a href="#faq" class="hover:text-[#d946ef] transition">SSS</a>
+                <a href="#hizmetler" class="sm:hidden bg-gradient-to-r from-[#7c3aed] to-[#d946ef] text-white text-center px-6 py-3 rounded-full">Teklif Al</a>
             </div>
-            <div class="text-center">
-                <a href="https://wa.me/905349644975" class="bg-gradient-to-r from-[#7c3aed] to-[#d946ef] text-white px-7 py-2 rounded-full font-bold text-sm block shadow-lg shadow-purple-100 hover:opacity-90 transition">WhatsApp</a>
-                <span class="text-[9px] font-bold text-[#d946ef] uppercase tracking-tighter block mt-1">7/24 Teknik Destek</span>
-            </div>
+            <a href="#hizmetler" class="hidden sm:block bg-gradient-to-r from-[#7c3aed] to-[#d946ef] text-white px-7 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-purple-100 hover:opacity-90 transition">Teklif Al</a>
+            <button id="mbtn" class="md:hidden text-2xl text-slate-700" aria-label="Menüyü aç" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
 
-    <div class="bg-white border-b border-slate-100 overflow-hidden py-4">
-        <div class="sponsor-track">
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-solid fa-microchip text-xl"></i> <span class="font-bold">INTEL PARTNER</span></div>
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-nvidia text-xl"></i> <span class="font-bold">NVIDIA CORP</span></div>
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-microsoft text-xl"></i> <span class="font-bold">MICROSOFT</span></div>
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-apple text-xl"></i> <span class="font-bold">APPLE SERVİS</span></div>
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-solid fa-shield-halved text-xl"></i> <span class="font-bold">ESET SECURITY</span></div>
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-solid fa-microchip text-xl"></i> <span class="font-bold">INTEL PARTNER</span></div>
-            <div class="flex items-center gap-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition w-[200px]"><i class="fa-brands fa-nvidia text-xl"></i> <span class="font-bold">NVIDIA CORP</span></div>
-        </div>
+    <div class="bg-white border-b border-slate-100 overflow-hidden py-4" aria-hidden="true">
+        <div class="sponsor-track text-slate-400 text-sm font-bold uppercase tracking-widest" id="ticker"></div>
     </div>
 
-    <header id="kurumsal" class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 text-xs font-bold text-[#7c3aed] mb-4">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Kurumsal Teknoloji Ortağınız
-            </span>
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 text-xs font-black text-[#7c3aed] mb-5 uppercase tracking-wider">
-                <i class="fa-solid fa-cart-shopping"></i> E-Ticaret & Dijital Medya Ajansı
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900 leading-tight">Markanızı <br><span class="bg-gradient-to-r from-[#7c3aed] via-[#d946ef] to-[#f43f5e] bg-clip-text text-transparent">Dijitalde Büyütüyoruz.</span></h1>
-            <p class="text-slate-500 text-lg font-medium mb-8 leading-relaxed">Satış odaklı e-ticaret siteleri, profesyonel web tasarım, sosyal medya yönetimi ve yaratıcı grafik çözümleriyle markanızı dijital dünyada güçlü bir şekilde konumlandırıyoruz.</p>
-            
-            <div class="mt-8">
-                <a href="#hizmetler" class="inline-flex items-center gap-4 bg-gradient-to-r from-[#7c3aed] via-[#d946ef] to-[#f43f5e] text-white px-7 py-4 rounded-2xl font-black text-base shadow-xl shadow-purple-200 hover:scale-[1.02] transition-all">
-                    <span class="w-11 h-11 rounded-xl bg-white/20 flex items-center justify-center">
-                        <i class="fa-solid fa-layer-group text-xl"></i>
-                    </span>
-                    HİZMET ALANLARIMIZ
-                    <i class="fa-solid fa-arrow-down text-lg"></i>
-                </a>
-            </div>
-            <div class="mt-4 flex flex-col sm:flex-row gap-3">
-                <a href="https://wa.me/905349644975" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 border-2 border-slate-100 bg-white text-slate-800 px-6 py-3.5 rounded-2xl font-black text-sm hover:border-[#d946ef] hover:text-[#d946ef] transition-all">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> BİZE ULAŞIN
-                </a>
-            </div>
-
-            <div class="grid grid-cols-3 gap-6 border-t border-slate-100 pt-8 mt-8">
-                <div>
-                    <h4 class="text-3xl font-black text-slate-900">10+</h4>
-                    <p class="text-xs font-semibold text-slate-400 uppercase mt-1">Yıllık Deneyim</p>
+    <header id="top" class="hero-bg relative">
+        <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-6 py-14 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div>
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-[11px] font-extrabold text-white mb-5 uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Web • E-Ticaret • Video • 3D Tasarım
+                </span>
+                <h1 class="text-[2.1rem] leading-[1.1] sm:text-5xl md:text-6xl font-extrabold mb-5 tracking-tight text-white">Dijital Dünyada <br class="hidden sm:block"><span class="bg-gradient-to-r from-[#a78bfa] via-[#e879f9] to-[#fb7185] bg-clip-text text-transparent">İşinizi Birlikte Büyütelim.</span></h1>
+                <p class="text-slate-300 text-base md:text-lg font-medium mb-8 leading-relaxed max-w-xl">Web tasarımından e-ticarete, video kurgusundan 3D projelere kadar işletmenizin dijital ihtiyaçlarına profesyonel çözümler sunuyoruz.</p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="#hizmetler" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#7c3aed] via-[#d946ef] to-[#f43f5e] text-white px-7 py-4 rounded-2xl font-black text-base shadow-xl shadow-purple-900/40 hover:scale-[1.02] transition-all"><i class="fa-solid fa-layer-group"></i> Hizmetlerimizi Keşfedin</a>
+                    <a id="heroWa" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 border-2 border-white/25 text-white px-7 py-4 rounded-2xl font-black text-base hover:bg-white hover:text-slate-900 transition-all"><i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yazın</a>
                 </div>
-                <div>
-                    <h4 class="text-3xl font-black text-[#d946ef]">15k+</h4>
-                    <p class="text-xs font-semibold text-slate-400 uppercase mt-1">Onarılan Cihaz</p>
-                </div>
-                <div>
-                    <h4 class="text-3xl font-black text-slate-900">%99.4</h4>
-                    <p class="text-xs font-semibold text-slate-400 uppercase mt-1">Müşteri Memnuniyeti</p>
+                <div class="grid grid-cols-3 gap-4 sm:gap-6 border-t border-white/10 pt-7 mt-9">
+                    <div><h4 class="text-2xl sm:text-3xl font-black text-white">9</h4><p class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase mt-1">Hizmet Alanı</p></div>
+                    <div><h4 class="text-2xl sm:text-3xl font-black text-[#e879f9]">2</h4><p class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase mt-1">Sipariş Kanalı</p></div>
+                    <div><h4 class="text-2xl sm:text-3xl font-black text-white">Net</h4><p class="text-[10px] sm:text-xs font-semibold text-slate-400 uppercase mt-1">Fiyat ve Kapsam</p></div>
                 </div>
             </div>
-        </div>
-        <div class="flex justify-center">
-            <div class="w-full max-w-xl rounded-[40px] overflow-hidden shadow-2xl shadow-purple-200 border border-white bg-white p-2">
-                <div class="relative h-[360px] md:h-[430px] rounded-[34px] overflow-hidden bg-slate-950">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop"
-                         alt="E-ticaret satış sitesi ve dijital marka çözümleri"
-                         class="absolute inset-0 w-full h-full object-cover"
-                         loading="eager">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-950/90 via-slate-950/45 to-transparent"></div>
-                    <div class="absolute inset-x-0 bottom-0 p-7 md:p-9 text-white">
-                        <span class="inline-flex px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-[10px] font-extrabold tracking-widest uppercase mb-3 border border-white/20">Dijital Çözümler</span>
-                        <h3 class="text-2xl md:text-3xl font-black tracking-tight leading-tight">E-Ticaret • Sosyal Medya • Dijital Marka</h3>
-                        <p class="text-sm text-slate-200 mt-2 max-w-md">Online satış sitenizden sosyal medya yönetiminize kadar dijital markanız için ihtiyaç duyduğunuz çözümler tek çatı altında.</p>
-                    </div>
+            <div class="flex justify-center">
+                <div class="w-full max-w-xl rounded-[28px] md:rounded-[32px] bg-white/[0.06] backdrop-blur-md border border-white/10 text-white p-6 md:p-10 shadow-2xl shadow-black/30">
+                    <p class="text-xs font-extrabold uppercase tracking-widest text-[#e879f9] mb-1">Öne Çıkan Hizmetler</p>
+                    <h3 class="text-xl md:text-2xl font-black tracking-tight mb-5">Net fiyat, net kapsam</h3>
+                    <div id="heroList" class="divide-y divide-white/10"></div>
+                    <a href="#hizmetler" class="mt-6 flex items-center justify-center gap-2 bg-gradient-to-r from-[#7c3aed] to-[#d946ef] py-3.5 rounded-2xl font-bold text-sm hover:opacity-90 transition">Tüm hizmetleri gör <i class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="sorgulama" class="max-w-4xl mx-auto px-6 mb-16">
-        <div class="bg-gradient-to-r from-slate-900 to-slate-950 p-8 md:p-10 rounded-[32px] shadow-2xl text-white relative overflow-hidden border border-slate-800">
-            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h3 class="text-2xl font-black tracking-tight mb-2">Cihaz Durumu Sorgulama</h3>
-                    <p class="text-sm text-slate-400">EsenTech teknik servisimize teslim ettiğiniz cihazların anlık durumunu buradan sorgulayabilirsiniz.</p>
-                </div>
-                <div class="flex gap-3">
-                    <input type="text" id="trackInput" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-5 py-4 outline-none font-bold text-white placeholder-slate-500 focus:border-[#d946ef] transition text-sm" placeholder="Örn: ES-2026">
-                    <button onclick="checkStatus()" class="bg-gradient-to-r from-[#7c3aed] to-[#d946ef] hover:opacity-90 transition px-6 py-4 rounded-xl font-bold text-sm whitespace-nowrap">Sorgula</button>
-                </div>
-            </div>
-            <div id="statusResult" class="mt-6 p-4 rounded-xl bg-slate-800/40 border border-slate-700/50 hidden text-sm font-semibold text-purple-300"></div>
-        </div>
-    </section>
-
-    <section class="bg-slate-50 border-y border-slate-100 py-16 px-6">
+    <section class="bg-slate-50 border-y border-slate-100 py-14 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="flex items-start gap-4">
-                <div class="p-4 bg-white rounded-2xl text-[#7c3aed] shadow-sm"><i class="fa-solid fa-shield-check text-2xl"></i></div>
-                <div>
-                    <h3 class="font-bold text-lg text-slate-900">Garantili & Kurumsal Hizmet</h3>
-                    <p class="text-sm text-slate-500 mt-1">Yapılan tüm işlemler, kullanılan tüm parçalar EsenTech güvencesiyle kayıt altına alınır ogarantilenir.</p>
-                </div>
-            </div>
-            <div class="flex items-start gap-4">
-                <div class="p-4 bg-white rounded-2xl text-[#d946ef] shadow-sm"><i class="fa-solid fa-bolt text-2xl"></i></div>
-                <div>
-                    <h3 class="font-bold text-lg text-slate-900">Hızlı Müdahale Süresi</h3>
-                    <p class="text-sm text-slate-500 mt-1">Bireysel ve kurumsal taleplerinizde süreç hızlıca başlatılarak iş kaybı yaşamanız engellenir.</p>
-                </div>
-            </div>
-            <div class="flex items-start gap-4">
-                <div class="p-4 bg-white rounded-2xl text-[#f43f5e] shadow-sm"><i class="fa-solid fa-hand-holding-dollar text-2xl"></i></div>
-                <div>
-                    <h3 class="font-bold text-lg text-slate-900">Şeffaf Fiyat Politikası</h3>
-                    <p class="text-sm text-slate-500 mt-1">Sürpriz maliyetlerle karşılaşmazsınız. İşlem öncesi arıza tespiti ve net fiyat onayı alınır.</p>
-                </div>
-            </div>
+            <div class="flex items-start gap-4"><div class="p-4 bg-white rounded-2xl text-[#7c3aed] shadow-sm"><i class="fa-solid fa-shield-halved text-2xl"></i></div><div><h3 class="font-bold text-lg text-slate-900">Bionluk Güvencesiyle Sipariş</h3><p class="text-sm text-slate-500 mt-1">Siparişlerinizi Bionluk üzerinden verebilir, ödemenizi platform güvencesiyle yapabilirsiniz.</p></div></div>
+            <div class="flex items-start gap-4"><div class="p-4 bg-white rounded-2xl text-[#d946ef] shadow-sm"><i class="fa-brands fa-whatsapp text-2xl"></i></div><div><h3 class="font-bold text-lg text-slate-900">WhatsApp ile Hızlı İletişim</h3><p class="text-sm text-slate-500 mt-1">Kapsamı ve ihtiyacınızı WhatsApp'tan konuşup teklifinizi hızlıca alabilirsiniz.</p></div></div>
+            <div class="flex items-start gap-4"><div class="p-4 bg-white rounded-2xl text-[#f43f5e] shadow-sm"><i class="fa-solid fa-hand-holding-dollar text-2xl"></i></div><div><h3 class="font-bold text-lg text-slate-900">Şeffaf Fiyat Politikası</h3><p class="text-sm text-slate-500 mt-1">Fiyat ve kapsam siparişten önce açıkça belirtilir, sürpriz maliyet çıkmaz.</p></div></div>
         </div>
     </section>
 
     <section id="hizmetler" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black text-slate-900 tracking-tight uppercase italic">Dijital Hizmet Alanlarımız</h2>
-            <p class="text-slate-400 mt-2 font-medium">Satışa ve marka görünürlüğüne odaklanan dijital çözümlerimizi keşfedin.</p>
+        <div class="text-center mb-14">
+            <h2 class="text-4xl font-black text-slate-900 tracking-tight">Hizmetlerimiz ve Fiyatlar</h2>
+            <p class="text-slate-400 mt-2 font-medium">Dilediğiniz hizmeti WhatsApp'tan konuşun ya da doğrudan Bionluk'tan sipariş verin.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('E-Ticaret Satış Sitesi')">
-                <i class="fa-solid fa-cart-shopping text-2xl text-[#d946ef] mb-4 block"></i>
-                <h3 class="font-bold text-lg">E-Ticaret Satış Sitesi</h3>
-                <p class="text-sm text-slate-500 mt-2">Ürünlerinizi online satabileceğiniz profesyonel ve mobil uyumlu satış siteleri.</p>
+        <div id="gr"></div>
+    </section>
+
+    <section id="video" class="bg-slate-50 border-y border-slate-100 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="rounded-[28px] bg-slate-950 text-white p-8 md:p-10 shadow-2xl shadow-purple-200">
+                <ul class="space-y-5">
+                    <li class="flex gap-4"><i class="fa-solid fa-scissors text-[#d946ef] mt-1"></i><div><p class="font-bold">Profesyonel kurgu</p><p class="text-sm text-slate-400">Ritim, kesim ve geçişlerle akıcı anlatım.</p></div></li>
+                    <li class="flex gap-4"><i class="fa-solid fa-wand-magic-sparkles text-[#d946ef] mt-1"></i><div><p class="font-bold">Hareketli grafikler</p><p class="text-sm text-slate-400">Başlık, altyazı ve logo animasyonları.</p></div></li>
+                    <li class="flex gap-4"><i class="fa-solid fa-mobile-screen text-[#d946ef] mt-1"></i><div><p class="font-bold">Her platforma uygun format</p><p class="text-sm text-slate-400">Reels, Shorts, reklam ve tanıtım videoları.</p></div></li>
+                </ul>
             </div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Sosyal Medya Yönetimi')">
-                <i class="fa-brands fa-instagram text-2xl text-[#f43f5e] mb-4 block"></i>
-                <h3 class="font-bold text-lg">Sosyal Medya Yönetimi</h3>
-                <p class="text-sm text-slate-500 mt-2">Markanızın sosyal medya hesaplarını profesyonel içerik ve stratejiyle yönetiyoruz.</p>
+            <div>
+                <h2 class="text-4xl font-black text-slate-900 tracking-tight mb-3">Video Kurgu ve Edit</h2>
+                <p class="text-slate-500 leading-relaxed mb-5">Sosyal medya, reklam ve tanıtım videoları için profesyonel kurgu, geçişler, hareketli grafikler ve görsel düzenleme.</p>
+                <p class="text-4xl font-black text-slate-900 mb-1">2.500 TL</p>
+                <p class="text-sm text-slate-400 mb-6">Teslimat süresi kapsama göre sipariş öncesi netleştirilir.</p>
+                <button onclick="openPanel('video')" class="bg-gradient-to-r from-[#7c3aed] to-[#d946ef] text-white px-8 py-4 rounded-2xl font-black shadow-xl shadow-purple-100 hover:opacity-90 transition">Hizmeti İncele</button>
             </div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('PC Tamiri')"><i class="fa-solid fa-screwdriver-wrench text-2xl text-[#7c3aed] mb-4 block"></i><h3 class="font-bold">PC Tamiri</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Sistem Toplama')"><i class="fa-solid fa-desktop text-2xl text-[#d946ef] mb-4 block"></i><h3 class="font-bold">Sistem Toplama</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Logo Tasarım')"><i class="fa-solid fa-pen-nib text-2xl text-[#f43f5e] mb-4 block"></i><h3 class="font-bold">Logo Tasarımı</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Web Yazılım')"><i class="fa-solid fa-code text-2xl text-[#7c3aed] mb-4 block"></i><h3 class="font-bold">Web Yazılım</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Web Site Oluşturma')"><i class="fa-solid fa-globe text-2xl text-[#f43f5e] mb-4 block"></i><h3 class="font-bold">Web Site Oluşturma</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Grafik Tasarım')"><i class="fa-solid fa-palette text-2xl text-[#7c3aed] mb-4 block"></i><h3 class="font-bold">Grafik Tasarım</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Anakart Onarımı')"><i class="fa-solid fa-microchip text-2xl text-[#d946ef] mb-4 block"></i><h3 class="font-bold">Anakart Onarımı</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Veri Kurtarma')"><i class="fa-solid fa-database text-2xl text-[#f43f5e] mb-4 block"></i><h3 class="font-bold">Veri Kurtarma</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Mining Servisi')"><i class="fa-solid fa-coins text-2xl text-[#7c3aed] mb-4 block"></i><h3 class="font-bold">Mining Servisi</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Kafe Çözümleri')"><i class="fa-solid fa-network-wired text-2xl text-[#d946ef] mb-4 block"></i><h3 class="font-bold">Kafe Çözümleri</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Siber Güvenlik')"><i class="fa-solid fa-shield-virus text-2xl text-[#f43f5e] mb-4 block"></i><h3 class="font-bold">Siber Güvenlik</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Bakım Anlaşması')"><i class="fa-solid fa-file-contract text-2xl text-[#7c3aed] mb-4 block"></i><h3 class="font-bold">Bakım Anlaşması</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('Yazıcı Tamiri')"><i class="fa-solid fa-print text-2xl text-[#d946ef] mb-4 block"></i><h3 class="font-bold">Yazıcı Tamiri</h3></div>
-            <div class="premium-card p-8 rounded-[32px]" onclick="openPanel('IT Danışmanlık')"><i class="fa-solid fa-lightbulb text-2xl text-[#f43f5e] mb-4 block"></i><h3 class="font-bold">IT Danışmanlık</h3></div>
-        
         </div>
     </section>
 
     <section id="surec" class="bg-slate-950 text-white py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black tracking-tight uppercase italic">Süreç Nasıl İşler?</h2>
-                <p class="text-slate-400 mt-2">Talebinizden teslimata kadar adım adım profesyonel işleyişimiz.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                <div class="text-center relative">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#7c3aed] to-[#d946ef] flex items-center justify-center text-2xl font-black mx-auto mb-4">1</div>
-                    <h3 class="text-xl font-bold mb-2">Talep veya Servis Kaydı</h3>
-                    <p class="text-slate-400 text-sm max-w-xs mx-auto">Web sitemiz veya WhatsApp üzerinden dilediğiniz hizmet için kaydınızı hızlıca iletin.</p>
-                </div>
-                <div class="text-center relative">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f43f5e] flex items-center justify-center text-2xl font-black mx-auto mb-4">2</div>
-                    <h3 class="text-xl font-bold mb-2">Profesyonel Analiz & Onay</h3>
-                    <p class="text-slate-400 text-sm max-w-xs mx-auto">Uzman ekibimiz durumu analiz eder, yapılması gerekenleri ve şeffaf fiyatlandırmayı onayınıza sunar.</p>
-                </div>
-                <div class="text-center relative">
-                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#f43f5e] to-[#7c3aed] flex items-center justify-center text-2xl font-black mx-auto mb-4">3</div>
-                    <h3 class="text-xl font-bold mb-2">Garantili Teslimat</h3>
-                    <p class="text-slate-400 text-sm max-w-xs mx-auto">İşlemleri tamamlanan projeniz veya cihazınız, test aşamalarından geçerek güvenle teslim edilir.</p>
-                </div>
+            <div class="text-center mb-14"><h2 class="text-4xl font-black tracking-tight">Süreç Nasıl İşler?</h2><p class="text-slate-400 mt-2">Talebinizden teslimata dört net adım.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="text-center"><div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#7c3aed] to-[#d946ef] flex items-center justify-center text-2xl font-black mx-auto mb-4">1</div><h3 class="text-lg font-bold mb-2">İhtiyacı Netleştiriyoruz</h3><p class="text-slate-400 text-sm">WhatsApp veya Bionluk üzerinden hedefinizi ve kapsamı birlikte belirliyoruz.</p></div>
+                <div class="text-center"><div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f43f5e] flex items-center justify-center text-2xl font-black mx-auto mb-4">2</div><h3 class="text-lg font-bold mb-2">Net Teklif Sunuyoruz</h3><p class="text-slate-400 text-sm">Fiyat ve teslimat süresi siparişten önce açıkça paylaşılır.</p></div>
+                <div class="text-center"><div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#f43f5e] to-[#7c3aed] flex items-center justify-center text-2xl font-black mx-auto mb-4">3</div><h3 class="text-lg font-bold mb-2">Tasarlıyor ve Geliştiriyoruz</h3><p class="text-slate-400 text-sm">Revizyon haklarınız çerçevesinde sizinle birlikte ilerliyoruz.</p></div>
+                <div class="text-center"><div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#7c3aed] to-[#f43f5e] flex items-center justify-center text-2xl font-black mx-auto mb-4">4</div><h3 class="text-lg font-bold mb-2">Test Edip Teslim Ediyoruz</h3><p class="text-slate-400 text-sm">Her şey kontrol edildikten sonra teslim edilir, kurulum sonrası destek devam eder.</p></div>
             </div>
         </div>
     </section>
-
-    <section id="yorumlar" class="max-w-7xl mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black text-slate-900 tracking-tight uppercase italic">Müşteri Deneyimleri</h2>
-            <p class="text-slate-400 mt-2 font-medium">Bizi tercih eden iş ortaklarımızın ve bireysel müşterilerimizin yorumları.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50">
-                <div class="flex text-amber-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-600 text-sm leading-relaxed italic">"Şirketimizin tüm bilgisayar altyapısı ve bakım anlaşmaları için EsenTech ile çalışıyoruz. Arızalara müdahale hızları olağanüstü, kesinlikle tavsiye ederim."</p>
-                <div class="mt-6 border-t border-slate-50 pt-4 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-purple-100 text-[#7c3aed] flex items-center justify-center font-bold text-sm">AH</div>
-                    <div><h4 class="font-bold text-sm text-slate-900">Ahmet H.</h4><p class="text-xs text-slate-400 font-medium">Genel Müdür, Nova Lojistik</p></div>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50">
-                <div class="flex text-amber-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-600 text-sm leading-relaxed italic">"Sıvı teması alan oyuncu bilgisayarımı getirdim. Diğer servislerin 'anakart değişecek' dediği cihazı sadece mikro onarımla kurtarıp teslim ettiler. Harika işçilik."</p>
-                <div class="mt-6 border-t border-slate-50 pt-4 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-pink-100 text-[#d946ef] flex items-center justify-center font-bold text-sm">MÇ</div>
-                    <div><h4 class="font-bold text-sm text-slate-900">Murat Ç.</h4><p class="text-xs text-slate-400 font-medium">Yazılım Geliştirici</p></div>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50">
-                <div class="flex text-amber-400 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                <p class="text-slate-600 text-sm leading-relaxed italic">"EsenTech ekibine web yazılım ve kurumsal logo tasarımı yaptırdık. İstediğimiz her detayı titizlikle koda döktüler. Süreç yönetimi çok profesyoneldi."</p>
-                <div class="mt-6 border-t border-slate-50 pt-4 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-blue-100 text-[#7c3aed] flex items-center justify-center font-bold text-sm">SE</div>
-                    <div><h4 class="font-bold text-sm text-slate-900">Selin E.</h4><p class="text-xs text-slate-400 font-medium">Kreatif Direktör</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="max-w-7xl mx-auto px-6 py-10 border-t border-slate-100">
-        <h2 class="text-4xl font-black text-slate-900 mb-10 uppercase tracking-tighter italic text-center">Referans Çalışmalarımız</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300" class="ref-img" loading="lazy" alt="EsenTech Referans">
-        </div>
-    </section>
-
-    <div style="width: 100%; display: flex; justify-content: center; margin: 40px 0; clear: both;">
-        <div style="width: 85%; max-width: 900px; min-width: 320px;">
-            <video width="100%" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); display: block;" controls>
-                <source src="tanitim.mp4" type="video/mp4">
-                Tarayıcınız bu videoyu oynatamıyor.
-            </video>
-        </div>
-    </div>
 
     <section id="faq" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-100">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-black text-slate-900 tracking-tight uppercase italic">Sıkça Sorulan Sorular</h2>
-            <p class="text-slate-400 mt-2 font-medium">Hizmetlerimizle ilgili en çok merak edilenler.</p>
-        </div>
-        <div class="space-y-4">
-            <div class="faq-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
-                <details class="group p-6">
-                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
-                        <span>Cihaz onarımları ve servis süreçleri ne kadar sürüyor?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
-                    </summary>
-                    <p class="text-sm text-slate-500 mt-4 leading-relaxed">Arıza tespitine bağlı olarak genellikle standart işlemler ve parça değişimleri aynı gün veya 24 saat içinde tamamlanarak test süreçlerine alınmaktadır.</p>
-                </details>
-            </div>
-            <div class="faq-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
-                <details class="group p-6">
-                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
-                        <span>Kurumsal şirketler için periyodik bakım anlaşması yapıyor musunuz?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
-                    </summary>
-                    <p class="text-sm text-slate-500 mt-4 leading-relaxed">Evet, şirketlerin IT altyapılarını güvenceye almak, veri kayıālarını engellemek ve sistemlerin sürekliliğini sağlamak adına aylık veya yıllık kurumsal bakım anlaşmaları yapıyoruz.</p>
-                </details>
-            </div>
-            <div class="faq-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
-                <details class="group p-6">
-                    <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
-                        <span>Veri kurtarma işlemlerinde gizlilik politikası nasıldır?</span>
-                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
-                    </summary>
-                    <p class="text-sm text-slate-500 mt-4 leading-relaxed">Müşteri verilerinin gizliliği bizim için en yüksek önceliktir. Laboratuvar ortamında yapılan veri kurtarma işlemlerinde verileriniz asla üçüncü şahıslarla paylaşılmaz ve kurumsal gizlilik sözleşmesi kapsamında korunur.</p>
-                </details>
+        <div class="text-center mb-12"><h2 class="text-4xl font-black text-slate-900 tracking-tight">Sıkça Sorulan Sorular</h2><p class="text-slate-400 mt-2 font-medium">Hizmetlerimizle ilgili en çok merak edilenler.</p></div>
+        <div class="space-y-4" id="faqList"></div>
+    </section>
+
+    <section class="px-5 md:px-6 pb-20">
+        <div class="max-w-5xl mx-auto rounded-[28px] md:rounded-[32px] bg-slate-950 relative overflow-hidden p-8 md:p-14 text-center text-white">
+            <div class="absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[#d946ef]/30 blur-3xl"></div><div class="absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[#7c3aed]/40 blur-3xl"></div>
+            <div class="relative">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-3">Projenizi birlikte konuşalım</h2>
+                <p class="text-slate-300 max-w-xl mx-auto mb-7">İhtiyacınızı anlatın, kapsamı ve fiyatı birlikte netleştirelim. Siparişi dilerseniz Bionluk güvencesiyle verebilirsiniz.</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a id="ctaWa" href="#" target="_blank" rel="noopener noreferrer" class="btn-wa inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-2xl font-black transition"><i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp ile Yazın</a>
+                    <a id="ctaBn" href="#" target="_blank" rel="noopener noreferrer" class="btn-bn inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-2xl font-black transition"><i class="fa-solid fa-bag-shopping"></i> Bionluk'ta Sipariş Verin</a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 px-8 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
-                <div class="flex items-center gap-3 text-white mb-4">
-                    <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-[#7c3aed] to-[#d946ef] p-1.5"><i class="fa-solid fa-circle-nodes text-sm"></i></div>
-                    <span class="text-xl font-black tracking-tighter">ESENTECH</span>
-                </div>
-                <p class="text-xs text-slate-500 leading-relaxed">Türkiye genelinde uçtan uca kurumsal ve bireysel bilişim, yazılım ve teknik servis operasyonları yürütmektedir.</p>
+                <div class="flex items-center gap-3 text-white mb-4"><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-[#7c3aed] to-[#d946ef] p-1.5"><i class="fa-solid fa-circle-nodes text-sm"></i></div><span class="text-xl font-black tracking-tighter">ESENTECH</span></div>
+                <p class="text-xs text-slate-500 leading-relaxed">Web tasarım, e-ticaret, video kurgu ve 3D tasarım çözümleriyle işletmelerin dijital büyümesine destek oluyoruz.</p>
             </div>
-            <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Hızlı Menü</h4>
-                <ul class="text-xs space-y-2.5">
-                    <li><a href="#kurumsal" class="hover:text-[#d946ef] transition">Hakkımızda</a></li>
-                    <li><a href="#hizmetler" class="hover:text-[#d946ef] transition">Hizmetlerimiz</a></li>
-                    <li><a href="#sorgulama" class="hover:text-[#d946ef] transition">Cihaz Takip</a></li>
-                    <li><a href="#faq" class="hover:text-[#d946ef] transition">Destek & SSS</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Çalışma Saatleri</h4>
-                <ul class="text-xs space-y-2.5 text-slate-500">
-                    <li>Pazartesi - Cuma: <span class="text-slate-300 font-semibold">09:00 - 19:00</span></li>
-                    <li>Cumartesi: <span class="text-slate-300 font-semibold">09:00 - 15:00</span></li>
-                    <li>Pazar: <span class="text-emerald-400 font-semibold">7/24 Sadece WhatsApp Destek</span></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">İletişim</h4>
-                <ul class="text-xs space-y-2.5">
-                    <li><i class="fa-solid fa-phone text-[#d946ef] mr-2"></i> +90 534 964 4975</li>
-                    <li><i class="fa-solid fa-envelope text-[#d946ef] mr-2"></i> info@esentech.com</li>
-                    <li><i class="fa-solid fa-location-dot text-[#d946ef] mr-2"></i> Türkiye / İstanbul HQ</li>
-                </ul>
-            </div>
+            <div><h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Hızlı Menü</h4>
+                <ul class="text-xs space-y-2.5"><li><a href="#hizmetler" class="hover:text-[#d946ef] transition">Hizmetlerimiz</a></li><li><a href="#video" class="hover:text-[#d946ef] transition">Video Edit</a></li><li><a href="#faq" class="hover:text-[#d946ef] transition">Destek & SSS</a></li></ul></div>
+            <div><h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">İletişim</h4>
+                <ul class="text-xs space-y-2.5"><li><i class="fa-solid fa-phone text-[#d946ef] mr-2"></i> +90 534 964 4975</li><li><i class="fa-solid fa-envelope text-[#d946ef] mr-2"></i> info@esentech.com</li></ul></div>
         </div>
         <div class="max-w-7xl mx-auto border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
-            <p>© 2022 EsenTech Technology. Tüm hakları saklıdır.</p>
-            <div class="flex gap-4"><a href="#" class="hover:text-slate-400">Gizlilik Sözleşmesi</a> | <a href="#" class="hover:text-slate-400">KVKK Metni</a></div>
+            <p>© <span id="yr"></span> EsenTech Technology. Tüm hakları saklıdır.</p>
+            <div class="flex flex-wrap justify-center gap-x-5 gap-y-2"><button data-legal="kvkk" class="hover:text-slate-300">KVKK Aydınlatma Metni</button><button data-legal="gizlilik" class="hover:text-slate-300">Gizlilik Politikası</button><button data-legal="cerez" class="hover:text-slate-300">Çerez Politikası</button><button onclick="openCookiePrefs()" class="hover:text-slate-300">Çerez Tercihleri</button></div>
         </div>
     </footer>
 
-    <div id="sidePanel">
-        <button onclick="closePanel()" class="text-2xl mb-8 self-start hover:text-[#d946ef] transition">✕</button>
-        <h2 id="pTitle" class="text-3xl font-black bg-gradient-to-r from-[#7c3aed] to-[#d946ef] bg-clip-text text-transparent mb-6 uppercase tracking-tighter"></h2>
-        <div class="input-box"><i class="fa-solid fa-user"></i><input type="text" id="name" class="custom-input" placeholder="Ad Soyad"></div>
-        <div class="input-box"><i class="fa-solid fa-map-pin"></i><input type="text" id="city" class="custom-input" placeholder="Şehir"></div>
-        <div class="input-box"><i class="fa-solid fa-phone"></i><input type="tel" id="tel" class="custom-input" placeholder="Telefon"></div>
-        <button onclick="sendToWhatsApp()" class="w-full bg-gradient-to-r from-[#7c3aed] via-[#d946ef] to-[#f43f5e] text-white py-5 rounded-2xl font-black text-lg mt-4 shadow-xl shadow-purple-100 flex items-center justify-center gap-3 hover:opacity-95 transition">
-            <i class="fa-brands fa-whatsapp text-2xl"></i> TALEBİ ONAYLA
-        </button>
+
+    <div id="cookieBar" class="hidden fixed inset-x-3 bottom-3 md:left-6 md:right-auto md:max-w-xl z-[1100] bg-white rounded-3xl shadow-2xl border border-slate-200 p-5" role="dialog" aria-label="Çerez bildirimi">
+        <p class="text-sm text-slate-600 leading-relaxed mb-4"><i class="fa-solid fa-cookie-bite text-[#d946ef] mr-1"></i> Sitemizde tercihlerinizi hatırlamak için zorunlu tarayıcı depolaması kullanıyoruz. İsteğe bağlı analitik ve pazarlama çerezlerini siz belirlersiniz. Ayrıntılar için <button data-legal="cerez" class="underline text-[#7c3aed] font-semibold">Çerez Politikası</button> ve <button data-legal="kvkk" class="underline text-[#7c3aed] font-semibold">KVKK Aydınlatma Metni</button>'ni inceleyebilirsiniz.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <button onclick="saveConsent({a:0,m:0})" class="py-3 rounded-xl border-2 border-slate-200 font-bold text-sm text-slate-700 hover:border-slate-400 transition">Reddet</button>
+            <button onclick="openCookiePrefs()" class="py-3 rounded-xl border-2 border-slate-200 font-bold text-sm text-slate-700 hover:border-slate-400 transition">Tercihler</button>
+            <button onclick="saveConsent({a:1,m:1})" class="py-3 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#d946ef] font-bold text-sm text-white hover:opacity-90 transition">Tümünü Kabul Et</button>
+        </div>
     </div>
 
-    <script>
-        let currentSvc = "";
-        function openPanel(title) { currentSvc = title; document.getElementById('pTitle').innerText = title; document.getElementById('sidePanel').classList.add('open'); document.getElementById('overlay').style.display = 'block'; }
-        function closePanel() { document.getElementById('sidePanel').classList.remove('open'); document.getElementById('overlay').style.display = 'none'; }
-        function sendToWhatsApp() {
-            const n = document.getElementById('name').value; const c = document.getElementById('city').value; const t = document.getElementById('tel').value;
-            if(!n || !c || !t) { alert("Doldur kanka!"); return; }
-            window.location.href = `https://wa.me/905349644975?text=*YENİ TALEP*%0A%0A*Hizmet:* ${currentSvc}%0A*İsim:* ${n}%0A*Şehir:* ${c}%0A*Tel:* ${t}`;
-        }
+    <dialog id="cookieDlg" aria-label="Çerez tercihleri">
+        <div class="bg-white rounded-3xl w-[calc(100vw-24px)] max-w-lg max-h-[88vh] overflow-y-auto p-6 md:p-8 mx-auto">
+            <div class="flex justify-between items-start mb-4"><h2 class="text-xl font-black">Çerez Tercihleri</h2><button onclick="$('cookieDlg').close()" class="text-2xl leading-none text-slate-400 hover:text-slate-700" aria-label="Kapat">✕</button></div>
+            <div class="space-y-4">
+                <div class="flex items-start justify-between gap-4 pb-4 border-b border-slate-100"><div><p class="font-bold text-sm">Zorunlu</p><p class="text-xs text-slate-500">Sitenin çalışması ve çerez tercihinizin saklanması için gereklidir. Kapatılamaz.</p></div><input type="checkbox" class="cookie-sw" checked disabled aria-label="Zorunlu çerezler"></div>
+                <div class="flex items-start justify-between gap-4 pb-4 border-b border-slate-100"><div><p class="font-bold text-sm">Analitik</p><p class="text-xs text-slate-500">Ziyaretçi istatistikleri. Şu anda sitede analitik araç kullanılmamaktadır.</p></div><input type="checkbox" id="ckA" class="cookie-sw" aria-label="Analitik çerezler"></div>
+                <div class="flex items-start justify-between gap-4"><div><p class="font-bold text-sm">Pazarlama</p><p class="text-xs text-slate-500">Reklam ve yeniden hedefleme. Şu anda sitede kullanılmamaktadır.</p></div><input type="checkbox" id="ckM" class="cookie-sw" aria-label="Pazarlama çerezleri"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-6"><button onclick="saveConsent({a:0,m:0});$('cookieDlg').close()" class="py-3 rounded-xl border-2 border-slate-200 font-bold text-sm">Tümünü Reddet</button><button onclick="saveConsent({a:$('ckA').checked?1:0,m:$('ckM').checked?1:0});$('cookieDlg').close()" class="py-3 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#d946ef] font-bold text-sm text-white">Seçimi Kaydet</button></div>
+        </div>
+    </dialog>
 
-        // Cihaz Sorgulama Fonksiyonu
-        function checkStatus() {
-            const val = document.getElementById('trackInput').value.trim();
-            const resultBox = document.getElementById('statusResult');
-            if(!val) { alert("Lütfen servis kodunuzu girin!"); return; }
-            
-            resultBox.classList.remove('hidden');
-            resultBox.innerHTML = `<i class="fa-solid fa-spinner animate-spin mr-2"></i> Sistem sorgulanıyor...`;
-            
-            setTimeout(() => {
-                resultBox.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> <strong>Kod: ${val}</strong> - Cihazınızın arıza tespiti tamamlanmış olup, onarım aşamasındadır. Detaylar için WhatsApp destek hattımızdan bilgi alabilirsiniz.`;
-            }, 1200);
-        }
-    </script>
+    <dialog id="legalDlg" aria-label="Yasal metin">
+        <div class="bg-white rounded-3xl w-[calc(100vw-24px)] max-w-2xl max-h-[88vh] overflow-y-auto p-6 md:p-8 mx-auto">
+            <div class="flex justify-between items-start mb-2"><h2 id="legalTitle" class="text-xl font-black"></h2><button onclick="$('legalDlg').close()" class="text-2xl leading-none text-slate-400 hover:text-slate-700" aria-label="Kapat">✕</button></div>
+            <div id="legalBody" class="legal"></div>
+        </div>
+    </dialog>
+
+    <div id="sidePanel" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+        <button onclick="closePanel()" class="text-2xl mb-5 self-start hover:text-[#d946ef] transition" aria-label="Kapat">✕</button>
+        <h2 id="pTitle" class="text-2xl font-black bg-gradient-to-r from-[#7c3aed] to-[#d946ef] bg-clip-text text-transparent mb-2 tracking-tighter"></h2>
+        <p id="pPrice" class="text-3xl font-black text-slate-900"></p>
+        <p id="pMeta" class="text-sm text-slate-400 mb-3"></p>
+        <p id="pDesc" class="text-sm text-slate-500 mb-3"></p>
+        <ul id="pList" class="text-sm text-slate-600 space-y-1.5 mb-3"></ul>
+        <div id="pExtra" class="mb-3"></div>
+        <div id="pBn" class="mb-4"></div>
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">veya bilgilerinizi bırakın</p>
+        <div class="input-box"><i class="fa-solid fa-user"></i><input type="text" id="name" class="custom-input" placeholder="Ad Soyad" autocomplete="name"></div>
+        <div class="input-box"><i class="fa-solid fa-map-pin"></i><input type="text" id="city" class="custom-input" placeholder="Şehir" autocomplete="address-level2"></div>
+        <div class="input-box"><i class="fa-solid fa-phone"></i><input type="tel" id="tel" class="custom-input" placeholder="Telefon" autocomplete="tel"></div>
+        <label class="flex items-start gap-3 text-xs text-slate-500 mb-2 cursor-pointer"><input type="checkbox" id="kvkkOk" class="mt-0.5 w-4 h-4 accent-[#7c3aed] flex-shrink-0"><span><button type="button" data-legal="kvkk" class="underline text-[#7c3aed] font-semibold">KVKK Aydınlatma Metni</button>'ni okudum. Bilgilerimin talebimin iletilmesi amacıyla kullanılmasını onaylıyorum.</span></label>
+        <p id="pErr" class="text-sm text-rose-600 min-h-[20px]" role="alert"></p>
+        <button onclick="sendToWhatsApp()" class="btn-wa w-full text-white py-4 rounded-2xl font-black text-base mt-1 shadow-xl flex items-center justify-center gap-3 transition"><i class="fa-brands fa-whatsapp text-2xl"></i> WHATSAPP İLE TALEP GÖNDER</button>
+    </div>
+
+<script>
+/* ==== YÖNETİM ALANI: fiyatlar ve Bionluk bağlantıları BURADAN değişir ==== */
+const WHATSAPP = "905349644975";
+/* Bionluk PROFİL adresiniz (herkese açık). Örn: "https://bionluk.com/kullaniciadiniz"  — ilan bağlantısı yoksa bu kullanılır */
+const BIONLUK_PROFIL = "";
+const TESLIM_YOK = "Kapsama göre, sipariş öncesi netleştirilir";
+/* Her hizmetin "url" alanına o ilanın herkese açık adresini yapıştırın (panel adresi DEĞİL). */
+const SERVICES = [
+ { id:"eticaret", grup:"Web Tasarım ve Yazılım", tip:"shop", ad:"E-Ticaret Sitesi Yapımı", fiyat:"20.500 TL", teslim:"20 gün", revizyon:"2 revizyon",
+   ozet:"Ürünlerinizi çevrim içi satabileceğiniz, mobil uyumlu ve profesyonel e-ticaret sitesi geliştirme.",
+   detay:["Kapsamlı e-ticaret sitesi","Özel arayüz düzenlemeleri","Gelişmiş kullanıcı deneyimi ve entegrasyonlar"],
+   ekstra:[["Ekstra sayfa","3.500 TL","+3 gün"],["Tasarım özelleştirme","1.500 TL","+3 gün"],["Responsive tasarım","2.000 TL","+2 gün"],["Plugin entegrasyonu","1.500 TL","+2 gün"],["Ekstra revizyon","2.000 TL","+2 gün"]], url:"" },
+ { id:"blog", grup:"Web Tasarım ve Yazılım", tip:"blog", ad:"Blog Tarzı Web Sitesi Yapımı", fiyat:"5.000 TL", teslim:"3 gün", revizyon:"1 revizyon",
+   ozet:"İçeriklerinizi ve yazılarınızı profesyonel biçimde yayınlayabileceğiniz modern web sitesi.",
+   detay:["Modern ve özgün tasarım","Mobil ve tablet uyumluluğu","Blog yazıları ve kategori sistemi","Kolay içerik yönetimi","Temel SEO ayarları","İletişim sayfası","Domain, hosting ve ücretli lisanslar fiyata dahil değildir"], url:"" },
+ { id:"uygulama", grup:"Web Tasarım ve Yazılım", tip:"app", ad:"Uygulama Geliştirme", fiyat:"30.000 TL", fiyatEk:"başlangıç fiyatı", teslim:TESLIM_YOK,
+   ozet:"İhtiyaçlara ve proje kapsamına göre özel uygulama geliştirme çözümleri.", detay:["Fiyat başlangıç fiyatıdır","Kapsam görüşmede belirlenir"], url:"" },
+ { id:"shopify", grup:"E-Ticaret Altyapıları", tip:"shop2", ad:"Shopify ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
+   ozet:"Shopify altyapısıyla modern, kullanıcı dostu ve satış odaklı çevrim içi mağaza kurulumu.", detay:["Mağaza kurulumu ve tasarımı","Ürün ve ödeme ayarları"], url:"" },
+ { id:"ikea", grup:"E-Ticaret Altyapıları", tip:"shop", ad:"IKEA ile E-Ticaret Sitesi", fiyat:"20.000 TL", teslim:TESLIM_YOK,
+   ozet:"Kapsam ve kullanılacak platform sipariş öncesinde birlikte netleştirilir.", detay:["Kapsam görüşmede belirlenir"], url:"" /* TODO: ilan adını/açıklamasını doğrulayın */ },
+ { id:"pazaryeri", grup:"E-Ticaret Altyapıları", tip:"market", ad:"Trendyol, Amazon ve Diğer Pazaryerleri", fiyat:"Teklif alın", teslim:TESLIM_YOK,
+   ozet:"Pazaryeri mağazası kurulumu, ürün listeleme ve satış süreçlerine yönelik hizmetler.", detay:["Mağaza kurulumu","Ürün listeleme"], url:"" },
+ { id:"video", grup:"Video ve Tasarım", tip:"video", ad:"Video Kurgulama ve Edit", fiyat:"2.500 TL", teslim:TESLIM_YOK,
+   ozet:"Sosyal medya, reklam ve tanıtım videoları için profesyonel kurgu, geçişler, hareketli grafikler ve görsel düzenleme.", detay:["Kurgu ve geçişler","Hareketli grafikler","Sosyal medya ve reklam formatları"], url:"" },
+ { id:"sketchup", grup:"Video ve Tasarım", tip:"cube", ad:"SketchUp ile 3D Tasarım ve Proje Çizimi", fiyat:"5.000 TL", teslim:TESLIM_YOK,
+   ozet:"Mekân, ürün ve mimari projeler için üç boyutlu modelleme ve proje çizimi.", detay:["3D modelleme","Proje çizimi"], url:"" },
+ { id:"corel", grup:"Video ve Tasarım", tip:"print", ad:"CorelDRAW ile Market Broşürü ve Reklam Tasarımı", fiyat:"500 TL", teslim:TESLIM_YOK,
+   ozet:"Market insertleri, kampanya broşürleri, ürün fiyat görselleri ve basılı reklam tasarımları.", detay:["Kampanya broşürleri","Ürün fiyat görselleri","Basılı reklam tasarımı"], url:"" }
+];
+const FAQ=[["Fiyatlara domain ve hosting dahil mi?","Hayır. Domain, hosting ve ücretli lisanslar fiyatlara dahil değildir. Kapsam sipariş öncesinde netleştirilir."],["Sipariş nasıl veriliyor?","İsterseniz doğrudan Bionluk'tan sipariş verebilir, isterseniz önce WhatsApp'tan kapsamı konuşabilirsiniz."],["Revizyon hakkı var mı?","Evet. Her ilanda dahil olan revizyon sayısı belirtilmiştir. Ek revizyon satın alınabilir."],["Fiyatlar sabit mi?","Fiyatlar ilan fiyatlarıdır. Uygulama geliştirme başlangıç fiyatıdır, pazaryeri hizmetleri tekliflidir."]];
+
+const ICON={shop:'fa-cart-shopping',shop2:'fa-store',blog:'fa-newspaper',app:'fa-mobile-screen-button',market:'fa-boxes-stacked',video:'fa-film',cube:'fa-cube',print:'fa-print'};
+
+/* ==== Sayfa mantığı ==== */
+const $=id=>document.getElementById(id);
+const wa=m=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`;
+const bnUrl=s=>s.url||BIONLUK_PROFIL||"https://bionluk.com";
+const waBtn=(s,c)=>`<a href="${wa('Merhaba, '+s.ad+' hizmeti için bilgi almak istiyorum.')}" target="_blank" rel="noopener noreferrer" class="btn-wa flex-1 text-white ${c} rounded-xl font-bold text-center transition flex items-center justify-center gap-2"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>`;
+const bnBtn=(s,c)=>bnUrl(s)?`<a href="${bnUrl(s)}" target="_blank" rel="noopener noreferrer" class="btn-bn flex-1 text-white ${c} rounded-xl font-bold text-center transition flex items-center justify-center gap-2"><i class="fa-solid fa-bag-shopping"></i> Bionluk</a>`:`<span class="btn-off flex-1 ${c} rounded-xl font-bold text-center flex items-center justify-center gap-2" aria-disabled="true" title="Bionluk bağlantısı henüz eklenmedi"><i class="fa-solid fa-bag-shopping"></i> Bionluk</span>`;
+[...new Set(SERVICES.map(s=>s.grup))].forEach(g=>{
+ $('gr').insertAdjacentHTML('beforeend',`<h3 class="text-sm font-black uppercase tracking-widest text-[#7c3aed] mt-12 mb-5 pb-3 border-b border-slate-100">${g}</h3><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-g="${g}"></div>`);
+ SERVICES.filter(s=>s.grup===g).forEach(s=>{
+  document.querySelector(`[data-g="${g}"]`).insertAdjacentHTML('beforeend',`<article class="premium-card rounded-[32px] overflow-hidden flex flex-col"><div class="p-6 pb-0 flex items-center justify-between"><div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#7c3aed] via-[#d946ef] to-[#f43f5e] flex items-center justify-center text-white text-xl shadow-md"><i class="fa-solid ${ICON[s.tip]}"></i></div><span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">${s.teslim!==TESLIM_YOK?s.teslim+' teslim':'Teklifli süreç'}</span></div><div class="p-6 flex flex-col gap-3 flex-1"><h3 class="font-bold text-lg leading-snug">${s.ad}</h3><p class="text-sm text-slate-500 flex-1">${s.ozet}</p><div class="flex items-baseline gap-2 flex-wrap"><span class="text-2xl font-black text-slate-900">${s.fiyat}</span><span class="text-xs text-slate-400">${s.fiyatEk||''}</span></div><button onclick="openPanel('${s.id}')" class="text-left text-sm font-bold text-[#7c3aed] hover:text-[#d946ef] transition">Kapsamı incele <i class="fa-solid fa-arrow-right text-xs"></i></button><div class="flex gap-2">${waBtn(s,'py-3 text-sm')}${bnBtn(s,'py-3 text-sm')}</div></div></article>`);
+ });
+});
+const names=SERVICES.map(s=>s.ad.split(' ile ')[0]);
+$('ticker').innerHTML=[...names,...names].map(n=>`<span class="whitespace-nowrap"><i class="fa-solid fa-circle text-[5px] mr-6 align-middle text-[#d946ef]"></i>${n}</span>`).join('');
+$('faqList').innerHTML=FAQ.map(([q,a])=>`<div class="faq-item bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden"><details class="group p-6"><summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none"><span>${q}</span><i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i></summary><p class="text-sm text-slate-500 mt-4 leading-relaxed">${a}</p></details></div>`).join('');
+$('heroList').innerHTML=['eticaret','blog','video','corel'].map(id=>SERVICES.find(s=>s.id===id)).map(s=>`<button onclick="openPanel('${s.id}')" class="w-full flex items-center justify-between gap-4 py-4 text-left hover:text-[#d946ef] transition"><span class="font-semibold text-sm">${s.ad}</span><span class="font-black whitespace-nowrap">${s.fiyat}</span></button>`).join('');
+$('waFloat').href=wa('Merhaba, bilgi almak istiyorum.');
+$('yr').textContent=new Date().getFullYear();
+$('mbtn').onclick=()=>{const m=$('menu'),o=m.classList.toggle('hidden');m.classList.toggle('flex',!o);m.classList.toggle('absolute',!o);m.classList.toggle('flex-col',!o);m.classList.toggle('top-full',!o);m.classList.toggle('left-0',!o);m.classList.toggle('right-0',!o);m.classList.toggle('bg-white',!o);m.classList.toggle('p-6',!o);m.classList.toggle('gap-4',!o);$('mbtn').setAttribute('aria-expanded',!o)};
+$('menu').onclick=e=>{if(e.target.tagName==='A'&&!$('menu').classList.contains('hidden')&&innerWidth<768)$('mbtn').click()};
+
+/* ==== Yasal bilgiler: kendi bilgilerinizle doldurun ==== */
+const LEGAL={unvan:"ESENTECH (EsenTech Technology)",adres:"",eposta:"info@esentech.com",tel:"+90 534 964 4975"};
+const iletisim=()=>`${LEGAL.unvan}${LEGAL.adres?', '+LEGAL.adres:''} · E-posta: ${LEGAL.eposta} · Telefon: ${LEGAL.tel}`;
+const TXT={
+kvkk:{t:'KVKK Aydınlatma Metni',b:()=>`<p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") m.10 uyarınca, kişisel verilerinizin işlenmesine ilişkin bilgilendirme aşağıdadır.</p>
+<h3>1. Veri sorumlusu</h3><p>${iletisim()}</p>
+<h3>2. İşlenen kişisel veriler</h3><ul><li>Kimlik ve iletişim: ad soyad, şehir, telefon numarası</li><li>Talep bilgisi: ilgilendiğiniz hizmet ve WhatsApp üzerinden paylaştığınız her türlü bilgi</li><li>Çerez tercihiniz (tarayıcınızda saklanır)</li></ul>
+<h3>3. İşleme amaçları</h3><p>Taleplerinizin alınması ve yanıtlanması, teklif hazırlanması, hizmetin sunulması, iletişim kurulması ve yasal yükümlülüklerin yerine getirilmesi.</p>
+<h3>4. Hukuki sebepler</h3><p>KVKK m.5/2 (c) sözleşmenin kurulması veya ifası, (ç) hukuki yükümlülüğün yerine getirilmesi ve (f) meşru menfaat.</p>
+<h3>5. Verilerin aktarımı</h3><p>Sitedeki form, bilgilerinizi sunucumuza kaydetmez; bilgilerinizi içeren bir WhatsApp mesajı hazırlar ve mesajı siz gönderirsiniz. Mesaj, WhatsApp (Meta) altyapısı üzerinden bize iletilir. Bionluk üzerinden verdiğiniz siparişler Bionluk'un kendi gizlilik koşullarına tabidir. Yasal zorunluluk dışında verileriniz üçüncü kişilerle paylaşılmaz. Bu hizmetlerin sunucuları yurt dışında olabileceğinden, aktarım kapsamında KVKK m.9 hükümleri geçerlidir.</p>
+<h3>6. Saklama süresi</h3><p>Verileriniz, işleme amacının gerektirdiği süre ve ilgili mevzuattaki zamanaşımı süreleri boyunca saklanır, süre sonunda silinir veya anonim hale getirilir.</p>
+<h3>7. Haklarınız (KVKK m.11)</h3><p>Verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, düzeltme, silme veya yok etme, işlemeye itiraz etme ve zarar halinde tazminat talep etme haklarına sahipsiniz.</p>
+<h3>8. Başvuru</h3><p>Taleplerinizi ${LEGAL.eposta} adresine veya WhatsApp hattımıza iletebilirsiniz. Başvurunuz en geç 30 gün içinde sonuçlandırılır.</p>`},
+gizlilik:{t:'Gizlilik Politikası',b:()=>`<p>Bu site, ziyaretçilerinin gizliliğine önem verir. Politikamız aşağıdaki gibidir.</p>
+<h3>Topladığımız bilgiler</h3><p>Siteyi gezmeniz için hesap açmanız gerekmez. Talep formunu doldurursanız yazdığınız ad, şehir ve telefon bilgisi yalnızca hazırlanan WhatsApp mesajında kullanılır; sunucularımızda saklanmaz.</p>
+<h3>Üçüncü taraf kaynaklar</h3><p>Sayfa görünümü için Google Fonts, cdnjs (Font Awesome) ve Tailwind CDN gibi dış kaynaklar yüklenir. Bu sağlayıcılar, kaynakları sunarken IP adresinizi ve tarayıcı bilgilerinizi teknik olarak işleyebilir.</p>
+<h3>Dış bağlantılar</h3><p>Sitedeki WhatsApp ve Bionluk bağlantıları sizi bu platformlara yönlendirir. Bu platformlardaki veri işleme, ilgili platformların kendi politikalarına tabidir.</p>
+<h3>Güvenlik</h3><p>Verilerinizin korunması için makul teknik ve idari tedbirler uygulanır. Ancak internet üzerinden iletimin tamamen risksiz olduğu garanti edilemez.</p>
+<h3>İletişim</h3><p>${iletisim()}</p>`},
+cerez:{t:'Çerez Politikası',b:()=>`<p>Çerezler ve benzeri teknolojiler, tarayıcınızda saklanan küçük veri parçalarıdır.</p>
+<h3>Kullandığımız türler</h3><ul><li><b>Zorunlu:</b> Çerez tercihinizi hatırlamak için tarayıcınızın yerel depolamasında "esen_cerez" kaydı tutulur. Kapatılamaz.</li><li><b>Analitik:</b> Şu anda kullanılmamaktadır. İleride eklenirse yalnızca onayınızla çalışır.</li><li><b>Pazarlama:</b> Şu anda kullanılmamaktadır. İleride eklenirse yalnızca onayınızla çalışır.</li></ul>
+<h3>Tercihlerinizi yönetme</h3><p>Sayfanın altındaki "Çerez Tercihleri" bağlantısından seçiminizi istediğiniz zaman değiştirebilirsiniz. Ayrıca tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz.</p>
+<h3>Üçüncü taraf kaynaklar</h3><p>Yazı tipi ve simge kaynakları (Google Fonts, cdnjs) ile Tailwind CDN dış sunuculardan yüklenir. Ayrıntılar için Gizlilik Politikası'na bakın.</p>
+<h3>İletişim</h3><p>${LEGAL.eposta}</p>`}};
+function openLegal(k){$('legalTitle').textContent=TXT[k].t;$('legalBody').innerHTML=TXT[k].b();$('legalDlg').showModal();$('legalDlg').querySelector('div').scrollTop=0}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-legal]');if(b){e.preventDefault();if($('cookieDlg').open)$('cookieDlg').close();openLegal(b.dataset.legal)}});
+['legalDlg','cookieDlg'].forEach(id=>$(id).addEventListener('click',e=>{if(e.target===$(id))$(id).close()}));
+
+/* ==== Çerez onayı ==== */
+const CK='esen_cerez';
+function getConsent(){try{return JSON.parse(localStorage.getItem(CK))}catch(e){return null}}
+function applyConsent(c){/* Analitik/pazarlama araçları eklerseniz yalnızca c.a / c.m === 1 ise yükleyin. */}
+function saveConsent(c){try{localStorage.setItem(CK,JSON.stringify({a:c.a,m:c.m,t:Date.now()}))}catch(e){}$('cookieBar').classList.add('hidden');applyConsent(c)}
+function openCookiePrefs(){const c=getConsent()||{a:0,m:0};$('ckA').checked=!!c.a;$('ckM').checked=!!c.m;$('cookieDlg').showModal()}
+(function(){const c=getConsent();if(c)applyConsent(c);else $('cookieBar').classList.remove('hidden')})();
+$('heroWa').href=$('ctaWa').href=wa('Merhaba, bilgi almak istiyorum.');
+$('ctaBn').href=bnUrl({});
+
+let cur=null;
+function openPanel(id){
+ cur=SERVICES.find(s=>s.id===id);
+ $('pTitle').textContent=cur.ad;$('pPrice').textContent=cur.fiyat+(cur.fiyatEk?' ('+cur.fiyatEk+')':'');
+ $('pMeta').textContent='Teslimat: '+cur.teslim+(cur.revizyon?' · '+cur.revizyon:'');
+ $('pDesc').textContent=cur.ozet;
+ $('pList').innerHTML=cur.detay.map(d=>`<li><i class="fa-solid fa-check text-[#d946ef] mr-2"></i>${d}</li>`).join('');
+ $('pExtra').innerHTML=cur.ekstra?'<p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Ekstralar</p>'+cur.ekstra.map(r=>`<div class="flex justify-between text-sm py-1.5 border-b border-slate-100"><span>${r[0]}</span><span class="text-slate-500">${r[1]} · ${r[2]}</span></div>`).join(''):'';
+ $('pBn').innerHTML=`<div class="flex gap-2">${waBtn(cur,'py-3.5')}${bnBtn(cur,'py-3.5')}</div>`;
+ $('pErr').textContent='';
+ $('sidePanel').classList.add('open');$('overlay').style.display='block';
+}
+function closePanel(){$('sidePanel').classList.remove('open');$('overlay').style.display='none'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel()});
+function sendToWhatsApp(){
+ const n=$('name').value.trim(),c=$('city').value.trim(),t=$('tel').value.trim();
+ if(!n||!c||t.replace(/\D/g,'').length<10){$('pErr').textContent='Lütfen ad soyad, şehir ve telefon numaranızı eksiksiz yazın.';return}
+ if(!$('kvkkOk').checked){$('pErr').textContent='Devam etmek için KVKK Aydınlatma Metni onay kutusunu işaretleyin.';return}
+ $('pErr').textContent='';
+ window.open(wa(`*YENİ TALEP*\n\n*Hizmet:* ${cur.ad}\n*İsim:* ${n}\n*Şehir:* ${c}\n*Tel:* ${t}`),'_blank','noopener');
+}
+</script>
 </body>
 </html>
